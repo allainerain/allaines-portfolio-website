@@ -48,27 +48,22 @@ p{
     overflow: hidden; /* Hide overflowing content */
 }
 
-/* On mouse-over, add a deeper shadow and scale the card slightly */
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     transform: scale(1.02);
     cursor: pointer;
 }
 
-
-/* Add some padding inside the card container */
 .container {
     margin: 40px;
-    /* padding: 5px 25px; */
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  border-radius: 10px; /* 5px rounded corners */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 10px; /* 5px rounded corners */
 }
 
-/* Add rounded corners to the top left and the top right corner of the image */
 img {
   border-radius: 0px 0px 10px 10px;
 }

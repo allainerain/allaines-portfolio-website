@@ -1,6 +1,7 @@
 <script>
     import Card from "../components/card.svelte";
     import Navbar from "../components/navbar.svelte";
+    import Footer from "../components/footer.svelte"
 </script>
 
 <body>
@@ -80,7 +81,9 @@
                 imgsrc="card-photos/placeholder.jpg"
             />
         </div>
+        <Footer></Footer>
     </section>
+    
 </body>
 
 
