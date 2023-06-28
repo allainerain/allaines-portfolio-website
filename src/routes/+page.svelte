@@ -12,14 +12,28 @@
         <h1>AI and Data Science Journey</h1>
         <p>Something has brought me to discover more about data science. These are the projects that I have made so far More story to come, kind of narrative style. These words are just a placeholder for the future.</p>
         <div class="cards">
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
+            <Card 
+                iconsrc="icons/icon-placeholder.png"
+                title="Mask Patrol"
+                description="A Face Mask Detection model using Computer Vision and Artificial Intelligence."
+                imgsrc="card-photos/placeholder.jpg"
+            />
+            <Card 
+                iconsrc="icons/icon-placeholder.png"
+                title="Mask Patrol"
+                description="A Face Mask Detection model using Computer Vision and Artificial Intelligence."
+                imgsrc="card-photos/placeholder.jpg"
+            />
+            <Card 
+                iconsrc="icons/icon-placeholder.png"
+                title="Mask Patrol"
+                description="A Face Mask Detection model using Computer Vision and Artificial Intelligence."
+                imgsrc="card-photos/placeholder.jpg"
+            />
+
         </div>
     </section>
 </body>
-
-
 
 
 <style>
@@ -59,7 +73,7 @@ p{
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 50px;
     justify-items: center;
-    margin: 100px 0px
+    margin: 100px 0px;
 }
 
 /* TABLET VIEW */

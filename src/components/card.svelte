@@ -1,14 +1,17 @@
 <script>
-
+    export let title;
+    export let description;
+    export let iconsrc;
+    export let imgsrc;
 </script>
 
 <div class="card">
     <div class="container">
-        <img src="icons/icon-placeholder.png" alt="icon"/>
-        <h4>Mask Patrol</h4>
-        <p>A Face Mask Detection model using Computer Vision and Artificial Intelligence.</p>
+        <img src={iconsrc} alt="icon"/>
+        <h4>{title}</h4>
+        <p>{description}</p>
     </div>
-    <img src="card-photos/placeholder.jpg" alt="project desc" style="width:100%"/>
+    <img src={imgsrc} alt={title} style="width:100%"/>
 </div>
 
 <style>
