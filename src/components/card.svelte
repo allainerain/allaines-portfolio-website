@@ -26,18 +26,23 @@ p{
     font-size: 13px;
     margin:0;
 }
+
 .card {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     background-color: #161A11;
     text-align: left;
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    overflow: hidden; /* Hide overflowing content */
 }
 
-/* On mouse-over, add a deeper shadow */
+/* On mouse-over, add a deeper shadow and scale the card slightly */
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transform: scale(1.02);
 }
+
 
 /* Add some padding inside the card container */
 .container {

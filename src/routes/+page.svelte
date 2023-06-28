@@ -56,7 +56,7 @@ p{
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 50px;
     justify-items: center;
     margin: 100px 0px
@@ -65,8 +65,8 @@ p{
 /* TABLET VIEW */
 @media only screen and (max-width: 900px) {
     section{
-        width: 90%;
-        margin: 150px 5% 150px 5%; /* Adjust the margin for small screens */
+        width: 94%;
+        margin: 150px 3% 150px 3%; /* Adjust the margin for small screens */
 
     }
 
@@ -74,6 +74,11 @@ p{
 
 /* PHONE VIEW */
 @media only screen and (max-width:770px){
+    section{
+        width: 90%;
+        margin: 150px 5% 150px 5%; /* Adjust the margin for small screens */
+        /* background-color: white; */
+    }
     h1{
         font-size: 80px;
     }
