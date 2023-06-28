@@ -5,9 +5,12 @@
     import Carousel from "../components/carousel.svelte";
 
     let imageSources = [
-    'card-photos/placeholder.jpg',
-    'card-images/placeholder.jpg',
-    'card-photos/placeholder.jpg',
+    'works/gdsc/gdsc1.png',
+    'works/gdsc/gdsc2.png',
+    'works/gdsc/gdsc3.png',
+    'works/gdsc/gdsc4.png',
+    'works/gdsc/gdsc5.png',
+    'works/gdsc/gdsc6.png',
     // Add more image sources as needed
   ];
 </script>
@@ -94,7 +97,7 @@
     </section>
 
     <Carousel
-        images = {imageSources}
+        gallery_items = {imageSources}
     />
     
 </body>
