@@ -61,5 +61,12 @@ section {
         background: linear-gradient(to top, #0D0F0A, transparent);
         /* background: white */
     }
+    .navbar a{
+        margin: 0 10px;
+    }
+    img{
+        margin: 0px 20px;
+
+    }
 }
 </style>

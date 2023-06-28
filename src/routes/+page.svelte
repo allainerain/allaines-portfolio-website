@@ -2,6 +2,14 @@
     import Card from "../components/card.svelte";
     import Navbar from "../components/navbar.svelte";
     import Footer from "../components/footer.svelte"
+    import Carousel from "../components/carousel.svelte";
+
+    let imageSources = [
+    'card-photos/placeholder.jpg',
+    'card-images/placeholder.jpg',
+    'card-photos/placeholder.jpg',
+    // Add more image sources as needed
+  ];
 </script>
 
 <body>
@@ -29,6 +37,7 @@
                 imgsrc="card-photos/placeholder.jpg"
             />
         </div>
+
     </section>
 
     <section class="UIUX">
@@ -83,6 +92,10 @@
         </div>
         <Footer></Footer>
     </section>
+
+    <Carousel
+        images = {imageSources}
+    />
     
 </body>
 
