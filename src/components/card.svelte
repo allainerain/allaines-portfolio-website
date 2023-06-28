@@ -4,10 +4,11 @@
 
 <div class="card">
     <div class="container">
-      <h4>Mask Patrol</h4>
-      <p>A Face Mask Detection model using Computer Vision and Artificial Intelligence.</p>
+        <img src="icons/icon-placeholder.png" alt="icon"/>
+        <h4>Mask Patrol</h4>
+        <p>A Face Mask Detection model using Computer Vision and Artificial Intelligence.</p>
     </div>
-    <img src="card-photos/placeholder.jpg" alt="Image Description" style="width:100%"/>
+    <img src="card-photos/placeholder.jpg" alt="project desc" style="width:100%"/>
 </div>
 
 <style>
@@ -15,12 +16,15 @@
 
 h4{
     font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400px;
     font-size: 20px;
+    margin:15px 0px 15px 0px;
 }
 
 p{
     font-family: 'Roboto Mono', monospace;
     font-size: 13px;
+    margin:0;
 }
 .card {
     /* Add shadows to create the "card" effect */
@@ -37,7 +41,8 @@ p{
 
 /* Add some padding inside the card container */
 .container {
-    padding: 5px 25px;
+    margin: 40px;
+    /* padding: 5px 25px; */
 }
 
 .card {
