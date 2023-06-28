@@ -3,16 +3,19 @@
     export let description;
     export let iconsrc;
     export let imgsrc;
+    export let link;
 </script>
 
-<div class="card">
-    <div class="container">
-        <img src={iconsrc} alt="icon"/>
-        <h4>{title}</h4>
-        <p>{description}</p>
+<a class="button-link" href={link}>
+    <div class="card">
+        <div class="container">
+            <img src={iconsrc} alt="icon"/>
+            <h4>{title}</h4>
+            <p>{description}</p>
+        </div>
+        <img src={imgsrc} alt={title} style="width:100%"/>
     </div>
-    <img src={imgsrc} alt={title} style="width:100%"/>
-</div>
+</a>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono&family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -30,6 +33,10 @@ p{
     font-size: 13px;
     margin: 0;
     color: #838481;
+}
+
+.button-link {
+    text-decoration: none;
 }
 
 .card {

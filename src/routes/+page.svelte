@@ -17,10 +17,11 @@
                 title="Mask Patrol"
                 description="A Face Mask Detection model using Computer Vision and Artificial Intelligence."
                 imgsrc="card-photos/placeholder.jpg"
+                link="/"
             />
             <Card 
                 iconsrc="icons/icon-placeholder.png"
-                title="Mask Patrol"
+                title="ABS-CBN Disinformation Case"
                 description="A Face Mask Detection model using Computer Vision and Artificial Intelligence."
                 imgsrc="card-photos/placeholder.jpg"
             />
