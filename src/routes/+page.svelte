@@ -32,7 +32,7 @@ body {
 }
 
 section {
-    color: #D9D9D9;
+    color: #C2C2C2;
     width: 800px;
     margin: 150px auto 150px auto;
     text-align: center;

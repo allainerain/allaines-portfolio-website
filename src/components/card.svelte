@@ -16,15 +16,17 @@
 
 h4{
     font-family: 'Source Sans 3', sans-serif;
-    font-weight: 400px;
+    font-weight: 600;
     font-size: 20px;
-    margin:15px 0px 15px 0px;
+    margin: 15px 0px 15px 0px;
+    color: #BBBBBB;
 }
 
 p{
     font-family: 'Roboto Mono', monospace;
     font-size: 13px;
-    margin:0;
+    margin: 0;
+    color: #838481;
 }
 
 .card {
@@ -41,6 +43,7 @@ p{
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     transform: scale(1.02);
+    cursor: pointer;
 }
 
 
