@@ -56,18 +56,23 @@ p{
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 50px;
     justify-items: center;
+    margin: 100px 0px
 }
 
+/* TABLET VIEW */
 @media only screen and (max-width: 900px) {
     section{
-        width: 100%;
+        width: 90%;
+        margin: 150px 5% 150px 5%; /* Adjust the margin for small screens */
+
     }
 
 }
 
+/* PHONE VIEW */
 @media only screen and (max-width:770px){
     h1{
         font-size: 86px;
