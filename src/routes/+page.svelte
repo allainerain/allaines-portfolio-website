@@ -41,7 +41,7 @@ section {
 h1{
     font-family: 'Gentium Plus', serif;
     font-weight: 400;
-    font-size: 96px;
+    font-size: 100px;
     line-height: 1.11;
 }
 
@@ -75,7 +75,7 @@ p{
 /* PHONE VIEW */
 @media only screen and (max-width:770px){
     h1{
-        font-size: 86px;
+        font-size: 80px;
     }
 
 }
