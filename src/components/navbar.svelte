@@ -29,6 +29,7 @@ section {
     align-items: center;
     justify-content: center;
     background: linear-gradient(to bottom, #0D0F0A, transparent);
+    z-index: 999; /* Add a high z-index value */
 }
 
 .navbar > .pill {
