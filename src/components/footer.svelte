@@ -22,7 +22,6 @@ section {
 }
 
 section .links {
-    text-align: right;
     margin: 0;
 }
 
