@@ -1,11 +1,13 @@
 <script>
     import Card from "../components/card.svelte";
+    import Navbar from "../components/navbar.svelte";
 </script>
 
 <body>
+    <Navbar></Navbar>
     <section class="Hero">
         <h1>Designer at Sketch. Having fun cycling around.</h1>
-        <p>Hey, I’m Allaine -- a Computer Science undergraduate from the University of the Philippines. I dabble in Artificial Intelligence, Data Science and UI/UX Design. </p>
+        <p> I’m Allaine – a Computer Science undergraduate from the University of the Philippines. I dabble in Artificial Intelligence, Data Science and UI/UX Design. </p>
     </section>
 
     <section class="AI">
@@ -25,20 +27,65 @@
                 description="A Face Mask Detection model using Computer Vision and Artificial Intelligence."
                 imgsrc="card-photos/placeholder.jpg"
             />
+        </div>
+    </section>
+
+    <section class="UIUX">
+        <h1>UI/UX Journey</h1>
+        <p>Something has brought me to discover more about data science. These are the projects that I have made so far More story to come, kind of narrative style. These words are just a placeholder for the future.</p>
+        <div class="cards">
+            <Card 
+                iconsrc="icons/icon-placeholder.png"
+                title="GDSC-UPD Website"
+                description="A Face Mask Detection model using Computer Vision and Artificial Intelligence."
+                imgsrc="card-photos/placeholder.jpg"
+                link="/"
+            />
+            <Card 
+                iconsrc="icons/icon-placeholder.png"
+                title="Forent Website"
+                description="A Face Mask Detection model using Computer Vision and Artificial Intelligence."
+                imgsrc="card-photos/placeholder.jpg"
+            />
+            <Card 
+                iconsrc="icons/icon-placeholder.png"
+                title="Forent Mobile App"
+                description="A Face Mask Detection model using Computer Vision and Artificial Intelligence."
+                imgsrc="card-photos/placeholder.jpg"
+            />
             <Card 
                 iconsrc="icons/icon-placeholder.png"
                 title="Mask Patrol"
                 description="A Face Mask Detection model using Computer Vision and Artificial Intelligence."
                 imgsrc="card-photos/placeholder.jpg"
             />
+        </div>
+    </section>
 
+    <section class="AI">
+        <h1>Miscellaneous Journies</h1>
+        <p>Something has brought me to discover more about data science. These are the projects that I have made so far More story to come, kind of narrative style. These words are just a placeholder for the future.</p>
+        <div class="cards">
+            <Card 
+                iconsrc="icons/icon-placeholder.png"
+                title="Mask Patrol"
+                description="A Face Mask Detection model using Computer Vision and Artificial Intelligence."
+                imgsrc="card-photos/placeholder.jpg"
+                link="/"
+            />
+            <Card 
+                iconsrc="icons/icon-placeholder.png"
+                title="ABS-CBN Disinformation Case"
+                description="A Face Mask Detection model using Computer Vision and Artificial Intelligence."
+                imgsrc="card-photos/placeholder.jpg"
+            />
         </div>
     </section>
 </body>
 
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono&family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
     margin: 0;
