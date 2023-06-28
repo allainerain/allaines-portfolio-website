@@ -2,17 +2,7 @@
     import Card from "../components/card.svelte";
     import Navbar from "../components/navbar.svelte";
     import Footer from "../components/footer.svelte"
-    import Carousel from "../components/carousel.svelte";
 
-    let imageSources = [
-    'works/gdsc/gdsc1.png',
-    'works/gdsc/gdsc2.png',
-    'works/gdsc/gdsc3.png',
-    'works/gdsc/gdsc4.png',
-    'works/gdsc/gdsc5.png',
-    'works/gdsc/gdsc6.png',
-    // Add more image sources as needed
-  ];
 </script>
 
 <body>
@@ -22,7 +12,7 @@
         <p> I’m Allaine – a Computer Science undergraduate from the University of the Philippines. I dabble in Artificial Intelligence, Data Science and UI/UX Design. </p>
     </section>
 
-    <section class="AI">
+    <section class="journey">
         <h1>AI and Data Science Journey</h1>
         <p>Something has brought me to discover more about data science. These are the projects that I have made so far More story to come, kind of narrative style. These words are just a placeholder for the future.</p>
         <div class="cards">
@@ -43,7 +33,7 @@
 
     </section>
 
-    <section class="UIUX">
+    <section class="journey">
         <h1>UI/UX Journey</h1>
         <p>Something has brought me to discover more about data science. These are the projects that I have made so far More story to come, kind of narrative style. These words are just a placeholder for the future.</p>
         <div class="cards">
@@ -75,7 +65,7 @@
         </div>
     </section>
 
-    <section class="AI">
+    <section class="journey">
         <h1>Miscellaneous Journies</h1>
         <p>Something has brought me to discover more about data science. These are the projects that I have made so far More story to come, kind of narrative style. These words are just a placeholder for the future.</p>
         <div class="cards">
@@ -95,11 +85,6 @@
         </div>
         <Footer></Footer>
     </section>
-
-    <Carousel
-        gallery_items = {imageSources}
-    />
-    
 </body>
 
 
@@ -126,13 +111,15 @@ h1{
     line-height: 1.11;
 }
 
-.AI h1 {
+.journey h1 {
     font-size: 64px;
 }
 
 p{
     font-family: 'Source Sans 3', sans-serif;
-    font-size: 20px;
+    font-size: 24px;
+    line-height: 1.75;
+
 }
 
 .cards {
@@ -158,7 +145,6 @@ p{
     section{
         width: 90%;
         margin: 150px 5% 150px 5%; /* Adjust the margin for small screens */
-        /* background-color: white; */
     }
     h1{
         font-size: 80px;

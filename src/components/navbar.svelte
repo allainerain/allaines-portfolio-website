@@ -7,7 +7,7 @@
         <a href="/"> Home </a>
         <a href="/"> About </a>
         <img src="icons/diamond.png" alt="Website Icon">
-        <a href="/"> Works </a>
+        <a href="/works"> Works </a>
         <a href="/"> Blog </a>
     </div>
 </section>
