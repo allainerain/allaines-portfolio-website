@@ -41,7 +41,7 @@ section {
     background-color: #0D0F0A;
     outline-style: solid;
     outline-color: #1C1C1C;
-    outline-width: 2px;;
+    outline-width: 2px;
 }
 
 .navbar a {
@@ -50,5 +50,16 @@ section {
     color: white;
     text-decoration: none;
     font-size: 16px;
+}
+
+/* PHONE VIEW */
+@media only screen and (max-width: 770px) {
+    section {
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        background: linear-gradient(to top, #0D0F0A, transparent);
+        /* background: white */
+    }
 }
 </style>
