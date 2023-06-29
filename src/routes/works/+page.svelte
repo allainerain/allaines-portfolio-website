@@ -30,7 +30,6 @@
         description = "As a freshman in 2020, UP Diliman's Google Developer Student Clubs hosted an internal website design competition for its 300+ community members. I co-designed this layout with the idea to create a clean yet playful design to encapsulate Google's branding. After a couple of revisions, the output was selected to be the official website design to represent the organization."
         gallery_items = {gdsc}
     />
-
     <Footer/>
 
 
