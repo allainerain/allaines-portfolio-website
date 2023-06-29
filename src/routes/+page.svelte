@@ -83,8 +83,9 @@
                 imgsrc="card-photos/placeholder.jpg"
             />
         </div>
-        <Footer></Footer>
+        
     </section>
+    <Footer></Footer>
 </body>
 
 

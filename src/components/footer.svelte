@@ -19,6 +19,10 @@ section {
     justify-content: space-between;
     font-family: 'Source Sans 3', sans-serif;
     color: #838481;
+    width: 800px;
+    margin: 100px auto;
+    text-align: center;
+    font-size: 20px;
 }
 
 section .links {
@@ -35,5 +39,20 @@ a{
 a:hover{
     color:  #C2C2C2;
 }
+
+@media only screen and (max-width: 900px) {
+        section{
+            width: 94%;
+            margin: 150px 3% 150px 3%;
+        }
+    }
+
+    /* PHONE VIEW */
+    @media only screen and (max-width: 770px){
+        section{
+            width: 90%;
+            margin: 150px 5% 150px 5%; 
+        }
+    }
 
 </style>
