@@ -69,8 +69,15 @@
             {/if}
         </div>
     </section>
-    <section>
+    <section class="about-site">
         <h1>About This Site</h1>
+        <p> In case you were wondering, this site is: </p>
+        <ul>
+            <li>Inspired from Dale Anthony and Augosto Lopez's sites</li>
+            <li>Designed and built using Figma and Visual Studio Code</li>
+            <li>Hosted by Vercel</li>
+            <li>Set in Gentium, Source Sans and Mono</li>
+        </ul>
     </section>
 
     <Footer/>
@@ -87,14 +94,13 @@ section {
     color: #C2C2C2;
     width: 800px;
     margin: 100px auto 100px auto;
-    /* text-align: center; */
 }
 
 .intro p{
     font-family: 'Source Sans 3', sans-serif;
     text-align: left;
-    font-size: 18px;
-    line-height: 1.50;
+    font-size: 20px;
+    line-height: 2;
     margin: 30px auto;
 }
 
@@ -146,6 +152,12 @@ h1{
 
 .date{
     margin: 0px;
+}
+
+.about-site{
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 20px;
+    line-height: 2;
 }
 
 /* The switch - the box around the slider */
@@ -224,7 +236,7 @@ input:checked + .slider:before {
         margin: 150px 5% 150px 5%; /* Adjust the margin for small screens */
     }
     h1{
-        font-size: 80px;
+        font-size: 36px;
     }
 
 }
