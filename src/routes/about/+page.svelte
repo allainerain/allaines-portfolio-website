@@ -12,7 +12,7 @@
     <Navbar/>
     
     <section class = "intro">
-        <img class="me" alt = "Me" src="card-photos/placeholder.jpg"/>
+        <img class="me" alt = "Me" src="profilepic.jpg"/>
         <p>
             Mask Patrol is a Web Application for Face mask detection and classification. For our AI class in the University of the Philippines, we were tasked to use AI and Machine learning to combat problems in daily life.  In a span of two weeks, my team and I were able to produce a working MVP of our trained model. 
         </p>

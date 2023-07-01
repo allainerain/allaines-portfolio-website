@@ -20,14 +20,14 @@
                 iconsrc="icons/icon-placeholder.png"
                 title="Mask Patrol"
                 description="A Face Mask Detection model using Computer Vision and Artificial Intelligence."
-                imgsrc="card-photos/placeholder.jpg"
+                imgsrc="card-photos/mask-patrol.png"
                 link="/"
             />
             <Card 
                 iconsrc="icons/icon-placeholder.png"
                 title="ABS-CBN Disinformation Case"
                 description="A Face Mask Detection model using Computer Vision and Artificial Intelligence."
-                imgsrc="card-photos/placeholder.jpg"
+                imgsrc="card-photos/abscbn.png"
             />
         </div>
 
@@ -41,20 +41,20 @@
                 iconsrc="icons/icon-placeholder.png"
                 title="GDSC-UPD Website"
                 description="A Face Mask Detection model using Computer Vision and Artificial Intelligence."
-                imgsrc="card-photos/placeholder.jpg"
+                imgsrc="card-photos/gdsc.png"
                 link="/"
-            />
-            <Card 
-                iconsrc="icons/icon-placeholder.png"
-                title="Forent Website"
-                description="A Face Mask Detection model using Computer Vision and Artificial Intelligence."
-                imgsrc="card-photos/placeholder.jpg"
             />
             <Card 
                 iconsrc="icons/icon-placeholder.png"
                 title="Forent Mobile App"
                 description="A Face Mask Detection model using Computer Vision and Artificial Intelligence."
-                imgsrc="card-photos/placeholder.jpg"
+                imgsrc="card-photos/forent-mobile.png"
+            />
+            <Card 
+                iconsrc="icons/icon-placeholder.png"
+                title="Forent Website"
+                description="A Face Mask Detection model using Computer Vision and Artificial Intelligence."
+                imgsrc="card-photos/forent-web.png"
             />
             <Card 
                 iconsrc="icons/icon-placeholder.png"
