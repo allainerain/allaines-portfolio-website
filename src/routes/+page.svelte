@@ -1,12 +1,10 @@
 <script>
     import Card from "../components/card.svelte";
-    import Navbar from "../components/navbar.svelte";
     import Footer from "../components/footer.svelte"
 
 </script>
 
 <body>
-    <Navbar></Navbar>
     <section class="Hero">
         <h1>Designer at Sketch. Having fun cycling around.</h1>
         <p> I’m Allaine – a Computer Science undergraduate from the University of the Philippines. I dabble in Artificial Intelligence, Data Science and UI/UX Design. </p>
@@ -93,11 +91,6 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono&family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-body {
-    margin: 0;
-    width: 100%;
-    background-color: #0D0F0A;
-}
 
 section {
     color: #C2C2C2;

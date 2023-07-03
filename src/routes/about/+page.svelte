@@ -1,5 +1,4 @@
 <script>
-    import Navbar from "../../components/navbar.svelte";
     import Footer from "../../components/footer.svelte"
 
     import { onMount } from 'svelte';
@@ -8,9 +7,7 @@
 
 </script>
 
-<body>
-    <Navbar/>
-    
+<body>    
     <section class = "intro">
         <img class="me" alt = "Me" src="profilepic.jpg"/>
         <p>
@@ -84,12 +81,6 @@
 </body>
 
 <style>
-body {
-    margin: 0;
-    width: 100%;
-    background-color: #0D0F0A;
-}
-
 section {
     color: #C2C2C2;
     width: 800px;
