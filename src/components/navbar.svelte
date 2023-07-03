@@ -6,7 +6,7 @@
     <div class="pill">
         <a href="/"> Home </a>
         <a href="/about"> About </a>
-        <img src="icons/diamond.png" alt="Website Icon">
+        <img src="../icons/diamond.png" alt="Website Icon">
         <a href="/works"> Works </a>
         <a href="/blog"> Blog </a>
     </div>
