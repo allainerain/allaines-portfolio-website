@@ -13,14 +13,13 @@ export async function getBlog() {
 
     try{
         const response = await notion.databases.query({
-			database_id: databaseId
-            // ,
-			// filter: {
-			// 	property: "Published",
-			// 	select: {
-			// 		equals: "checked",
-			// 	},
-			// },
+			database_id: databaseId,
+			filter: {
+				property: "Published",
+				checkbox: {
+					equals: true,
+				},
+			},
 		});
 
         console.log("FROM SERVICE")
@@ -32,3 +31,24 @@ export async function getBlog() {
 
 }
 
+
+// get post by slug
+
+// export async function getPostBySlug(slug) {
+//     try{
+//         const response = await notion.databases.query({
+//             database_id: databaseId,
+//             filter: {
+//                 property: "Slug",
+//                 rich_text:{
+//                     equals: slug
+//                 }
+//             }
+//         });
+
+        
+
+//     }catch{
+
+//     }
+// }

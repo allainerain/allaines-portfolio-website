@@ -5,6 +5,5 @@ export async function GET() {
   const blog = await getBlog();
   console.log("FROM PAGE SERVER");
   console.log(blog);
-
   return json(blog);
 }
