@@ -8,7 +8,7 @@
         const response = await fetch("/blog");
         const data = await response.json();
         blogPosts = data.results;
-        console.log(blogPosts);
+        console.log(blogPosts[0].properties.Title.title[0].plain_text);
       } catch (error) {
         console.error("Error fetching blog posts:", error);
       }
@@ -21,6 +21,6 @@
   
   <ul>
     {#each blogPosts as blogPost}
-      <li>{blogPost.title}</li>
+      <li>{blogPost.properties.Title.title[0].plain_text}</li>
     {/each}
   </ul>
