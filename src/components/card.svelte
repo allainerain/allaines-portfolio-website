@@ -39,9 +39,8 @@ p{
 }
 
 .card {
-    /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
+    transition: 0.2s;
     background-color: #161A11;
     text-align: left;
     border-radius: 10px; /* Add border-radius for rounded corners */
@@ -56,12 +55,6 @@ p{
 
 .container {
     margin: 40px;
-}
-
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 10px; /* 5px rounded corners */
 }
 
 img {
