@@ -2,7 +2,7 @@
 	import BlogPost from '$lib/components/BlogPost.svelte';
     export let data;
 
-    console.log(data)
+    // console.log(data)
 </script>
 
 <BlogPost {data} />
