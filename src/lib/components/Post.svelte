@@ -60,9 +60,9 @@
                 </div>
             {/each}
 
-            {#if faqs && faqs.length > 0}
+            <!-- {#if faqs && faqs.length > 0}
                 <Faq {faqs} />
-            {/if}
+            {/if} -->
         </article>
     {/if}
 </div>
