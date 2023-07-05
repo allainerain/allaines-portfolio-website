@@ -52,7 +52,7 @@
                 <Image src = {cover} layout="fullWidth" aspectRatio={16/9} class="rounded-md aspect-video object-cover max-h-[500px] w-full" />
             {/if} -->
 
-            <TableOfContent {tableOfContent} />
+            <!-- <TableOfContent {tableOfContent} /> -->
             
             {#each blocks as block}
                 <div class="my-4">

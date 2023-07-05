@@ -1,8 +1,10 @@
 <script>
     export let tableOfContent;
+
+    // console.log("table of contents", tableOfContent)
 </script>
 
-{#if tableOfContent && tableOfContent?.length > 0}
+{#if tableOfContent.length > 0}
     <ul class="not-prose bg-slate-100 rounded-md w-full py-6 list-none">
         {#each  tableOfContent as content }
             {#if content}
@@ -17,7 +19,6 @@
 {/if}
 
 <style>
-    a {
-        @apply text-slate-700;
-    }
+
+
 </style>

@@ -14,17 +14,20 @@
         if (block.type == "heading_1") {
             return {
             text: block.heading_1.rich_text[0].plain_text,
-            id: block.id
+            id: block.id,
+            type: "heading_1"
         };
         } else if (block.type == "heading_2") {
         return {
             text: block.heading_2.rich_text[0].plain_text,
-            id: block.id
+            id: block.id,
+            type: "heading_2"
         };
         } else if (block.type == "heading_3") {
         return {
             text: block.heading_3.rich_text[0].plain_text,
-            id: block.id
+            id: block.id,
+            type: "heading_3"
         };
         } else {
             return undefined;
