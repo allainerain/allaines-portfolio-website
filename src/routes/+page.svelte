@@ -114,7 +114,6 @@ p{
     font-family: 'Source Sans 3', sans-serif;
     font-size: 24px;
     line-height: 1.75;
-
 }
 
 .cards {

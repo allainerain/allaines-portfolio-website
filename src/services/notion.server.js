@@ -32,7 +32,7 @@ export async function getBlog() {
 export async function getPageBySlug(slug) {
     try {
 
-        console.log("CALLING SLUG")
+        // console.log("CALLING SLUG")
 
         const response = await notion.databases.query({
             database_id: databaseId,
@@ -44,9 +44,9 @@ export async function getPageBySlug(slug) {
             }
         });
 
-        console.log("AWAITED")
+        // console.log("AWAITED")
 
-        console.log(response)
+        // console.log(response)
 
         console.log(response.results.length)
         if(response.results.length>0){
@@ -59,6 +59,7 @@ export async function getPageBySlug(slug) {
             const cover = page.cover.external.url;
             const published = page.properties.Publish_Date.date.start
             const author = page.properties.Authors.people[0]
+            const category = page.properties.Category.select.name
             
             // console.log("title", title)
             // console.log("description", description)
@@ -101,7 +102,8 @@ export async function getPageBySlug(slug) {
                     slug,
                     published,
                     author,
-                    faqs
+                    faqs,
+                    category
                 }
             }
         } else {
