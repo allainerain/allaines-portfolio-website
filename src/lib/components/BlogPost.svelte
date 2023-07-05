@@ -37,28 +37,16 @@
 
 <MetaTags
   title= {data.title}
-  titleTemplate="%s | StoreBud- Launch ecommerce website in india and the world"
+  titleTemplate="%sAllaine's Headspace"
   description= {data.description}
   openGraph={{
-    url: "https://mystorebud.com/blog/" + data.slug,
+    url: "https://allainerain.github.io/blog/" + data.slug,
     title:data.title,
     description: data.description,
     images: [
       { url: data.cover ?? "" }
     ],
-    site_name: 'StoreBud'
-  }}
-  twitter={{
-    handle: '@mystorebud',
-    site: '@mystorebud',
-    cardType: 'summary_large_image',
-    title: data.title,
-    description: data.description,
-    image: data.cover ,
-    imageAlt: data.title
-  }}
-  facebook={{
-    appId: '1234567890'
+    site_name: "%sAllaine's Headspace"
   }}
 />
 
@@ -93,6 +81,6 @@
 
 <div class="min-h-screen bg-white py-8 flex flex-col justify-center relative overflow-hidden lg:py-12">
     <div class="relative w-full px-6 py-12 md:max-w-3xl md:mx-auto lg:max-w-4xl lg:pt-16 lg:pb-28">
-        <Post blocks={data.props.postData.blocks} {tableOfContent} title={data.props.postData.title} cover={data.props.postData.cover} faqs={data.props.postData.faqs} author={data.props.postData.author} published={data.props.postData.published} />
+        <Post blocks={data.props.postData.blocks} {tableOfContent} title={data.props.postData.title} cover={data.props.postData.cover} faqs={data.props.postData.faqs} author={data.props.postData.author} published={data.props.postData.published} category={data.props.postData.category}/>
     </div>
 </div>
