@@ -5,8 +5,8 @@
 
     export let data;
 
-    console.log("CALLED", data)
-    console.log(data.props.postData)
+    // console.log("CALLED", data)
+    // console.log(data.props.postData)
 
     let tableOfContent
     if (Array.isArray(data.props.postData.blocks)) {
@@ -35,7 +35,7 @@
     });
     }
 
-    console.log("table of contents", tableOfContent)
+    // console.log("table of contents", tableOfContent)
 </script>
 
 <MetaTags
