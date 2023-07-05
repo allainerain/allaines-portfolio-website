@@ -51,7 +51,7 @@ export async function getPageBySlug(slug) {
         console.log(response.results.length)
         if(response.results.length>0){
 
-            console.log("RESPONSE IS OK")
+            // console.log("RESPONSE IS OK")
 
             const page = response.results[0];
             const title = page.properties.Title.title[0].plain_text;
@@ -67,14 +67,14 @@ export async function getPageBySlug(slug) {
             // console.log("published", published)
             // console.log("author", author)
             
-            // if(!page?.id){
-            //     return {
-            //         error: {
-            //             code: 500,
-            //             message: "Invalid or missing page!"
-            //         }
-            //     }
-            // }
+            if(!page?.id){
+                return {
+                    error: {
+                        code: 500,
+                        message: "Invalid or missing page!"
+                    }
+                }
+            }
     
             const blockResponse = await getBlocks(notion , page.id);
 
