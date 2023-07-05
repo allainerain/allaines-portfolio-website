@@ -1,5 +1,7 @@
 <script>
     export let heading;
+
+    // console.log("heading", heading)
 </script>
 
 {#if heading}
@@ -8,7 +10,7 @@
     {:else if heading.type=="heading_2"}
         <h2 id={heading.id}>{heading.heading_2.rich_text?.[0]?.plain_text}</h2>
     {:else if heading.type=="heading_3"}
-        <h3 id={heading.id} class="">{heading.heading_3.rich_text?.[0]?.plain_text}</h3>
+        <h3 id={heading.id}>{heading.heading_3.rich_text?.[0]?.plain_text}</h3>
     {/if}
 {/if}
 

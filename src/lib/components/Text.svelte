@@ -1,6 +1,6 @@
 <script>
     export let text;
-    console.log("text", text)
+    // console.log("text", text)
 </script>
 
 {#if text}
