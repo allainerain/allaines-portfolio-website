@@ -6,7 +6,7 @@
 
 <body>
     <section class="Hero">
-        <h1>Designer at Sketch. Having fun cycling around.</h1>
+        <h1>Aspiring <span class="moving-gradient gradient-text">Designer</span>. Having fun cycling around.</h1>
         <p> I’m Allaine – a Computer Science undergraduate from the University of the Philippines. I dabble in Artificial Intelligence, Data Science and UI/UX Design. </p>
     </section>
 
@@ -145,4 +145,31 @@ p{
     }
 
 }
+
+.gradient-text {
+    --bg-size: 400%;
+    --color-one: #6E48BF;
+    --color-two: #E378B1;
+    --color-two: #ED885E;
+    /* font-size: clamp(3rem, 25vmin, 8rem); */
+    background: linear-gradient(
+                    90deg,
+                    var(--color-one),
+                    var(--color-two),
+                    var(--color-one)
+                ) 0 0 / var(--bg-size) 100%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: move-bg 15s infinite linear;
+
+}
+
+@keyframes move-bg {
+  to {
+    background-position: var(--bg-size) 0;
+  }
+}
+
+
 </style>
