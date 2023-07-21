@@ -40,5 +40,19 @@
       font-size: 20px;
       line-height: 1.75;
     }
+
+    @media only screen and (max-width: 900px) {
+
+
+    }
+
+    /* PHONE VIEW */
+    @media only screen and (max-width:770px){
+        p{
+            font-size: 18px;
+        }
+
+
+    }
   </style>
   

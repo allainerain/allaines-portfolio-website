@@ -12,6 +12,6 @@
         font-family: 'Source Sans 3', sans-serif;
         font-size: 20px;
         line-height: 1.75;
-    }
+    } 
 
 </style>

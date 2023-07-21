@@ -115,6 +115,18 @@
             width: 94%;
             margin: 150px 3% 150px 3%; /* Adjust the margin for small screens */
         }
+        h1{
+            font-size: 68px;
+        }
+        p{
+            font-size: 20px;
+        }
+        .case-study{
+            font-size: 16px;
+        }
+        a{
+            font-size: 16px;
+        }
     }
 
     /* PHONE VIEW */
@@ -124,7 +136,16 @@
             margin: 150px 5% 150px 5%; /* Adjust the margin for small screens */
         }
         h1{
-            font-size: 80px;
+            font-size: 48px;
+        }
+        p{
+            font-size: 18px;
+        }
+        .case-study{
+            font-size: 14px;
+        }
+        a{
+            font-size: 14px;
         }
     }
 </style>

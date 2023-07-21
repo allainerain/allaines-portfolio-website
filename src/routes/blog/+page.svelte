@@ -120,7 +120,7 @@ a{
 a h2{
   color: #D9D9D9;
   font-family: 'Source Sans 3', sans-serif;
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 600;
 }
 
@@ -128,14 +128,25 @@ a p{
   color: #838481;
   font-family: 'Roboto Mono', monospace;
   font-size: 16px;
+  line-height: 1.5;
 }
 
 /* TABLET VIEW */
 @media only screen and (max-width: 900px) {
     section{
-        width: 94%;
-        margin: 150px 3% 150px 3%; /* Adjust the margin for small screens */
+      width: 94%;
+      margin: 150px 3% 150px 3%; /* Adjust the margin for small screens */
 
+    }
+    h1{
+      font-size: 48px;
+    }
+    h2{
+      font-size: 24px;
+    }
+    a p{
+      font-size: 15px;
+      line-height: 1.4;
     }
 
 }
@@ -143,11 +154,18 @@ a p{
 /* PHONE VIEW */
 @media only screen and (max-width:770px){
     section{
-        width: 90%;
-        margin: 150px 5% 150px 5%; /* Adjust the margin for small screens */
+      width: 90%;
+      margin: 150px 5% 150px 5%; /* Adjust the margin for small screens */
     }
     h1{
-        font-size: 36px;
+      font-size: 36px;
+    }
+    h2{
+      font-size: 20px;
+    }
+    a p{
+      font-size: 14px;
+      line-height: 1.3;
     }
 
   }
