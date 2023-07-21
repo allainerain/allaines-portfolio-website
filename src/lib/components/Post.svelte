@@ -71,6 +71,9 @@
     .header{
         margin: 60px 0px;
     }
+
+    /* Styles for blog post header */
+
     h1{
         font-family: 'Gentium Plus', serif;
         font-weight: 400;
@@ -96,4 +99,27 @@
         margin: 0;
         color: #838481;
     }
+
+    /* TABLET VIEW */
+    @media only screen and (max-width: 900px) {
+        h1{
+            font-size: 54px;
+        }
+        h2{
+            font-size: 18px;
+        }
+
+    }
+
+    /* PHONE VIEW */
+    @media only screen and (max-width:770px){
+        h1{
+            font-size: 44px;
+        }
+        h2{
+            font-size: 16px;
+        }
+
+    }
+    
 </style>

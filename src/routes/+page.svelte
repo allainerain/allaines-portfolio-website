@@ -131,6 +131,15 @@ p{
         margin: 150px 3% 150px 3%; /* Adjust the margin for small screens */
 
     }
+    h1{
+        font-size: 80px;
+    }
+    .journey h1 {
+        font-size: 52px;
+    }
+    p{
+        font-size: 20px;
+    }
 
 }
 
@@ -141,9 +150,14 @@ p{
         margin: 150px 5% 150px 5%; /* Adjust the margin for small screens */
     }
     h1{
-        font-size: 80px;
+        font-size: 64px;
     }
-
+    .journey h1 {
+        font-size: 46px;
+    }
+    p{
+        font-size: 18px;
+    }
 }
 
 .gradient-text {

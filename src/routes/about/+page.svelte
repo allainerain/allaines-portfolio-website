@@ -217,6 +217,18 @@ input:checked + .slider:before {
         margin: 150px 3% 150px 3%; /* Adjust the margin for small screens */
 
     }
+    h1{
+        font-size: 32px;
+    }
+    .about-site{
+        font-size: 20px;
+    }
+    .intro p{
+        font-size: 20px;
+    }
+    .work-item{
+        font-size: 18px;
+    }
 
 }
 
@@ -227,8 +239,19 @@ input:checked + .slider:before {
         margin: 150px 5% 150px 5%; /* Adjust the margin for small screens */
     }
     h1{
-        font-size: 36px;
+        font-size: 30px;
+    }
+    .intro p{
+        font-size: 18px;
+    }
+    .about-site{
+        font-size: 18px;
+    }
+    .work-item{
+        font-size: 16px;
     }
 
 }
+
+
 </style>
