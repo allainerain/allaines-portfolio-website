@@ -7,7 +7,7 @@
 <body>
     <section class="Hero">
         <h1>Aspiring <span class="moving-gradient gradient-text">Designer</span>. Having fun cycling around.</h1>
-        <p> I’m Allaine – a Computer Science undergraduate from the University of the Philippines. I dabble in Artificial Intelligence, Data Science and UI/UX Design. </p>
+        <p> I’m Allaine – a Computer Science undergraduate from the University of the Philippines. I dabble in Artificial Intelligence, Data Science and UI/UX design. </p>
     </section>
 
     <section class="journey">
@@ -17,14 +17,14 @@
             <Card 
                 iconsrc="icons/icon-placeholder.png"
                 title="Mask Patrol"
-                description="A Face Mask Detection model using Computer Vision and Artificial Intelligence."
+                description="A deployed face mask and social distancing detection model using computer vision."
                 imgsrc="card-photos/mask-patrol.png"
                 link="/"
             />
             <Card 
                 iconsrc="icons/icon-placeholder.png"
-                title="ABS-CBN Disinformation Case"
-                description="A Face Mask Detection model using Computer Vision and Artificial Intelligence."
+                title="Twitter Disinformation Analysis"
+                description="An award winning case analysis regarding the disinformation on the ABS-CBN tax evasion case."
                 imgsrc="card-photos/abscbn.png"
             />
         </div>
@@ -33,25 +33,25 @@
 
     <section class="journey">
         <h1>UI/UX Journey</h1>
-        <p>Something has brought me to discover more about data science. These are the projects that I have made so far More story to come, kind of narrative style. These words are just a placeholder for the future.</p>
+        <p>While I love crunching numbers (really), and staring at neon monospaced text in code editors (really) while I cant figure out what’s wrong? in the logic? in my brain? The art girl inside me just wants to look at pretty things. And make pretty things that are useful to people. Because, what use is technology if it can’t connect with people? </p>
         <div class="cards">
             <Card 
                 iconsrc="icons/icon-placeholder.png"
                 title="GDSC-UPD Website"
-                description="A Face Mask Detection model using Computer Vision and Artificial Intelligence."
+                description="Co-designed the official website of UP Diliman’s Google Developer Student Clubs as a freshman."
                 imgsrc="card-photos/gdsc.png"
                 link="/"
             />
             <Card 
                 iconsrc="icons/icon-placeholder.png"
                 title="Forent Mobile App"
-                description="A Face Mask Detection model using Computer Vision and Artificial Intelligence."
+                description="Designed screens for Forent as they grew from 500 downloads in the Google PlayStore to 10,000+ and counting."
                 imgsrc="card-photos/forent-mobile.png"
             />
             <Card 
                 iconsrc="icons/icon-placeholder.png"
                 title="Forent Website"
-                description="A Face Mask Detection model using Computer Vision and Artificial Intelligence."
+                description="Proposed a website redesign to update Forent’s branding as they grew from a small start-up to a recognized one."
                 imgsrc="card-photos/forent-web.png"
             />
             <Card 
