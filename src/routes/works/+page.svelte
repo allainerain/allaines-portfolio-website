@@ -110,6 +110,8 @@
         description = "In 2022, I was a UI/UX designer intern in Forent, a start up with a mission to create a centralized renting platform in the Philippines. As a part of the pioneer interns, my work included redesigning outdated screens, creating user flows and layouting new features to create a seamless lessor to renter connection. Now, the Forent App has over 5,000 downloads in the Google Playstore."
         gallery_items = {forent_app}
         live = "https://play.google.com/store/apps/details?id=com.ph.forent_app&pli=1"
+        github = "none"
+        figma = "none"
         case_study="none"
     />
     <hr id="hb">
