@@ -6,26 +6,31 @@
 
 <body>
     <section class="Hero">
-        <h1>Aspiring <span class="moving-gradient gradient-text">Designer</span>. Having fun cycling around.</h1>
-        <p> I’m Allaine – a Computer Science undergraduate from the University of the Philippines. I dabble in Artificial Intelligence, Data Science and UI/UX design. </p>
+        <h1>Aspiring <span class="moving-gradient gradient-text">Designer</span>. Cycling around the world.</h1>
+        <p> Hey, I’m Allaine! I’m a Computer Science undergraduate from the University of the (sunny) Philippines, dabbling in Machine Learning, Data Science and UI/UX design.  </p>
     </section>
 
     <section class="journey">
         <h1>AI and Data Science Journey</h1>
-        <p>Something has brought me to discover more about data science. These are the projects that I have made so far More story to come, kind of narrative style. These words are just a placeholder for the future.</p>
+        <p>
+            Yeah, AI is the new hot topic in tech right now, how can I not get myself into it? 
+            While I'm still new to AI and ML, I’ve particularly been enjoying Natural Language Processing (as someone who loves learning languages) and Computer Vision.
+            Here are some of the projects I've worked on!
+        </p>
         <div class="cards">
             <Card 
                 iconsrc="icons/icon-placeholder.png"
                 title="Mask Patrol"
                 description="A deployed face mask and social distancing detection model using computer vision."
                 imgsrc="card-photos/mask-patrol.png"
-                link="/"
+                link="/works#mask-patrol"
             />
             <Card 
                 iconsrc="icons/icon-placeholder.png"
                 title="Twitter Disinformation Analysis"
                 description="An award winning case analysis regarding the disinformation on the ABS-CBN tax evasion case."
                 imgsrc="card-photos/abscbn.png"
+                link="/works#abs-cbn"
             />
         </div>
 
@@ -33,52 +38,66 @@
 
     <section class="journey">
         <h1>UI/UX Journey</h1>
-        <p>While I love crunching numbers (really), and staring at neon monospaced text in code editors (really) while I cant figure out what’s wrong? in the logic? in my brain? The art girl inside me just wants to look at pretty things. And make pretty things that are useful to people. Because, what use is technology if it can’t connect with people? </p>
+        <p>
+            While I love crunching numbers (really), and staring at neon monospaced text in code editors (really), sometimes, 
+            the art girl inside me just gets tired at how tech can be too technical. 
+            To me, design isn't just about making things pretty. It's about translating tech into a language that users can understand. 
+            Because, what use is technology if it can’t connect with people? 
+            Here are some of the projects I've worked on!
+        </p>
         <div class="cards">
             <Card 
                 iconsrc="icons/icon-placeholder.png"
                 title="GDSC-UPD Website"
                 description="Co-designed the official website of UP Diliman’s Google Developer Student Clubs as a freshman."
                 imgsrc="card-photos/gdsc.png"
-                link="/"
+                link="/works#gdsc"
             />
             <Card 
                 iconsrc="icons/icon-placeholder.png"
                 title="Forent Mobile App"
                 description="Designed screens for Forent as they grew from 500 downloads in the Google PlayStore to 10,000+ and counting."
                 imgsrc="card-photos/forent-mobile.png"
+                link="/works#forent-app"
             />
             <Card 
                 iconsrc="icons/icon-placeholder.png"
                 title="Forent Website"
                 description="Proposed a website redesign to update Forent’s branding as they grew from a small start-up to a recognized one."
                 imgsrc="card-photos/forent-web.png"
+                link="/works#forent-web"
             />
             <Card 
                 iconsrc="icons/icon-placeholder.png"
-                title="Mask Patrol"
-                description="A Face Mask Detection model using Computer Vision and Artificial Intelligence."
-                imgsrc="card-photos/placeholder.jpg"
+                title="Home Buddies Website"
+                description="[Coming Soon] Designed the website for a home enthusiast Facebook group with over 3M+ active members."
+                imgsrc="card-photos/home-buddies.png"
+                link="/works#hb"
             />
         </div>
     </section>
 
     <section class="journey">
         <h1>Miscellaneous Journies</h1>
-        <p>Something has brought me to discover more about data science. These are the projects that I have made so far More story to come, kind of narrative style. These words are just a placeholder for the future.</p>
+        <p>
+            Away from the keyboard, I can't really keep still.
+            Something inside me just wants to keep my feet moving, to see what else is out there. 
+            Here's some of the journies I've gone on with people I've met from all over the world.
+        </p>
         <div class="cards">
             <Card 
                 iconsrc="icons/icon-placeholder.png"
-                title="Mask Patrol"
-                description="A Face Mask Detection model using Computer Vision and Artificial Intelligence."
-                imgsrc="card-photos/placeholder.jpg"
-                link="/"
+                title="Cycling Journey"
+                description="Don't own a bike in the Philippines, but I've (probably) biked over 100km in other countries."
+                imgsrc="card-photos/cycling.png"
+                link="/blog/cycling-journey"
             />
             <Card 
                 iconsrc="icons/icon-placeholder.png"
-                title="ABS-CBN Disinformation Case"
-                description="A Face Mask Detection model using Computer Vision and Artificial Intelligence."
-                imgsrc="card-photos/placeholder.jpg"
+                title="Photo Album"
+                description="Don't own a camera, but here are some snaps of people, places and things that matter to me."
+                imgsrc="card-photos/photo-album.png"
+                link="/blog/photo-album"
             />
         </div>
         

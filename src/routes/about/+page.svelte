@@ -11,13 +11,24 @@
     <section class = "intro">
         <img class="me" alt = "Me" src="profilepic.jpg"/>
         <p>
-            Mask Patrol is a Web Application for Face mask detection and classification. For our AI class in the University of the Philippines, we were tasked to use AI and Machine learning to combat problems in daily life.  In a span of two weeks, my team and I were able to produce a working MVP of our trained model. 
+            Hey! I'm Allaine, a Filipino-Chinese computer science undergrad presently based in the sunny Philippines 
+            (but dreaming of broader horizons). 
         </p>
         <p>
-            Mask Patrol is a Web Application for Face mask detection and classification. For our AI class in the University of the Philippines, we were tasked to use AI and Machine learning to combat problems in daily life.  In a span of two weeks, my team and I were able to produce a working MVP of our trained model. 
+            I think this usually the part where people explain that they took up conputer science  because 
+            1. they’ve been coding since they could spell, 
+            2. they were good at math, or
+            3. they fell in love with the world-changing impact of technology.
+            Well, I took up CS because I didn’t really know what I wanted to be. 
+            (Can you really expect a 17 year old to know that?)     
         </p>
         <p>
-            Mask Patrol is a Web Application for Face mask detection and classification. For our AI class in the University of the Philippines, we were tasked to use AI and Machine learning to combat problems in daily life.  In a span of two weeks, my team and I were able to produce a working MVP of our trained model. 
+            But I consider myself lucky. 
+            As a hobbyist writer, artist, and  designer, I just like creating things. 
+            While I still don't really where life will take me, programming and technology just became my medium to create things that do its little good in one way or another.  
+        </p>
+        <p>
+            So, what have I been up to?
         </p>
     </section>
     <section class="work">
@@ -25,7 +36,7 @@
             {#if !failure}
                 <h1>Work</h1>
             {:else}
-                <h1>Failure</h1>
+                <h1>On the Side</h1>
             {/if}
             <label class="switch">
                 <input type="checkbox" bind:checked={failure}>
@@ -35,34 +46,64 @@
         <div>
             {#if !failure}
                 <div class="work-item">
-                    <h4 class="company">Company One</h4>
+                    <h4 class="company"><a href="https://www.cocomilkstudio.com/" target="_blank">Cocomilk Studio</a></h4>
                     <span class="position-date">
-                        <p class="position">Company Position</p>
+                        <p class="position">Product Design Intern</p>
                         <p class="date">07/23 - 08/23</p>
                     </span>
                 </div>
                 <div class="work-item">
-                    <h4 class="company">Company One</h4>
+                    <h4 class="company"><a href="https://www.forent-app.com/" target="_blank">Forent Group Incorporated</a></h4>
                     <span class="position-date">
-                        <p class="position">Company Position</p>
-                        <p class="date">07/23 - 08/23</p>
+                        <p class="position">UI/UX Intern</p>
+                        <p class="date">12/21 - 04/22</p>
                     </span>
                 </div>
                 <div class="work-item">
-                    <h4 class="company">Company One</h4>
+                    <h4 class="company"><a href="https://www.azeus.com/" target="_blank">Azeus Systems Limited</a></h4>
                     <span class="position-date">
-                        <p class="position">Company Position</p>
-                        <p class="date">07/23 - 08/23</p>
+                        <p class="position">Software Developer Intern</p>
+                        <p class="date">07/21 - 08/21</p>
                     </span>
                 </div>
             {:else}
                 <div class="work-item">
-                    <h4 class="company">Company One</h4>
+                    <h4 class="company">Learning Mandarin</h4>
                     <span class="position-date">
-                        <p class="position">Company Position</p>
-                        <p class="date">07/23 - 08/23</p>
+                        <p class="position">to get connected to my heritage</p>
+                        <p class="date">2023</p>
                     </span>
                 </div>
+                <div class="work-item">
+                    <h4 class="company">Looking for freelance work</h4>
+                    <span class="position-date">
+                        <p class="position">to meet my overseas friends again </p>
+                        <p class="date">2023</p>
+                    </span>
+                </div>
+                <div class="work-item">
+                    <h4 class="company"><a href="https://www.huawei.com/minisite/seeds-for-the-future/index.html" target="_blank">Huawei Seeds for the Future</a></h4>
+                    <span class="position-date">
+                        <p class="position">Shenzhen and Shanghai, China</p>
+                        <p class="date">2023</p>
+                    </span>
+                </div>
+                <div class="work-item">
+                    <h4 class="company"><a href="https://eba.soi.asia/" target="_blank">Fieldwork with Keio University</a></h4>
+                    <span class="position-date">
+                        <p class="position">Tokyo and Minamata, Japan</p>
+                        <p class="date">2023</p>
+                    </span>
+                </div>
+                <div class="work-item">
+                    <h4 class="company"><a href="https://taiwantoday.tw/news.php?unit=2&post=231290" target="_blank">Exchange at Taipei Tech</a></h4>
+                    <span class="position-date">
+                        <p class="position">Taipei, Taiwan</p>
+                        <p class="date">2022</p>
+                    </span>
+                </div>
+
+
             {/if}
         </div>
     </section>
@@ -70,8 +111,9 @@
         <h1>About This Site</h1>
         <p> In case you were wondering, this site is: </p>
         <ul>
-            <li>Inspired from Dale Anthony and Augosto Lopez's sites</li>
-            <li>Designed and built using Figma and Visual Studio Code</li>
+            <li>Designed on Figma based on <a href="https://daleanthony.com/" target="_blank">Dale Anthony</a> and <a href="https://www.augustolopes.design/" target="_blank">Augosto Lopes</a>' sites</li>
+            <li>Designed and built using SvelteKit and Visual Studio Code</li>
+            <li>Using Notion as a CMS</li>
             <li>Hosted by Vercel</li>
             <li>Set in Gentium, Source Sans and Mono</li>
         </ul>
@@ -81,6 +123,17 @@
 </body>
 
 <style>
+
+a{
+    text-decoration: none;
+    transition: color 0.3s ease; 
+    color:  #C2C2C2;
+}
+
+a:hover{
+    color: #838481;
+}
+
 section {
     color: #C2C2C2;
     width: 800px;
@@ -139,10 +192,12 @@ h1{
 
 .position{
     margin: 0 20px;
+    text-align: right;
 }
 
 .date{
     margin: 0px;
+    text-align: left;
 }
 
 .about-site{

@@ -45,7 +45,7 @@
     section {
         color: #C2C2C2;
         width: 800px;
-        margin: 150px auto 150px auto;
+        margin: 100px auto 100px auto;
         text-align: center;
     }
 
@@ -113,7 +113,7 @@
     @media only screen and (max-width: 900px) {
         section{
             width: 94%;
-            margin: 150px 3% 150px 3%; /* Adjust the margin for small screens */
+            margin: 100px 3% 100px 3%; /* Adjust the margin for small screens */
         }
         h1{
             font-size: 68px;
@@ -133,7 +133,7 @@
     @media only screen and (max-width:770px){
         section{
             width: 90%;
-            margin: 150px 5% 150px 5%; /* Adjust the margin for small screens */
+            margin: 100px 5% 100px 5%; /* Adjust the margin for small screens */
         }
         h1{
             font-size: 48px;
