@@ -42,29 +42,48 @@
     'works/forent-app/4.png'
     ];
 
+    let hb =[
+    'works/hb/1.png',
+    'works/hb/2.png',
+    'works/hb/3.png',
+    'works/hb/4.png',
+    'works/hb/5.png',
+    'works/hb/6.png',
+    'works/hb/7.png',
+    'works/hb/8.png',
+    'works/hb/9.png',
+    'works/hb/10.png'
+    ];
+
 </script>
 
 <body>
+
+    <hr id="mask-patrol">
     <Project
+        id="mask-patrol"
         title = "Mask Patrol"
-        description = "As a freshman in 2020, UP Diliman's Google Developer Student Clubs hosted an internal website design competition for its 300+ community members. I co-designed this layout with the idea to create a clean yet playful design to encapsulate Google's branding. After a couple of revisions, the output was selected to be the official website design to represent the organization."
+        description = "For our AI class, we were challenged to use AI to solve an everyday issue. Within 2 weeks, my group was able to train and deploy a Face Mask Detection and Social Distancing Detection Model using convolutional neural networks with a 97% accuracy. I trained the model over 3,000+ images and designed the UI of the website."
         gallery_items = {mask_patrol}
         github = "https://github.com/allainerain/CS180-MaskPatrol"
         figma = "https://www.figma.com/file/uoXEo5hwm93aywbjAgJCyW/Mask-Patrol?type=design&node-id=0%3A1&mode=design&t=xXjBaG6H8ZCXAWra-1"
         live = "none"
         case_study="none"
     />
+    <hr id="abs-cbn">
     <Project
+        id="abs-cbn"
         title = "ABS-CBN Disinformation"
-        description = "As a freshman in 2020, UP Diliman's Google Developer Student Clubs hosted an internal website design competition for its 300+ community members. I co-designed this layout with the idea to create a clean yet playful design to encapsulate Google's branding. After a couple of revisions, the output was selected to be the official website design to represent the organization."
+        description = "In 2023, our Data Science class made us explore the disinformation spread on Twitter regarding political issues in the Philippines. Using data analysis, NLP and modeling, my group of 3 created an award winning case analysis over 60 groups regarding the disinformation on the ABS-CBN tax evasion case. I designed the website, performed NLP and created the poster presentation which garnered a special distinction for visual design."
         gallery_items = {abscbn}
         github = "https://github.com/allainerain/cs132-data-science-portfolio/tree/main"
         figma = "https://www.figma.com/file/e8J2k03nZe5kHTqPXIWPmQ/Data-Science-Portfolio?type=design&node-id=0%3A1&mode=design&t=Dy8GkZyLzTafGD66-1"
         live = "https://overdrivengain.github.io/cs132-portfolio/#portfolio"
         case_study="none"
     />
-
+    <hr id="gdsc">
     <Project
+        id="gdsc"
         title = "GDSC-UPD Website"
         description = "As a freshman in 2020, UP Diliman's Google Developer Student Clubs hosted an internal website design competition for its 300+ community members. I co-designed this layout with the idea to create a clean yet playful design to encapsulate Google's branding. After a couple of revisions, the output was selected to be the official website design to represent the organization."
         gallery_items = {gdsc}
@@ -73,28 +92,49 @@
         live = "https://gdscupd.com/"
         case_study="none"
     />
+    <hr id="forent-web">
     <Project
+        
         title = "Forent Website"
-        description = "As a freshman in 2020, UP Diliman's Google Developer Student Clubs hosted an internal website design competition for its 300+ community members. I co-designed this layout with the idea to create a clean yet playful design to encapsulate Google's branding. After a couple of revisions, the output was selected to be the official website design to represent the organization."
+        description = "In 2022, Forent ventured from being a small start up to a recognized organization. In order to adapt to its growing influence, I was given the solo responsibility of redesigning their website from scratch to accommodate new features, such as testimonials, FAQs and a blog."
         gallery_items = {forent_web}
         github = "none"
         figma = "https://www.figma.com/file/mZfL6mYrNCynrRbfDVi1IT/Forent-Web---Allaine?type=design&node-id=0%3A1&mode=design&t=6agIt7BfjDz51cHN-1"
         live = "https://www.forent-app.com/"
         case_study="none"
     />
-
+    <hr id = "forent-app">
     <Project
+        
         title = "Forent App"
-        description = "As a freshman in 2020, UP Diliman's Google Developer Student Clubs hosted an internal website design competition for its 300+ community members. I co-designed this layout with the idea to create a clean yet playful design to encapsulate Google's branding. After a couple of revisions, the output was selected to be the official website design to represent the organization."
+        description = "In 2022, I was a UI/UX designer intern in Forent, a start up with a mission to create a centralized renting platform in the Philippines. As a part of the pioneer interns, my work included redesigning outdated screens, creating user flows and layouting new features to create a seamless lessor to renter connection. Now, the Forent App has over 5,000 downloads in the Google Playstore."
         gallery_items = {forent_app}
         live = "https://play.google.com/store/apps/details?id=com.ph.forent_app&pli=1"
         case_study="none"
     />
-        <Footer/>
+    <hr id="hb">
+    <Project
+        
+        title = "Home Buddies"
+        description = "[Coming Soon] As a Product Design Intern in Cocomilk Studio, I got involved in the whole design process of creating a website for Home Buddies, a community of home improvement enthusiasts on Facebook with over 3 million active users. I was involved in designing their website from low fidelity to high fidelity wireframes, to implementing the website using Webflow."
+        gallery_items = {hb}
+        figma = "none"
+        github = "none"
+        live = "none"
+        case_study="none"
+    />
+
+    <Footer/>
 
 </body>
 
 
 <style>
 
+hr {
+    height: 0;
+    margin: 0;
+    border: none;
+    border-top: 1px solid transparent;
+}
 </style>
