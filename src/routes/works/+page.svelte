@@ -42,18 +42,18 @@
     'works/forent-app/4.png'
     ];
 
-    let hb =[
-    'works/hb/1.png',
-    'works/hb/2.png',
-    'works/hb/3.png',
-    'works/hb/4.png',
-    'works/hb/5.png',
-    'works/hb/6.png',
-    'works/hb/7.png',
-    'works/hb/8.png',
-    'works/hb/9.png',
-    'works/hb/10.png'
-    ];
+    // let hb =[
+    // 'works/hb/1.png',
+    // 'works/hb/2.png',
+    // 'works/hb/3.png',
+    // 'works/hb/4.png',
+    // 'works/hb/5.png',
+    // 'works/hb/6.png',
+    // 'works/hb/7.png',
+    // 'works/hb/8.png',
+    // 'works/hb/9.png',
+    // 'works/hb/10.png'
+    // ];
 
 </script>
 
@@ -115,7 +115,7 @@
         case_study="none"
     />
     <hr id="hb">
-    <Project
+    <!-- <Project
         
         title = "Home Buddies"
         description = "[Coming Soon] As a Product Design Intern in Cocomilk Studio, I got involved in the whole design process of creating a website for Home Buddies, a community of home improvement enthusiasts on Facebook with over 3 million active users. I was involved in designing their website from low fidelity to high fidelity wireframes, to implementing the website using Webflow."
@@ -124,7 +124,7 @@
         github = "none"
         live = "none"
         case_study="none"
-    />
+    /> -->
 
     <Footer/>
 
