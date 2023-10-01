@@ -6,7 +6,7 @@
 
 <body>
     <section class="Hero">
-        <h1>Aspiring <span class="moving-gradient gradient-text">Designer</span>. Cycling Around the World.</h1>
+        <h1>Aspiring <span class="moving-gradient gradient-text">Designer & Researcher</span>. Cycling Around the World.</h1>
         <p> Hey, I’m Allaine! I’m a Computer Science undergraduate from the University of the (sunny) Philippines, dabbling in Machine Learning, Data Science and UI/UX design.  </p>
     </section>
 
