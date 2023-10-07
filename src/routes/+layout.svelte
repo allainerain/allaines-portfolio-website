@@ -1,7 +1,9 @@
+<svelte:head>
+    <title>Allaine Tan</title> 
+</svelte:head>
+
 <script>
     import Navbar from "../components/navbar.svelte";
-
-
 </script>
 
 <Navbar></Navbar>
