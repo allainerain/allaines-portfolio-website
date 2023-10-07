@@ -48,6 +48,13 @@
         <div class="cards">
             <Card 
                 iconsrc="icons/icon-placeholder.png"
+                title="Home Buddies Website"
+                description="Designed the website for a home enthusiast Facebook group with over 3M+ active members."
+                imgsrc="card-photos/home-buddies.png"
+                link="/works#hb"
+            />
+            <Card 
+                iconsrc="icons/icon-placeholder.png"
                 title="GDSC-UPD Website"
                 description="Co-designed the official website of UP Diliman’s Google Developer Student Clubs as a freshman."
                 imgsrc="card-photos/gdsc.png"
@@ -66,13 +73,6 @@
                 description="Proposed a website redesign to update Forent’s branding as they grew from a small start-up to a recognized one."
                 imgsrc="card-photos/forent-web.png"
                 link="/works#forent-web"
-            />
-            <Card 
-                iconsrc="icons/icon-placeholder.png"
-                title="Home Buddies Website"
-                description="[Coming Soon] Designed the website for a home enthusiast Facebook group with over 3M+ active members."
-                imgsrc="card-photos/home-buddies.png"
-                link="/works#hb"
             />
         </div>
     </section>

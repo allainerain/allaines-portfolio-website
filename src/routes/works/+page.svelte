@@ -42,18 +42,18 @@
     'works/forent-app/4.png'
     ];
 
-    // let hb =[
-    // 'works/hb/1.png',
-    // 'works/hb/2.png',
-    // 'works/hb/3.png',
-    // 'works/hb/4.png',
-    // 'works/hb/5.png',
-    // 'works/hb/6.png',
-    // 'works/hb/7.png',
-    // 'works/hb/8.png',
-    // 'works/hb/9.png',
-    // 'works/hb/10.png'
-    // ];
+    let hb =[
+    'works/hb/1.png',
+    'works/hb/2.png',
+    'works/hb/3.png',
+    'works/hb/4.png',
+    'works/hb/5.png',
+    'works/hb/6.png',
+    'works/hb/7.png',
+    'works/hb/8.png',
+    'works/hb/9.png',
+    'works/hb/10.png'
+    ];
 
 </script>
 
@@ -79,6 +79,17 @@
         github = "https://github.com/allainerain/cs132-data-science-portfolio/tree/main"
         figma = "https://www.figma.com/file/e8J2k03nZe5kHTqPXIWPmQ/Data-Science-Portfolio?type=design&node-id=0%3A1&mode=design&t=Dy8GkZyLzTafGD66-1"
         live = "https://overdrivengain.github.io/cs132-portfolio/#portfolio"
+        case_study="none"
+    />
+    <hr id="hb">
+    <Project
+        
+        title = "Home Buddies"
+        description = "As a Product Design Intern in Cocomilk Studio, I got involved in the whole design process of creating a website for Home Buddies, a community of home improvement enthusiasts on Facebook with over 3 million active users. I was involved in designing their website from low fidelity to high fidelity wireframes, to implementing the website using Webflow within 2 months."
+        gallery_items = {hb}
+        figma = "none"
+        github = "none"
+        live = "none"
         case_study="none"
     />
     <hr id="gdsc">
@@ -114,17 +125,7 @@
         figma = "none"
         case_study="none"
     />
-    <hr id="hb">
-    <!-- <Project
-        
-        title = "Home Buddies"
-        description = "[Coming Soon] As a Product Design Intern in Cocomilk Studio, I got involved in the whole design process of creating a website for Home Buddies, a community of home improvement enthusiasts on Facebook with over 3 million active users. I was involved in designing their website from low fidelity to high fidelity wireframes, to implementing the website using Webflow."
-        gallery_items = {hb}
-        figma = "none"
-        github = "none"
-        live = "none"
-        case_study="none"
-    /> -->
+
 
     <Footer/>
 
