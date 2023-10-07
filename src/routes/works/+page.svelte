@@ -89,7 +89,7 @@
         gallery_items = {hb}
         figma = "none"
         github = "none"
-        live = "none"
+        live = "https://www.homebuddies.community/"
         case_study="none"
     />
     <hr id="gdsc">
