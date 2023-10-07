@@ -2,21 +2,24 @@
     import { fade, slide } from 'svelte/transition';
     export let gallery_items = [];
     let currentSlideItem = 0;
-  
+    let imagesLoaded = 0;
+
     function nextSlide() {
         currentSlideItem = (currentSlideItem + 1) % gallery_items.length;
+        imagesLoaded = 0; // Reset imagesLoaded when changing slides
     }
-  
+
     function previousSlide() {
         currentSlideItem = (currentSlideItem - 1 + gallery_items.length) % gallery_items.length;
+        imagesLoaded = 0; // Reset imagesLoaded when changing slides
     }
 </script>
-  
+
 <div class="carousel">
     {#each [gallery_items[currentSlideItem]] as item (currentSlideItem)}
-        <img in:fade={{ duration: 800 }} class="carousel-image" src={item} alt="Project">
+        <img in:fade={{ duration: 800 }} class="carousel-image {imagesLoaded === 1 ? 'loaded' : ''}" src={item} alt="Project" on:load={() => imagesLoaded = 1}>
     {/each}
-  
+
     <div class="carousel-controls">
         <button class="previous" on:click={previousSlide} transition:fade>
             Previous
