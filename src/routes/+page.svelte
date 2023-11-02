@@ -12,9 +12,9 @@
 
     <section class="journey">
         <h1>AI and Data Science Journey</h1>
-        <p>
-            Yeah, AI is the new hot topic in tech right now, how can I not get myself into it? 
-            While I'm still new to AI and ML, I’ve particularly been enjoying Natural Language Processing (as someone who loves learning languages) and Computer Vision.
+        <p> 
+            As someone who loves learning low-resource languages (like Hokkien and Bahasa Indonesia), I'm interested in doing research that will enable us to understand these low-resource languages more.
+            But more generally, I'm interested in applying computer science to low-resource settings. Currently, I'm involved in ML projects meant to accelerate data collection and classification for zooarchaeology. 
             Here are some of the projects I've worked on!
         </p>
         <div class="cards">
@@ -40,8 +40,8 @@
         <h1>UI/UX Journey</h1>
         <p>
             While I love crunching numbers (really), and staring at neon monospaced text in code editors (really), sometimes, 
-            the art girl inside me just gets tired at how tech can be too technical. 
-            To me, design isn't just about making things pretty. It's about translating tech into a language that users can understand. 
+            I get tired at how isolatingly technical tech can be. 
+            To me, design isn't just about making things pretty. It's about translating tech into a language that anyone can understand. 
             Because, what use is technology if it can’t connect with people? 
             Here are some of the projects I've worked on!
         </p>
