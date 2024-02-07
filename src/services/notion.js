@@ -73,7 +73,7 @@ export const getPageBySlug = async (blogClient, slug) => {
 }
 
 export const getBlocks = async (client, blockId) => {
-//   console.log("IN GET BLOCKS")
+  // console.log("IN GET BLOCKS")
   const notion = client;
 
   if (!notion) {
@@ -82,10 +82,10 @@ export const getBlocks = async (client, blockId) => {
 
   const { results } = await notion.blocks.children.list({
     block_id: blockId,
-    page_size: 100,
+    page_size: 50,
   });
 
-//   console.log("GOT BLOCKS")
+  // console.log("GOT BLOCKS")
 
   let blocks = [];
 
@@ -145,30 +145,71 @@ export const getNotionUser = async (blogClient, userId) => {
   }
 }
 
-export const getFAQs = async (blogClent, id) => {
-  const response = await getBlocks(blogClent, id);
+//this function returns an array of arrays of objects.
+export const getColumnItems = async (blogClient, id) => {
+  try {
+      let response = [];
+      const columnListResponse = await getBlocks(blogClient, id);
+      const columns = columnListResponse.value;
+      console.log("columns in get col", columns);
+      
+      for (let column of columns) { 
+          let columnObjects = [];
+          
+          const columnId = column?.id;
+          console.log("one column", columnId);
 
-  if (response.isOk()) {
-    const faqs = response.value.map((row) => {
-      if (row.type == "table_row") {
-        return {
-          question: row.table_row.cells?.[0]?.[0]?.plain_text,
-          answer: row.table_row.cells?.[1]?.[0]?.plain_text
-        }
-      } else {
-        return {
-          question: null,
-          answer: null
-        }
+          if (columnId) { 
+              const columnResponse = await getBlocks(blogClient, columnId);
+              const blocks = columnResponse.value;
+              
+              // get each item in the column
+              for (let block of blocks) { 
+                  columnObjects.push(block);
+              }
+          }
+          response.push(columnObjects);
       }
-    });
-
-    return ok(faqs);
-  } else if (response.isErr()) {
-    return err(response.error);
-  } else {
-    return err({
-      code: 500, message: "Unknown Error"
-    });
+      console.log("returning")
+      return ok(response);
+  } catch (error) {
+    return err(error); // Proper error handling
   }
 }
+
+
+export const getTable = async (blogClient, id, width) => {
+  try {
+    // console.log("Getting children");
+    // Get the children of the table
+    const response = await getBlocks(blogClient, id);
+
+    // console.log("Table children", response);
+    
+    if (response.isOk()) {
+      // Process the information
+      const entries = response.value.map((row) => {
+        if (row.type === "table_row") {
+          const cells = [];
+          for (let i = 0; i < width; i++) {
+            // Use optional chaining to safely access nested properties
+            cells.push(row.table_row.cells?.[i]?.[0]?.plain_text || null);
+          }
+          return { cells };
+        } else {
+          return {
+            cells: Array.from({ length: width }, () => null) // Fill cells with null values if it's not a table row
+          };
+        }
+      });
+
+      return ok(entries); // Return a successful result with the entries
+    } else if (response.isErr()) {
+      return err(response.error); // Return an error result with the response error
+    } else {
+      return err({ code: 500, message: "Unknown Error" }); // Return an error result with a generic error message
+    }
+  } catch (error) {
+    return err(error); // Catch any unexpected errors and return an error result
+  }
+};

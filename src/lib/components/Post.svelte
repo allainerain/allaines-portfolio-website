@@ -1,17 +1,20 @@
 <script>
     import Block from "./Block.svelte";
-    import TableOfContent from "./TableOfContent.svelte";
+    // import TableOfContent from "./TableOfContent.svelte";
     import { Image } from "@unpic/svelte";
-    import Faq from "./FAQ.svelte";
+    import Table from "./Table.svelte";
   
-    export let blocks;
-    export let tableOfContent;
+    export let postBlocks;
+    // export let tableOfContent;
     export let title;
-    export let cover;
-    export let faqs;
-    export let author;
+    // export let cover;
+    export let rows;
+    // export let author;
+    export let columns;
     export let published;
     export let category;
+
+    console.log(postBlocks);
   
     // Assign a sample date value for demonstration
     let sampleDate = new Date();
@@ -19,7 +22,8 @@
   </script>
 
 <div class="max-w-prose mx-auto lg:text-lg">
-    {#if blocks && blocks.length >0}
+
+    {#if postBlocks && postBlocks.length > 0}
         <article class="mt-8 prose prose-slate mx-auto lg:prose-lg">
             <div class = "header">
                 {#if category}
@@ -45,29 +49,49 @@
                 </div>
             </div>
 
-            
-            
-
             <!-- {#if cover}
                 <Image src = {cover} layout="fullWidth" aspectRatio={16/9} class="rounded-md aspect-video object-cover max-h-[500px] w-full" />
             {/if} -->
 
             <!-- <TableOfContent {tableOfContent} /> -->
             
-            {#each blocks as block}
-                <div class="my-4">
-                    <Block {block} />
-                </div>
+            {#each postBlocks as postBlock}
+                {#if postBlock.type === "table"}
+                    <Table rows={postBlock.rows} />
+                {:else if postBlock.type === "column_list"}
+                    <div class="column-list">
+                        {#each postBlock.columns as column}
+                            <div class="column">
+                                {#each column as block}
+                                    <Block {block} />
+                                {/each}
+                            </div>
+                        {/each}
+                    </div>
+                {:else}
+                    <Block block={postBlock} />
+                {/if}
             {/each}
+        
 
-            <!-- {#if faqs && faqs.length > 0}
-                <Faq {faqs} />
+            <!-- {#if rows && rows.length > 0}
+                <Table {rows} />
             {/if} -->
+
         </article>
     {/if}
 </div>
 
 <style>
+    .column-list {
+        display: flex;
+        flex-direction: row; /* Arrange columns horizontally */
+        gap: 16px; /* Add some spacing between columns */
+    }
+
+    .column {
+        flex: 1; /* Each column takes up equal space */
+    }
     .header{
         margin: 60px 0px;
     }

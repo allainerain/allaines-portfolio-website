@@ -5,12 +5,12 @@
 
     export let data;
 
-    // console.log("CALLED", data)
+    console.log("CALLED", data)
     // console.log(data.props.postData)
 
     let tableOfContent
-    if (Array.isArray(data.props.postData.blocks)) {
-    tableOfContent = data.props.postData.blocks.map((block) => {
+    if (Array.isArray(data.props.postData.postBlocks)) {
+    tableOfContent = data.props.postData.postBlocks.map((block) => {
         if (block.type == "heading_1") {
             return {
             text: block.heading_1.rich_text[0].plain_text,
@@ -84,6 +84,15 @@
 
 <div class="min-h-screen bg-white py-8 flex flex-col justify-center relative overflow-hidden lg:py-12">
     <div class="relative w-full px-6 py-12 md:max-w-3xl md:mx-auto lg:max-w-4xl lg:pt-16 lg:pb-28">
-        <Post blocks={data.props.postData.blocks} {tableOfContent} title={data.props.postData.title} cover={data.props.postData.cover} faqs={data.props.postData.faqs} author={data.props.postData.author} published={data.props.postData.published} category={data.props.postData.category}/>
+        <Post 
+        postBlocks={data.props.postData.postBlocks} 
+
+        title={data.props.postData.title} 
+        cover={data.props.postData.cover} 
+        
+        author={data.props.postData.author} 
+        
+        published={data.props.postData.published} 
+        category={data.props.postData.category}/>
     </div>
 </div>
