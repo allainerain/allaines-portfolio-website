@@ -1,13 +1,12 @@
 <script>
 	import Heading from "./Heading.svelte";
 	import Paragraph from "./Paragraph.svelte";
-	import Table from "./FAQ.svelte";
 	import ImageBlock from "./ImageBlock.svelte";
 	import NumberedList from "./NumberedList.svelte";
 	import BulletList from "./BulletList.svelte";
 	import Embed from "./Embed.svelte";
     export let block
-    //$: console.log(block.type, block);
+    $: console.log(block.type, block);
     
 </script>
 
