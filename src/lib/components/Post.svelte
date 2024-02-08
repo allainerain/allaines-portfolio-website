@@ -76,6 +76,7 @@
 </div>
 
 <style>
+    
     .column-list {
         display: flex;
         flex-direction: row; /* Arrange columns horizontally */
