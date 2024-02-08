@@ -5,8 +5,10 @@
 	import NumberedList from "./NumberedList.svelte";
 	import BulletList from "./BulletList.svelte";
 	import Embed from "./Embed.svelte";
+    import Callout from "./Callout.svelte"
+    import Table from "./Table.svelte"
     export let block
-    $: console.log(block.type, block);
+    // $: console.log(block.type, block);
     
 </script>
 
@@ -27,4 +29,8 @@
     <ImageBlock {block} />
 {:else if block.type=="embed"}
     <Embed {block} />
+{:else if block.type=="callout"}
+    <Callout block={block} />
+{:else if block.type=="table"}
+    <Table block={block} />
 {/if}

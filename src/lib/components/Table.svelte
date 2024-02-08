@@ -1,5 +1,6 @@
 <script>
-    export let rows;
+    export let block;
+    let rows = block.rows;
 </script>
 
 <table>
