@@ -92,7 +92,7 @@ ul{
 }
 
 h1{
-    font-family: 'Gentium Plus', serif;
+    font-family: 'Hogbine', sans-serif;
     font-weight: 400;
     font-size: 64px;
     line-height: 1.11;
@@ -119,15 +119,15 @@ a{
 
 a h2{
   color: #D9D9D9;
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 28px;
-  font-weight: 600;
+  font-family: 'Satoshi', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
 }
 
 a p{
   color: #838481;
   font-family: 'Roboto Mono', monospace;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
 }
 

@@ -9,7 +9,7 @@
 
 <style>
     p{
-        font-family: 'Source Sans 3', sans-serif;
+        font-family: 'Satoshi', sans-serif;
         font-size: 20px;
         line-height: 1.75;
     } 

@@ -37,7 +37,7 @@
     .carousel {
         width: 100%;
         max-width: 800px;
-        margin: 150px auto;
+        margin: 100px auto;
         color: #C2C2C2;
         font-family: 'Gentium Plus', serif;
         font-size: 20px;
@@ -87,7 +87,7 @@
     @media only screen and (max-width: 900px) {
         .carousel{
             width: 94%;
-            margin: 150px 3% 150px 3%;
+            margin: 75px 3% 150px 3%;
         }
     }
 
@@ -95,7 +95,7 @@
     @media only screen and (max-width: 770px){
         .carousel{
             width: 90%;
-            margin: 150px 5% 150px 5%; 
+            margin: 75px 5% 0px 5%; 
         }
     }
 </style>

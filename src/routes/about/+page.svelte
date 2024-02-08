@@ -141,17 +141,18 @@ section {
 }
 
 .intro p{
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'Satoshi', sans-serif;
     text-align: left;
-    font-size: 20px;
-    line-height: 2;
+    font-size: 18px;
+    line-height: 1.75;
+    color: #B3B3B3;
     margin: 30px auto;
 }
 
 .me{
     width: 100%;
     height: auto;
-    aspect-ratio: 16/10.4; /* Adjust the aspect ratio as per your requirement */
+    aspect-ratio: 16/10.4; 
     overflow: hidden;
     object-fit: cover;
     border-radius: 20px;
@@ -164,7 +165,7 @@ section {
 }
 
 h1{
-    font-family: 'Gentium Plus', serif;
+    font-family: 'Hogbine', sans-serif;
     font-weight: 400;
     font-size: 36px;
     line-height: 1.11;
@@ -175,7 +176,7 @@ h1{
     align-items: center;
     justify-content: space-between;
     font-family: 'Roboto Mono', monospace;
-    font-size: 18px;
+    font-size: 16px;
     margin: 20px 0px;;
 }
 
@@ -201,8 +202,8 @@ h1{
 }
 
 .about-site{
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 20px;
+    font-family: 'Satoshi', sans-serif;
+    font-size: 18px;
     line-height: 2;
 }
 
@@ -276,13 +277,13 @@ input:checked + .slider:before {
         font-size: 32px;
     }
     .about-site{
-        font-size: 20px;
+        font-size: 18px;
     }
     .intro p{
-        font-size: 20px;
+        font-size: 18px;
     }
     .work-item{
-        font-size: 18px;
+        font-size: 16px;
     }
 
 }
