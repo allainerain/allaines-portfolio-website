@@ -3,9 +3,7 @@ import { Client } from '@notionhq/client'
 export const notion = new Client({ auth: process.env.NOTION_KEY})
 const databaseId = process.env.NOTION_DATABASE_ID
 
-import { getBlocks, getColumnItems, getTable } from './notion.js'
-
-// console.log(process.env.NOTION_KEY)
+import { getBlocks, getColumnItems, getTable, getCalloutItems } from './notion.js'
 
 export async function getBlog() {
 
@@ -69,55 +67,43 @@ export async function getPageBySlug(slug) {
 
                 let postBlocks = []; //to store all of the blocks chronologically
 
-                //get the blocks from the response
                 const blocks = blockResponse.value;
 
-                //for each block 
                 for (let block of blocks){
-
-                    //if it's a table, extract the row contents
+                    //process blocks that require accessing the children
+                    //these blocks are: tables, column lists and callouts
                     if (block.type == "table"){
-                        console.log("here at table");
-                        
-                        // extract the rows of the table
-                        const TableId =  block.id;
-                        const TableWidth = block.table.table_width;
-                        const tableResponse =  await getTable(notion , TableId, TableWidth);
-                        let tableRows = null;
+
+                        const tableResponse =  await getTable(notion , block);
+                        let tableObject;
                         
                         if(tableResponse.isOk()){
-                            tableRows = tableResponse.value;
+                            tableObject = tableResponse.value;
                         }
                         
-                        //create a table object with fields type and rows
-                        const tableObject = {
-                            type: "table",
-                            rows: tableRows
-                        };
-
-                        console.log("table object", tableObject)
                         postBlocks.push(tableObject);
                     } 
-                    //if it's a column list, extract the contents of the columns
                     else if (block.type == "column_list"){
-                        // extract the rows of the table
-                        console.log("here at col list");
-                        const ColumnListId =  block.id;
-                        let columns = null;
-                        const columnResponse = await getColumnItems(notion, ColumnListId);
+
+                        let columnListObject;
+                        const columnResponse = await getColumnItems(notion, block);
                         
                         if(columnResponse.isOk()){
-                            columns = columnResponse.value;
+                            columnListObject = columnResponse.value;
                         }
-    
-                        console.log("COL RESPO RIGHT", columns);
 
-                        //create a column list object with the fields type and column 
-                        const columnListObject = {
-                            type: "column_list",
-                            columns: columns
-                        };
                         postBlocks.push(columnListObject);
+                    }
+                    //if it's a callout then extract the children
+                    else if (block.type == "callout"){
+                        let calloutListObject;
+                        const calloutResponse = await getCalloutItems(notion, block);
+        
+                        if (calloutResponse.isOk()) {
+                            calloutListObject = calloutResponse.value;
+                        }
+      
+                        postBlocks.push(calloutListObject);
                     }
                     //otherwise, just push the block normally
                     else {
@@ -125,38 +111,7 @@ export async function getPageBySlug(slug) {
                     }
                 }
 
-                console.log(postBlocks);
-
-                // const TableId =  blocks?.filter((f) => f.type=="table")?.[0]?.id;
-                // const TableWidth =  blocks?.filter((f) => f.type=="table")?.[0]?.table.table_width;
-                // let rows = null;
-
-                
-                // //if the block is a table, extract the rows of the table
-                // if(TableId){
-                //     const tableResponse =  await getTable(notion , TableId, TableWidth);
-                    
-                //     if(tableResponse.isOk()){
-                //         // console.log(tableResponse);
-                //         rows = tableResponse.value;
-                //     }
-                // }
-
-                // const ColumnListId =  blocks?.filter((f) => f.type=="column_list")?.[0]?.id;
-                // let columns = null;
-
-                // //if the block is a column list, extract the children of the column list
-                // // console.log("COL ID", ColumnListId);
-                // if(ColumnListId){
-                //     const columnResponse = await getColumnItems(notion, ColumnListId);
-                    
-                //     if(columnResponse.isOk()){
-        
-                //         columns = columnResponse.value;
-                //     }
-
-                //     console.log("COL RESPO", columns);
-                // }
+                console.log("POST BLOCKS", postBlocks);
     
                 return {
                     postBlocks,

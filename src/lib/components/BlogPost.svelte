@@ -5,7 +5,7 @@
 
     export let data;
 
-    console.log("CALLED", data)
+    // console.log("CALLED", data)
     // console.log(data.props.postData)
 
     let tableOfContent

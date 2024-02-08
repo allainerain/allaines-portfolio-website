@@ -7,7 +7,7 @@ export async function load({ params }) {
     // console.log("FROM PAGE SERVER", slug)
     const response = await getPageBySlug(slug);
 
-    // console.log("FROM PAGE SERVER", response)
+    console.log("FROM PAGE SERVER", response)
 
     if (!response) {
       // console.log("ERROR")

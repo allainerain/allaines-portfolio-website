@@ -146,53 +146,122 @@ export const getNotionUser = async (blogClient, userId) => {
 }
 
 //this function returns an array of arrays of objects.
-export const getColumnItems = async (blogClient, id) => {
+export const getColumnItems = async (blogClient, block) => {
   try {
-      let response = [];
-      const columnListResponse = await getBlocks(blogClient, id);
-      const columns = columnListResponse.value;
-      console.log("columns in get col", columns);
-      
-      for (let column of columns) { 
-          let columnObjects = [];
-          
-          const columnId = column?.id;
-          console.log("one column", columnId);
+    console.log("getting columns");
+    const id =  block.id;
 
-          if (columnId) { 
-              const columnResponse = await getBlocks(blogClient, columnId);
-              const blocks = columnResponse.value;
-              
-              // get each item in the column
-              for (let block of blocks) { 
-                  columnObjects.push(block);
-              }
+    let response = [];
+    const columnListResponse = await getBlocks(blogClient, id);
+    const columns = columnListResponse.value;
+
+    for (let column of columns) {
+
+        const columnId = column.id;
+        const columnResponse = await getBlocks(blogClient, columnId);
+        const blocks = columnResponse.value;
+
+        let columnObjects = [];
+
+        // Process each block in the column
+        for (let block of blocks) {
+          
+          // If it's a callout, extract the children
+          if (block.type === "table") {
+            const tableResponse = await getTable(blogClient, block);
+            if (tableResponse.isOk()) {
+                columnObjects.push(tableResponse.value);
+            } else if (response.isErr()) {
+              return err(response.error); // Return an error result with the response error
+            } else {
+              return err({ code: 500, message: "Unknown Error" }); // Return an error result with a generic error message
+            }
+        } else if (block.type === "callout") {
+            const calloutResponse = await getCalloutItems(blogClient, block);
+            if (calloutResponse.isOk()) {
+                columnObjects.push(calloutResponse.value);
+            } else if (response.isErr()) {
+              return err(response.error); // Return an error result with the response error
+            } else {
+              return err({ code: 500, message: "Unknown Error" }); // Return an error result with a generic error message
+            }
+          } else {
+            columnObjects.push(block);
           }
-          response.push(columnObjects);
+
+        }
+        response.push(columnObjects);
+    }
+
+    // Return the response array
+    //create a column list object with the fields type and column 
+    const columnListObject = {
+      type: "column_list",
+      columns: response
+  };
+
+    return ok(columnListObject);
+  } catch (error) {
+      // Proper error handling
+      return err(error);
+  }
+};
+
+//this function returns an array of arrays of objects.
+export const getCalloutItems = async (blogClient, block) => {
+  try {
+    let children;
+    // console.log("here1", block.has_children, block.callout.rich_text)
+    console.log("inside callout");
+    if(block.has_children == true){
+      console.log("callout has children");
+      const id = block.id;
+      const calloutResponse = await getBlocks(blogClient, id);
+
+      if(calloutResponse.isOk()){
+        console.log("retrieved children");
+        children = calloutResponse.value;
       }
-      console.log("returning")
-      return ok(response);
+      else if (response.isErr()) {
+        return err(response.error); // Return an error result with the response error
+      } else {
+        return err({ code: 500, message: "Unknown Error" }); // Return an error result with a generic error message
+      }
+
+    } else{
+      console.log("do nothing no children")
+    }
+
+    console.log("callout has outsite");
+    const calloutListObject = {
+      rich_text: block.callout.rich_text,
+      icon: block.callout.icon,
+      type: "callout",
+      children: children
+    };
+    
+    return ok(calloutListObject);
+
   } catch (error) {
     return err(error); // Proper error handling
   }
 }
 
-
-export const getTable = async (blogClient, id, width) => {
+//gets the table from the block and returns a table object
+//table object contains: type and rows
+export const getTable = async (blogClient, block) => {
   try {
-    // console.log("Getting children");
-    // Get the children of the table
-    const response = await getBlocks(blogClient, id);
+    const id =  block.id;
+    const width = block.table.table_width;
 
-    // console.log("Table children", response);
+    const response = await getBlocks(blogClient, id);
     
     if (response.isOk()) {
-      // Process the information
+
       const entries = response.value.map((row) => {
         if (row.type === "table_row") {
           const cells = [];
           for (let i = 0; i < width; i++) {
-            // Use optional chaining to safely access nested properties
             cells.push(row.table_row.cells?.[i]?.[0]?.plain_text || null);
           }
           return { cells };
@@ -203,7 +272,13 @@ export const getTable = async (blogClient, id, width) => {
         }
       });
 
-      return ok(entries); // Return a successful result with the entries
+      //create a table object with fields type and rows
+      const tableObject = {
+        type: "table",
+        rows: entries
+      };
+      return ok(tableObject); 
+
     } else if (response.isErr()) {
       return err(response.error); // Return an error result with the response error
     } else {

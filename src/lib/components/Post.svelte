@@ -56,9 +56,7 @@
             <!-- <TableOfContent {tableOfContent} /> -->
             
             {#each postBlocks as postBlock}
-                {#if postBlock.type === "table"}
-                    <Table rows={postBlock.rows} />
-                {:else if postBlock.type === "column_list"}
+                {#if postBlock.type === "column_list"}
                     <div class="column-list">
                         {#each postBlock.columns as column}
                             <div class="column">
@@ -72,11 +70,6 @@
                     <Block block={postBlock} />
                 {/if}
             {/each}
-        
-
-            <!-- {#if rows && rows.length > 0}
-                <Table {rows} />
-            {/if} -->
 
         </article>
     {/if}
