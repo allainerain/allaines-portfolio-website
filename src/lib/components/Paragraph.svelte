@@ -54,8 +54,9 @@
   
   <style>
     p {
-      font-family: 'Source Sans 3', sans-serif;
-      font-size: 20px;
+      font-family: 'Satoshi', sans-serif;
+
+      font-size: 16px;
       line-height: 1.75;
     }
 

@@ -119,9 +119,14 @@ section {
 }
 
 h1{
-    font-family: 'Gentium Plus', serif;
+    /* font-family: 'Giom Mod', sans-serif; */
+    /* font-family: 'Casftego', sans-serif; */
+    /* font-family: 'Opsi', sans-serif; */
+    /* font-family: 'Kemilash', sans-serif; */
+    font-family: 'Hogbine', sans-serif;
+
     font-weight: 400;
-    font-size: 100px;
+    font-size: 96px;
     line-height: 1.11;
 }
 
@@ -130,9 +135,10 @@ h1{
 }
 
 p{
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 24px;
+    font-family: 'Satoshi', sans-serif;
+    font-size: 18px;
     line-height: 1.75;
+    color: #B3B3B3
 }
 
 .cards {
@@ -151,10 +157,10 @@ p{
 
     }
     h1{
-        font-size: 80px;
+        font-size: 72px;
     }
     .journey h1 {
-        font-size: 52px;
+        font-size: 48px;
     }
     p{
         font-size: 20px;
@@ -169,13 +175,13 @@ p{
         margin: 150px 5% 150px 5%; /* Adjust the margin for small screens */
     }
     h1{
-        font-size: 64px;
+        font-size: 54px;
     }
     .journey h1 {
-        font-size: 46px;
+        font-size: 38px;
     }
     p{
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 

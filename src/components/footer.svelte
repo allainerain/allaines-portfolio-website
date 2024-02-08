@@ -17,12 +17,12 @@
     section {
         display: flex;
         justify-content: space-between;
-        font-family: 'Source Sans 3', sans-serif;
+        font-family: 'Satoshi', sans-serif;
         color: #838481;
         width: 800px;
         margin: 100px auto;
         text-align: center;
-        font-size: 20px;
+        font-size: 16px;
     }
 
     section .links {

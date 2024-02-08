@@ -84,16 +84,18 @@
     }
 
     h1{
-        font-family: 'Gentium Plus', serif;
+        font-family: 'Hogbine', sans-serif;
         font-weight: 400;
-        font-size: 100px;
+        font-size: 96px;
         line-height: 1.11;
+        margin: 24px;
     }
 
     p{
-        font-family: 'Source Sans 3', sans-serif;
-        font-size: 24px;
+        font-family: 'Satoshi', sans-serif;
+        font-size: 18px;
         line-height: 1.75;
+        color: #B3B3B3
     }
 
     a{
@@ -101,7 +103,7 @@
         font-size: 18px;
         text-decoration: none;
         margin: 0 10px;
-        color: #838481;
+        color: #747474;
         transition: color 0.3s ease; 
     }
 
@@ -112,11 +114,11 @@
     /* TABLET VIEW */
     @media only screen and (max-width: 900px) {
         section{
-            width: 94%;
-            margin: 100px 3% 100px 3%; /* Adjust the margin for small screens */
+            width: 90%;
+            margin: 75px 3% 75px 3%; /* Adjust the margin for small screens */
         }
         h1{
-            font-size: 68px;
+            font-size: 72px;
         }
         p{
             font-size: 20px;
@@ -133,19 +135,19 @@
     @media only screen and (max-width:770px){
         section{
             width: 90%;
-            margin: 100px 5% 100px 5%; /* Adjust the margin for small screens */
+            margin: 50px 5% 50px 5%; /* Adjust the margin for small screens */
         }
         h1{
-            font-size: 48px;
+            font-size: 54px;
         }
         p{
-            font-size: 18px;
+            font-size: 16px;
         }
         .case-study{
             font-size: 14px;
         }
         a{
-            font-size: 14px;
+            font-size: 16px;
         }
     }
 </style>
