@@ -7,7 +7,7 @@
 <body>
     <section class="Hero">
         <h1>Aspiring <span class="moving-gradient gradient-text">Designer & Researcher</span>. Cycling Around the World.</h1>
-        <p> Hey, I’m Allaine! I’m a Computer Science undergraduate from the University of the (sunny) Philippines, dabbling in Machine Learning, Data Science and UI/UX design.  </p>
+        <!-- <p> Hey, I’m Allaine! I’m a Computer Science undergraduate from the University of the (sunny) Philippines, dabbling in Machine Learning, Data Science and UI/UX design.  </p> -->
     </section>
 
     <section class="journey">
@@ -20,7 +20,21 @@
         <div class="cards">
             <Card 
                 iconsrc="icons/icon-placeholder.png"
-                title="Mask Patrol"
+                title="Micomammal Bone Classification"
+                description="Training a model to classify micromammal bones. To create a device to aid on-site classification."
+                imgsrc="card-photos/zmal.png"
+                link="/"
+            />
+            <Card 
+                iconsrc="icons/icon-placeholder.png"
+                title="Campus Disease Spread Model"
+                description="An agent based model of disease spread and impact on student productivity."
+                imgsrc="card-photos/dcs-disease.png"
+                link="/"
+            />
+            <Card 
+                iconsrc="icons/icon-placeholder.png"
+                title="Mask Patrol: Face Mask Detection"
                 description="A deployed face mask and social distancing detection model using computer vision."
                 imgsrc="card-photos/mask-patrol.png"
                 link="/works#mask-patrol"

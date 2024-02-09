@@ -36,7 +36,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50px;
+    border-radius: 10px;
     padding: 10px;
     background-color: #0D0F0A;
     outline-style: solid;
@@ -45,7 +45,7 @@ section {
 }
 
 .navbar a {
-    font-family: 'Gentium Plus', serif;
+    font-family: 'Hogbine', sans-serif;
     margin: 0 20px;
     color: white;
     text-decoration: none;
