@@ -79,7 +79,7 @@
     <Project
         id="suse"
         title = "SUSe: RFID library service tracker"
-        description = "This project is in its MVP stage, aimed to be implemented in our university's College of Engineering library. Availing library services in our university is inconvenient -- you need to fill out lots and lots of forms which makes people just want to cut corners. To make availing library services virtually form-less and provide accurate data reports for librarians, we created SUSe. I was the sole product designer and front-end developer for SUSe."
+        description = "This project is in its MVP stage, aimed to be implemented in our university's College of Engineering library, and released open-source for students to contribute. Availing library services in our university is inconvenient -- you need to fill out lots and lots of forms which makes people just want to cut corners. To make availing library services virtually form-less and provide accurate data reports for librarians, we created SUSe. I was the sole product designer and front-end developer for SUSe."
         gallery_items = {suse}
         github = "https://github.com/bbcarrots/suse"
         figma = "https://www.figma.com/proto/eMRvqJbuP5pXhJqbUC5J0E/CS-191-SUS%C3%AA?page-id=196%3A2205&node-id=447-24008&viewport=-7365%2C-2434%2C0.49&t=XqjRXTh6Yu7UEYSU-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=447%3A24008&show-proto-sidebar=1"
