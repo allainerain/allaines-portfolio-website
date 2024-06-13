@@ -19,7 +19,7 @@
             1. they’ve been coding since they could spell, 
             2. they were good at math, or
             3. they fell in love with the world-changing impact of technology.
-            Well, I took up CS because I didn’t really know what I wanted to be. 
+            Well, I took up CS because I didn’t really know what I wanted to be.  
             (Can you really expect a 17 year old to know that?)     
         </p>
         <p>
