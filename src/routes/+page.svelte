@@ -11,6 +11,30 @@
     </section>
 
     <section class="journey">
+        <h1>Product Journey</h1>
+        <p> 
+            I love using technology to make life easier. From identifying key problems to interviewing stakeholders to designing prototypes to developing and implementing, I love seeing the value that my work brings to others.
+            Here are some products that I have worked on.
+        </p>
+        <div class="cards">
+        <Card 
+            iconsrc="icons/icon-placeholder.png"
+            title="SUSe: Intuitive RFID library inventory tracking"
+            description="Avail library services seamlessly and with no forms. Accurate data visualization for librarians."
+            imgsrc="card-photos/suse.png"
+            link="/works#suse"
+        />
+        <Card 
+            iconsrc="icons/icon-placeholder.png"
+            title="BerdeBox: Secure remote delivery package mailbox"
+            description="A delivery pick-up mailbox you can remotely control to receive packages from anywhere, anytime."
+            imgsrc="card-photos/berdebox.png"
+            link="/works#berdebox"
+        />
+        </div>
+        
+    </section>
+    <section class="journey">
         <h1>AI and Data Science Journey</h1>
         <p> 
             As someone who loves learning low-resource languages (like Hokkien and Bahasa Indonesia), I'm interested in doing research that will enable us to understand these low-resource languages more.
