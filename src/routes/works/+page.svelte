@@ -55,14 +55,51 @@
     'works/hb/10.png'
     ];
 
+    let berdebox = [
+        'works/berdebox/1.png',
+        'works/berdebox/2.png',
+        'works/berdebox/3.png',
+        'works/berdebox/4.png',
+        'works/berdebox/5.png',
+    ];
+
+    let suse = [
+        'works/suse/1.png',
+        'works/suse/2.png',
+        'works/suse/3.png',
+        'works/suse/4.png',
+        'works/suse/5.png',
+    ];
+
 </script>
 
 <body>
 
+    <hr id="suse">
+    <Project
+        id="suse"
+        title = "SUSe: RFID library service tracker"
+        description = "This project is in its MVP stage, aimed to be implemented in our university's College of Engineering library. Availing library services in our university is inconvenient -- you need to fill out lots and lots of forms which makes people just want to cut corners. To make availing library services virtually form-less and provide accurate data reports for librarians, we created SUSe. I was the sole product designer and front-end developer for SUSe."
+        gallery_items = {suse}
+        github = "https://github.com/bbcarrots/suse"
+        figma = "https://www.figma.com/proto/eMRvqJbuP5pXhJqbUC5J0E/CS-191-SUS%C3%AA?page-id=196%3A2205&node-id=447-24008&viewport=-7365%2C-2434%2C0.49&t=XqjRXTh6Yu7UEYSU-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=447%3A24008&show-proto-sidebar=1"
+        live = "https://suse.vercel.app"
+        case_study="none"
+    />
+    <hr id="berdebox">
+    <Project
+        id="berdebox"
+        title = "BerdeBox: Remote delivery mailbox"
+        description = "Receiving deliveries is a hassle, especially in the Philippines where 7 out of 10 Filipinos use Cash-on-Delivery. We created BerdeBox to solve this: a mailbox with livestreaming capabilities to maintain trust and plug-and-play modules for customizability. Created in a month, I was a product designer, web designer and principal full-stack developer for BerdeBox."
+        gallery_items = {berdebox}
+        github = "https://github.com/bbcarrots/berdebox"
+        live = "https://berde-box.vercel.app"
+        case_study="none"
+    />
     <hr id="mask-patrol">
     <Project
         id="mask-patrol"
-        title = "Mask Patrol"
+        title = "Mask Patrol: Face Mask Detection"
         description = "For our AI class, we were challenged to use AI to solve an everyday issue. Within 2 weeks, my group was able to train and deploy a Face Mask Detection and Social Distancing Detection Model using convolutional neural networks with a 97% accuracy. I trained the model over 3,000+ images and designed the UI of the website."
         gallery_items = {mask_patrol}
         github = "https://github.com/allainerain/CS180-MaskPatrol"
@@ -84,7 +121,7 @@
     <hr id="hb">
     <Project
         
-        title = "Home Buddies"
+        title = "Home Buddies Website"
         description = "As a Product Design Intern in Cocomilk Studio, I got involved in the whole design process of creating a website for Home Buddies, a community of home improvement enthusiasts on Facebook with over 3 million active users. I was involved in designing their website from low fidelity to high fidelity wireframes, to implementing the website using Webflow within 2 months."
         gallery_items = {hb}
         figma = "none"
@@ -117,7 +154,7 @@
     <hr id = "forent-app">
     <Project
         
-        title = "Forent App"
+        title = "Forent App Design"
         description = "In 2022, I was a UI/UX designer intern in Forent, a start up with a mission to create a centralized renting platform in the Philippines. As a part of the pioneer interns, my work included redesigning outdated screens, creating user flows and layouting new features to create a seamless lessor to renter connection. Now, the Forent App has over 5,000 downloads in the Google Playstore."
         gallery_items = {forent_app}
         live = "https://play.google.com/store/apps/details?id=com.ph.forent_app&pli=1"
