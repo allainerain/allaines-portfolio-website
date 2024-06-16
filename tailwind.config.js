@@ -1,19 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./src/**/*.{html,js,svelte}", // Adjust the path according to your project structure
-  ],
-  darkMode: "class", // Use 'media' if you prefer to follow the user's system preference
+  content: ["./src/**/*.{html,js,svelte}"],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
         light: {
           background: "#ffffff",
-          text: "#000000",
+          text: "#404040",
+          accent: "#999999",
         },
         dark: {
-          background: "#000000",
-          text: "#C2C2C2",
+          background: "#131313",
+          text: "#FFFFFF",
+          accent: "#999999",
         },
       },
     },
