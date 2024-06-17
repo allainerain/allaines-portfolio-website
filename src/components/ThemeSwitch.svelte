@@ -10,7 +10,7 @@
     }
 </script>
 
-<div>
+<div class="flex items-center">
     <input checked={darkMode} on:click={handleSwitchDarkMode} type="checkbox" id="theme-toggle" />
     <label for="theme-toggle" />
 </div>
@@ -21,7 +21,7 @@
     }
 
     #theme-toggle + label {
-        @apply inline-block cursor-pointer h-12 w-12 rounded-full duration-300 content-[''];
+        @apply inline-flex cursor-pointer h-7 w-7 rounded-full duration-300 content-[''];
     }
 
     #theme-toggle:not(:checked) + label {
@@ -30,6 +30,6 @@
 
     #theme-toggle:checked + label {
         @apply bg-transparent;
-        box-shadow: inset -18px -16px 1px 1px #ddd;
+        box-shadow: inset -10px -10px 1px 1px #ddd;
     }
 </style>
