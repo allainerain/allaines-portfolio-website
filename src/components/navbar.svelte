@@ -1,16 +1,5 @@
 <script>
-    import { createEventDispatcher } from "svelte";
     import ThemeSwitch from "./ThemeSwitch.svelte";
-    let isDark = true
-    const dispatch = createEventDispatcher()
-
-    function toggleMode() {
-        isDark = !isDark
-        console.log(isDark)
-        dispatch('changeMode', {
-            mode: isDark
-        });
-    }
 </script>
 
 <div class="
@@ -28,11 +17,7 @@
     ">
         <a href="/" class="px-3 py-1"> Home </a>
         <a href="/about" class="px-3 py-1"> About </a>
-        <!-- <button on:click={toggleMode} class="px-3 py-1">
-            <img src="../icons/diamond.png" alt="Website Icon" class="w-6 h-6">
-        </button> -->
         <ThemeSwitch />
-
         <a href="/works" class="px-3 py-1"> Works </a>
         <a href="/blog" class="px-3 py-1"> Blog </a>
     </div>
