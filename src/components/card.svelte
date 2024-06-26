@@ -1,63 +1,19 @@
 <script>
     export let title;
     export let description;
-    export let iconsrc;
     export let imgsrc;
     export let link;
 </script>
 
-<a class="button-link" href={link}>
-    <div class="card">
-        <div class="container">
-            <img src={iconsrc} alt="icon"/>
-            <h4>{title}</h4>
-            <p>{description}</p>
-        </div>
-        <img src={imgsrc} alt={title} style="width:100%"/>
+<a class="grid gap-4" href={link}>
+    <div class="rounded-lg border border-[3px] border-light-accent border-opacity-[20%] overflow-hidden">
+        <img class="w-full h-full transition-transform duration-300 hover:scale-[102%]"
+        src={imgsrc} alt={title}
+    />
+    </div>
+
+    <div class="grid gap-2 text-left">
+        <h3>{title}</h3>
+        <h4 class="text-light-accent">{description}</h4>
     </div>
 </a>
-
-<style>
-
-h4{
-    font-family: 'Source Sans 3', sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-    margin: 15px 0px 15px 0px;
-    color: #BBBBBB;
-}
-
-p{
-    font-family: 'Roboto Mono', monospace;
-    font-size: 13px;
-    margin: 0;
-    color: #838481;
-}
-
-.button-link {
-    text-decoration: none;
-}
-
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.2s;
-    background-color: #161A11;
-    text-align: left;
-    border-radius: 10px; /* Add border-radius for rounded corners */
-    overflow: hidden; /* Hide overflowing content */
-}
-
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    transform: scale(1.02);
-    cursor: pointer;
-}
-
-.container {
-    margin: 40px;
-}
-
-img {
-  border-radius: 0px 0px 10px 10px;
-}
-</style>
