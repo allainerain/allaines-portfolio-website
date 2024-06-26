@@ -3,12 +3,10 @@
 </script>
 
 
-<body>
-    <section>
-        <slot/>
-    </section>
-    
-</body>
+<section class="grid gap-12 items-center justify-center w-[75%]">
+    <slot/>
+</section>
+
 
 
 

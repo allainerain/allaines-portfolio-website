@@ -20,7 +20,7 @@
         <img in:fade={{ duration: 800 }} class="carousel-image {imagesLoaded === 1 ? 'loaded' : ''}" src={item} alt="Project" on:load={() => imagesLoaded = 1}>
     {/each}
 
-    <div class="carousel-controls text-light-text">
+    <div class="carousel-controls text-light-text dark:text-dark-text">
         <button class="previous" on:click={previousSlide} transition:fade>
             <p>Previous</p>
         </button>

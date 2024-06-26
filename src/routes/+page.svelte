@@ -1,6 +1,7 @@
 <script>
     import Card from "../components/Card.svelte";
     import SmallCard from "../components/SmallCard.svelte";
+    import Divider from "../components/Divider.svelte";
 </script>
 
 <section class="flex flex-col w-full items-center">
@@ -15,11 +16,8 @@
             </h1>
         </section>
         
-        <div class="grid gap-[12px]">
-            <hr width="100%" size="2" noshade>
-            <p class="text-light-accent">RECENT WORK I'M PROUD OF</p>
-        </div>
-    
+        <Divider text={"RECENT WORK I'M PROUD OF"}/>
+
         <section class="journey">
             <div class="cards grid grid-cols-1 gap-8 md:grid-cols-2">
             <Card 
@@ -47,24 +45,20 @@
         </section>
 
     </section>
-    <section class="flex flex-col items-center bg-[#FBFBFB] w-full py-20">
+    <section class="flex flex-col items-center bg-[#FBFBFB] w-full py-20 dark:bg-[#070707]">
 
         <!-- OTHER PROJECTS -->
         <div class="grid md:grid-cols-3 grid-cols-1 max-lg:w-[75%] w-[90%]">
             <div class="flex flex-col px-4 gap-8">
 
                 <!-- HEADER -->
-                <div class="grid gap-[12px]">
-                    <hr width="100%" size="2" noshade>
-                    <p class="text-light-accent">RESEARCH</p>
-                </div>
+                <Divider text={"RESEARCH"}/>
+
             </div>
             <div class="flex flex-col px-4 gap-8">
                 <!-- HEADER -->
-                <div class="grid gap-[12px]">
-                    <hr width="100%" size="2" noshade>
-                    <p class="text-light-accent">WEB DESIGN</p>
-                </div>
+                <Divider text={"WEB DEVELOPMENT"}/>
+
 
                 <!-- CONTENT -->
                 <SmallCard 
@@ -120,10 +114,7 @@
             </div>
             <div class="flex flex-col px-4 gap-8">
                 <!-- HEADER -->
-                <div class="grid gap-[12px]">
-                    <hr width="100%" size="2" noshade>
-                    <p class="text-light-accent">AI/ML/DATA</p>
-                </div>
+                <Divider text={"AI/ML/DATA"}/>
 
                 <!-- CONTENT -->
                 <SmallCard 

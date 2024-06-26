@@ -8,12 +8,14 @@ export default {
         light: {
           background: "#ffffff",
           text: "#404040",
-          accent: "#999999",
+          accent: "#6C6F75",
+          border: "#F3F4F6",
         },
         dark: {
           background: "#131313",
           text: "#FFFFFF",
-          accent: "#999999",
+          accent: "#A9A9A9",
+          border: "#F3F4F6",
         },
       },
     },
