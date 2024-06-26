@@ -4,39 +4,19 @@
 
 <script>
 	import '../app.pcss';
-    import { onMount } from "svelte";
+    import Footer from '../components/Footer.svelte';
     import Navbar from "../components/Navbar.svelte";
-    let isDark = true;
-
-    function handleChangeMode(e){
-        isDark = e.detail.mode;
-        var element = document.body;
-        if (isDark) {
-            element.classList.remove("light-mode");
-        } else {
-            element.classList.add("light-mode");
-        }
-    }
-
-    onMount(() => {
-        var element = document.body;
-        if (isDark) {
-            element.classList.remove("light-mode");
-        } else {
-            element.classList.add("light-mode");
-        }
-    });
-
 </script>
 
-<Navbar on:changeMode={(e) => {handleChangeMode(e)}}></Navbar>
+<Navbar></Navbar>
 <body class="flex w-full items-center justify-center bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text">
     <slot/>
 </body>
-
+<Footer></Footer>
 
 <style global>
 @import url('https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono&family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 
 @import url('https://fonts.cdnfonts.com/css/satoshi');
 @import url('https://fonts.cdnfonts.com/css/giom-mod');
@@ -48,6 +28,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body{
-    font-family: "Roboto", sans-serif;
+    font-family: "SF Pro Display", sans-serif;
 }
 </style>
