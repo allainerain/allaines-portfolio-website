@@ -1,313 +1,101 @@
 <script>
-    import Footer from "../../components/footer.svelte"
-
-    import { onMount } from 'svelte';
-
+    import Divider from "../../components/Divider.svelte";
     let failure = false;
+
+    let hobby = 'knit'
+    let hobbySrc = '/hobbies/knit.jpg'
 
 </script>
 
-<body>    
-    <section class = "intro">
-        <img class="me" alt = "Me" src="profilepic.jpg"/>
-        <p>
-            Hey! I'm Allaine, a Filipino-Chinese computer science undergrad presently based in the sunny Philippines 
-            (but dreaming of broader horizons). 
-        </p>
-        <p>
-            I think this usually the part where people explain that they took up conputer science  because 
-            1. they’ve been coding since they could spell, 
-            2. they were good at math, or
-            3. they fell in love with the world-changing impact of technology.
-            Well, I took up CS because I didn’t really know what I wanted to be.  
-            (Can you really expect a 17 year old to know that?)     
-        </p>
-        <p>
-            But I consider myself lucky. 
-            As a hobbyist writer, artist, and  designer, I just like creating things. 
-            While I still don't really where life will take me, programming and technology just became my medium to create things that do its little good in one way or another.  
-        </p>
-        <p>
-            So, what have I been up to?
-        </p>
-    </section>
-    <section class="work">
-        <div class="work-header">
-            {#if !failure}
-                <h1>Work</h1>
-            {:else}
-                <h1>On the Side</h1>
-            {/if}
-            <label class="switch">
-                <input type="checkbox" bind:checked={failure}>
-                <span class="slider round"></span>
-            </label>
+<section class="grid gap-12 items-center justify-center max-w-[1300px] w-[90%]">
+
+    <!-- INTRO SECTION -->
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-16 md:mt-40 mt-10">
+        <div class="relative overflow-hidden max-h-[600px] rounded-[20px] lg:order-last">
+            <img class="object-cover w-full" alt="Me" src="/profilepic.jpg"/>
+            <div class="absolute top-0 left-0 w-full h-full fade-corner"></div>
         </div>
-        <div>
-            {#if !failure}
-                <div class="work-item">
-                    <h4 class="company"><a href="https://www.cocomilkstudio.com/" target="_blank">Cocomilk Studio</a></h4>
-                    <span class="position-date">
-                        <p class="position">Product Design Intern</p>
-                        <p class="date">07/23 - 08/23</p>
-                    </span>
-                </div>
-                <div class="work-item">
-                    <h4 class="company"><a href="https://www.forent-app.com/" target="_blank">Forent Group Incorporated</a></h4>
-                    <span class="position-date">
-                        <p class="position">UI/UX Intern</p>
-                        <p class="date">12/21 - 04/22</p>
-                    </span>
-                </div>
-                <div class="work-item">
-                    <h4 class="company"><a href="https://www.azeus.com/" target="_blank">Azeus Systems Limited</a></h4>
-                    <span class="position-date">
-                        <p class="position">Software Developer Intern</p>
-                        <p class="date">07/21 - 08/21</p>
-                    </span>
-                </div>
-            {:else}
-                <div class="work-item">
-                    <h4 class="company">Learning Mandarin</h4>
-                    <span class="position-date">
-                        <p class="position">to get connected to my heritage</p>
-                        <p class="date">2023</p>
-                    </span>
-                </div>
-                <div class="work-item">
-                    <h4 class="company">Looking for freelance work</h4>
-                    <span class="position-date">
-                        <p class="position">to meet my overseas friends again </p>
-                        <p class="date">2023</p>
-                    </span>
-                </div>
-                <div class="work-item">
-                    <h4 class="company"><a href="https://www.huawei.com/minisite/seeds-for-the-future/index.html" target="_blank">Huawei Seeds for the Future</a></h4>
-                    <span class="position-date">
-                        <p class="position">Shenzhen and Shanghai, China</p>
-                        <p class="date">2023</p>
-                    </span>
-                </div>
-                <div class="work-item">
-                    <h4 class="company"><a href="https://eba.soi.asia/" target="_blank">Fieldwork with Keio University</a></h4>
-                    <span class="position-date">
-                        <p class="position">Tokyo and Minamata, Japan</p>
-                        <p class="date">2023</p>
-                    </span>
-                </div>
-                <div class="work-item">
-                    <h4 class="company"><a href="https://taiwantoday.tw/news.php?unit=2&post=231290" target="_blank">Exchange at Taipei Tech</a></h4>
-                    <span class="position-date">
-                        <p class="position">Taipei, Taiwan</p>
-                        <p class="date">2022</p>
-                    </span>
-                </div>
+        <div class="flex flex-col gap-8 lg:order-first">
+            <span class="flex flex-col gap-2 text-light-accent">
+                <h1>Allaine Tan</h1>
+                <h1>鄭俐嫻</h1>
+            </span>
+            <span class="flex flex-col gap-4">
+                <p>I’m a designer based in Manila, Philippines.</p>
+                <p>For the longest time, I’ve always had the notion that design was just “prettying things up”. Clearly, it isn’t the case. I saw how important it was for technology to be accessible to all.</p>
+                <p>Now, I build products for local communities and I make sure that design fits in seamlessly. I aspire to build stuff that are a joy to use.</p>
+            </span>
+        </div>
 
+    </section>
 
-            {/if}
+    <!-- EDUFATION SECTION -->
+    <Divider text={"EDUCATION"} />
+
+    <section class="grid grid-cols-1 lg:grid-cols-2 w-full gap-16 lg:max-h-[700px]">
+        <div class="flex items-stretch overflow-hidden max-h-[700px]">
+            <img class="object-cover w-full" alt="Me" src="/"/>
+        </div>
+        <div class="flex flex-col gap-4">
+            <span>
+                <h2 class="text-light-text">University of the Philippines</h2>
+                <h2 class="text-light-accent">College of Engineering</h2>
+            </span>
+            <h5>Bachelor of Science in Computer Science</h5>
+            <p>I owe my work ethic and principles to the University of the Philippines, by surrounding me with computer scientists who I have nothing but uttmost respect for and who I aspire to be one day. Teaching me how computers are built from the ground up, what exactly it means for something to compute, and how to tell these computers what to do in an elegant way. I went to UP knowing nothing about computer science and I left seeing how beautiful it all is.</p>
         </div>
     </section>
-    <section class="about-site">
-        <h1>About This Site</h1>
-        <p> In case you were wondering, this site is: </p>
-        <ul>
-            <li>Designed on Figma based on <a href="https://daleanthony.com/" target="_blank">Dale Anthony</a> and <a href="https://www.augustolopes.design/" target="_blank">Augosto Lopes</a>' sites</li>
-            <li>Designed and built using SvelteKit and Visual Studio Code</li>
-            <li>Using Notion as a CMS</li>
-            <li>Hosted by Vercel</li>
-            <li>Set in Gentium, Source Sans and Mono</li>
-        </ul>
+
+    <!-- DESIGN PHILOSOPHIES SECTION -->
+    <Divider text={"DESIGN PHILOSOPHIES"} />
+
+    <section class="grid grid-cols-1 lg:grid-cols-2 w-full gap-16 lg:max-h-[700px]">
+        <div class="flex flex-col gap-2">
+            <h5>Less Research, More Building</h5>
+            <p>I believe that great products are built entirely for users. I don’t want to sell promises of an idea, or the future. Build, then get feedback from real users, then iterate.</p>
+        </div>
+        <div class="flex flex-col gap-2">
+            <h5>Less Research, More Building</h5>
+            <p>I believe that great products are built entirely for users. I don’t want to sell promises of an idea, or the future. Build, then get feedback from real users, then iterate.</p>
+        </div>
     </section>
 
-    <Footer/>
-</body>
+    <!-- HOBBIES SECTION -->
+    <Divider text={"THINGS I LOVE TO DO AWAY FROM THE KEYBOARD"} />
+
+    <section class="grid grid-cols-1 lg:grid-cols-2 w-full gap-16 lg:max-h-[700px] ">
+        <div class="flex flex-col gap-2 items-left justify-left">
+            <button class={hobby == "knit"? "text-left" : "text-left text-light-accent"} on:click={()=>{hobby="knit"; hobbySrc="/hobbies/knit.jpg"}}>
+                <h2>Knitting/Crocheting</h2>
+            </button>
+            <button class={hobby == "travel"? "text-left" : "text-left text-light-accent"} on:click={()=>{hobby="travel"; hobbySrc="/hobbies/travel.jpg"}}>
+                <h2>Travelling</h2>
+            </button>
+            <button class={hobby == "lang"? "text-left" : "text-left text-light-accent"} on:click={()=>{hobby="lang"; hobbySrc="/hobbies/lang.jpg"}}>
+                <h2>Learning Languages</h2>
+            </button>
+            <button class={hobby == "bike"? "text-left" : "text-left text-light-accent"} on:click={()=>{hobby="bike"; hobbySrc="/hobbies/bike.jpg"}}>
+                <h2>Biking</h2>
+            </button>
+        </div>
+
+        <div class="relative overflow-hidden max-h-[600px] rounded-[20px] lg:order-last">
+            <img class="object-cover w-full" alt="Me" src={hobbySrc}/>
+            <div class="absolute top-0 left-0 w-full h-full fade-corner"></div>
+        </div>
+    </section>
+</section>
+
 
 <style>
-
-a{
-    text-decoration: none;
-    transition: color 0.3s ease; 
-    color:  #C2C2C2;
-}
-
-a:hover{
-    color: #838481;
-}
-
-section {
-    color: #C2C2C2;
-    width: 800px;
-    margin: 100px auto 100px auto;
-}
-
-.intro p{
-    font-family: 'Satoshi', sans-serif;
-    text-align: left;
-    font-size: 18px;
-    line-height: 1.75;
-    color: #B3B3B3;
-    margin: 30px auto;
-}
-
-.me{
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16/10.4; 
-    overflow: hidden;
-    object-fit: cover;
-    border-radius: 20px;
-}
-
-.work-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-h1{
-    font-family: 'Hogbine', sans-serif;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 1.11;
-}
-
-.work-item{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 16px;
-    margin: 20px 0px;;
-}
-
-.company{
-    font-weight: 600;
-    margin: 0px;
-}
-
-.position-date{
-    display: flex;
-    color: #838481;
-    margin: 0px;
-}
-
-.position{
-    margin: 0 20px;
-    text-align: right;
-}
-
-.date{
-    margin: 0px;
-    text-align: left;
-}
-
-.about-site{
-    font-family: 'Satoshi', sans-serif;
-    font-size: 18px;
-    line-height: 2;
-}
-
-/* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #1C1C1C;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: #0D0F0A;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #1C1C1C;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
-/* TABLET VIEW */
-@media only screen and (max-width: 900px) {
-    section{
-        width: 94%;
-        margin: 150px 3% 150px 3%; /* Adjust the margin for small screens */
-
+    .fade-corner::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top left, #ffffffff, rgba(255, 255, 255, 0.1) 40%, #ffffffff);
+        pointer-events: none; 
     }
-    h1{
-        font-size: 32px;
-    }
-    .about-site{
-        font-size: 18px;
-    }
-    .intro p{
-        font-size: 18px;
-    }
-    .work-item{
-        font-size: 16px;
-    }
-
-}
-
-/* PHONE VIEW */
-@media only screen and (max-width:770px){
-    section{
-        width: 90%;
-        margin: 150px 5% 150px 5%; /* Adjust the margin for small screens */
-    }
-    h1{
-        font-size: 30px;
-    }
-    .intro p{
-        font-size: 18px;
-    }
-    .about-site{
-        font-size: 18px;
-    }
-    .work-item{
-        font-size: 16px;
-    }
-
-}
-
-
 </style>
