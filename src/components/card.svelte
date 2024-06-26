@@ -14,6 +14,6 @@
 
     <div class="grid gap-2 text-left">
         <h3>{title}</h3>
-        <h4 class="text-light-accent">{description}</h4>
+        <h4 class="text-light-accent dark:text-dark-accent">{description}</h4>
     </div>
 </a>

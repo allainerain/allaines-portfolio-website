@@ -139,17 +139,17 @@
 
         <div class="grid gap-2 text-left">
             <h5>{title}</h5>
-            <p class="text-light-accent">{description}</p>
+            <p class="text-light-accent dark:text-dark-accent">{description}</p>
         </div>
     </div>
 </button>
 
 {#if selected}
     <!-- Project preview -->
-    <div transition:fly={{ duration: 300, easing: quintOut, y: 1000 }} class="fixed top-0 left-0 h-screen w-full bg-[#FBFBFB] z-50 overflow-hidden flex justify-center">
+    <div transition:fly={{ duration: 300, easing: quintOut, y: 1000 }} class="fixed top-0 left-0 h-screen w-full bg-[#FBFBFB] dark:bg-[#070707] z-50 overflow-hidden flex justify-center">
         <div class="flex flex-col max-w-[900px] w-[90%]">
             <!-- Exit button-->
-            <div class="fixed top-0 right-0 z-40 m-8 text-light-text">
+            <div class="fixed top-0 right-0 z-40 m-8 text-light-text dark:text-dark-text">
                 <button on:click={() => selected = false}>
                     <Icon src={XMark}  size="52"/>
                 </button>
