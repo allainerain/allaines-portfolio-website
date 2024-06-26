@@ -4,7 +4,7 @@
 
 <div class="
     flex fixed w-full items-center justify-center h-[100px] z-40 pt-8
-    md:top-0
+    md:top-0 left-0
     max-md:bottom-0 max-md:left-0 max-md:right-0 
     bg-gradient-to-t from-light-background to-transparent
     dark:from-dark-background to-transparent
