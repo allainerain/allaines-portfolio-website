@@ -1,252 +1,240 @@
 <script>
-    import Card from "../components/card.svelte";
-    import Footer from "../components/footer.svelte"
-
+    import Card from "../components/Card.svelte";
+    import SmallCard from "../components/SmallCard.svelte";
 </script>
 
-<body>
-    <section class="Hero">
-        <h1>Aspiring <span class="moving-gradient gradient-text">Designer & Researcher</span>. Cycling Around the World.</h1>
-        <!-- <p> Hey, I’m Allaine! I’m a Computer Science undergraduate from the University of the (sunny) Philippines, dabbling in Machine Learning, Data Science and UI/UX design.  </p> -->
-    </section>
+<section class="flex flex-col w-full items-center">
 
-    <section class="journey">
-        <h1>Product Journey</h1>
-        <p> 
-            I love using technology to make life easier. From identifying key problems to interviewing stakeholders to designing prototypes to developing and implementing, I love seeing the value that my work brings to others.
-            Here are some products that I have worked on.
-        </p>
-        <div class="cards">
-        <Card 
-            iconsrc="icons/icon-placeholder.png"
-            title="SUSe: Intuitive RFID library inventory tracking"
-            description="Avail library services seamlessly and with no forms. Accurate data visualization for librarians."
-            imgsrc="card-photos/suse.png"
-            link="/works#suse"
-        />
-        <Card 
-            iconsrc="icons/icon-placeholder.png"
-            title="BerdeBox: Secure remote delivery package mailbox"
-            description="A delivery pick-up mailbox you can remotely control to receive packages from anywhere, anytime."
-            imgsrc="card-photos/berdebox.png"
-            link="/works#berdebox"
-        />
-        </div>
+    <section class="grid gap-12 items-center justify-center max-lg:w-[75%] w-[90%]">
+        <section class="Hero flex flex-col gap-8 items-left justify-center md:pt-40 md:pb-20 pt-20">
+            
+            <!-- <h1 class="xl:w-[80%] xl:text-center">Freelance <span class="moving-gradient gradient-text">Designer & Developer</span>. Cycling Around the World.</h1> -->
+            <h5 class="gradient-text-static">Hello there!</h5>
+            <h1 class="gradient-text-grey">
+                Allaine Tan is a designer and developer from the sunny Philippines, designing next-generation interfaces and products for emerging technologies. She studied Computer Science at University of the Philippines Diliman, and she’s designed for startups and more.
+            </h1>
+        </section>
         
-    </section>
-    <section class="journey">
-        <h1>AI and Data Science Journey</h1>
-        <p> 
-            As someone who loves learning low-resource languages (like Hokkien and Bahasa Indonesia), I'm interested in doing research that will enable us to understand these low-resource languages more.
-            But more generally, I'm interested in applying computer science to low-resource settings. Currently, I'm involved in ML projects meant to accelerate data collection and classification for zooarchaeology. 
-            Here are some of the projects I've worked on!
-        </p>
-        <div class="cards">
-            <Card 
-                iconsrc="icons/icon-placeholder.png"
-                title="Micomammal Bone Classification"
-                description="Training a model to classify micromammal bones. To create a device to aid on-site classification."
-                imgsrc="card-photos/zmal.png"
-                link="/"
-            />
-            <Card 
-                iconsrc="icons/icon-placeholder.png"
-                title="Campus Disease Spread Model"
-                description="An agent based model of disease spread and impact on student productivity."
-                imgsrc="card-photos/dcs-disease.png"
-                link="/"
-            />
-            <Card 
-                iconsrc="icons/icon-placeholder.png"
-                title="Mask Patrol: Face Mask Detection"
-                description="A deployed face mask and social distancing detection model using computer vision."
-                imgsrc="card-photos/mask-patrol.png"
-                link="/works#mask-patrol"
-            />
-            <Card 
-                iconsrc="icons/icon-placeholder.png"
-                title="Twitter Disinformation Analysis"
-                description="An award winning case analysis regarding the disinformation on the ABS-CBN tax evasion case."
-                imgsrc="card-photos/abscbn.png"
-                link="/works#abs-cbn"
-            />
+        <div class="grid gap-[12px]">
+            <hr width="100%" size="2" noshade>
+            <p class="text-light-accent">RECENT WORK I'M PROUD OF</p>
         </div>
+    
+        <section class="journey">
+            <div class="cards grid grid-cols-1 gap-8 md:grid-cols-2">
+            <Card 
+                iconsrc="icons/icon-placeholder.png"
+                title="Avail library services seamlessly with university ID with SUSe"
+                description="Project turned open-source"
+                imgsrc="card-photos/suse.png"
+                link="/works#suse"
+            />
+            <Card 
+                iconsrc="icons/icon-placeholder.png"
+                title="Claim packages remotely and securely from anywhere with BerdeBox"
+                description="Personal"
+                imgsrc="card-photos/berdebox.png"
+                link="/works#berdebox"
+            />
+            </div>
+            
+        </section>
+        <section class="journey">
+            <div class="cards grid grid-cols-1 gap-8 md:grid-cols-2">
 
-    </section>
-
-    <section class="journey">
-        <h1>UI/UX Journey</h1>
-        <p>
-            While I love crunching numbers (really), and staring at neon monospaced text in code editors (really), sometimes, 
-            I get tired at how isolatingly technical tech can be. 
-            To me, design isn't just about making things pretty. It's about translating tech into a language that anyone can understand. 
-            Because, what use is technology if it can’t connect with people? 
-            Here are some of the projects I've worked on!
-        </p>
-        <div class="cards">
-            <Card 
-                iconsrc="icons/icon-placeholder.png"
-                title="Home Buddies Website"
-                description="Designed the website for a home enthusiast Facebook group with over 3M+ active members."
-                imgsrc="card-photos/home-buddies.png"
-                link="/works#hb"
-            />
-            <Card 
-                iconsrc="icons/icon-placeholder.png"
-                title="GDSC-UPD Website"
-                description="Co-designed the official website of UP Diliman’s Google Developer Student Clubs as a freshman."
-                imgsrc="card-photos/gdsc.png"
-                link="/works#gdsc"
-            />
-            <Card 
-                iconsrc="icons/icon-placeholder.png"
-                title="Forent Mobile App"
-                description="Designed screens for Forent as they grew from 500 downloads in the Google PlayStore to 10,000+ and counting."
-                imgsrc="card-photos/forent-mobile.png"
-                link="/works#forent-app"
-            />
-            <Card 
-                iconsrc="icons/icon-placeholder.png"
-                title="Forent Website"
-                description="Proposed a website redesign to update Forent’s branding as they grew from a small start-up to a recognized one."
-                imgsrc="card-photos/forent-web.png"
-                link="/works#forent-web"
-            />
-        </div>
-    </section>
-
-    <section class="journey">
-        <h1>Miscellaneous Journies</h1>
-        <p>
-            Away from the keyboard, I can't really keep still.
-            Something inside me just wants to keep my feet moving, to see what else is out there. 
-            Here's some of the journies I've gone on with people I've met from all over the world.
-        </p>
-        <div class="cards">
-            <Card 
-                iconsrc="icons/icon-placeholder.png"
-                title="Cycling Journey"
-                description="Don't own a bike in the Philippines, but I've (probably) biked over 100km in other countries."
-                imgsrc="card-photos/cycling.png"
-                link="/blog/cycling-journey"
-            />
-            <Card 
-                iconsrc="icons/icon-placeholder.png"
-                title="Photo Album"
-                description="Don't own a camera, but here are some snaps of people, places and things that matter to me."
-                imgsrc="card-photos/photo-album.png"
-                link="/blog/photo-album"
-            />
-        </div>
+            </div>
         
+        </section>
+
+    </section>
+    <section class="flex flex-col items-center bg-[#FBFBFB] w-full py-20">
+
+        <!-- OTHER PROJECTS -->
+        <div class="grid md:grid-cols-3 grid-cols-1 max-lg:w-[75%] w-[90%]">
+            <div class="flex flex-col px-4 gap-8">
+
+                <!-- HEADER -->
+                <div class="grid gap-[12px]">
+                    <hr width="100%" size="2" noshade>
+                    <p class="text-light-accent">RESEARCH</p>
+                </div>
+            </div>
+            <div class="flex flex-col px-4 gap-8">
+                <!-- HEADER -->
+                <div class="grid gap-[12px]">
+                    <hr width="100%" size="2" noshade>
+                    <p class="text-light-accent">WEB DESIGN</p>
+                </div>
+
+                <!-- CONTENT -->
+                <SmallCard 
+                    id='hb'
+                    iconsrc="icons/icon-placeholder.png"
+                    title="Website for 3+ Million community members of Home Buddies"
+                    description="Conference, More"
+                    imgsrc="card-photos/home-buddies.png"
+                    link="/works#hb"
+
+                    long_title="Homebuddies Website"
+                    long_description="As a Product Design Intern in Cocomilk Studio. I was involved in designing their website from low fidelity to high fidelity wireframes, to implementing the website using Webflow within 2 months."
+                    live="https://www.homebuddies.community/"             
+                />
+                <SmallCard 
+                    id='gdsc'
+                    iconsrc="icons/icon-placeholder.png"
+                    title="Website design for Google Developer Student Clubs UP Diliman"
+                    description="Conference, More"
+                    imgsrc="card-photos/gdsc.png"
+                    link="/works#gdsc"
+
+                    long_title="Google Developer Student Clubs Website"
+                    long_description="As a freshman in 2020, UP Diliman's Google Developer Student Clubs hosted an internal website design competition for its 300+ community members. I co-designed this layout with the idea to create a clean yet playful design to encapsulate Google's branding. After a couple of revisions, the output was selected to be the official website design to represent the organization."
+                    live="https://gdscupd.com/"   
+                    figma="https://www.figma.com/file/SoKB49L9i4hfsquxfOBw7s/DSC-Website-UI-(Project)?type=design&node-id=0%3A1&mode=design&t=cStUvlPrHtVG34Za-1"
+                />
+                <SmallCard 
+                    id='forent_app'
+                    iconsrc="icons/icon-placeholder.png"
+                    title="Growing Forent from 500 to 10,000+ downloads"
+                    description="Conference, More"
+                    imgsrc="card-photos/forent-mobile.png"
+                    link="/works#forent-app"
+
+                    long_title="Forent App Design"
+                    long_description="In 2022, I was a UI/UX designer intern in Forent, a start up with a mission to create a centralized renting platform in the Philippines. As a part of the pioneer interns, my work included redesigning outdated screens, creating user flows and layouting new features to create a seamless lessor to renter connection. Now, the Forent App has over 5,000 downloads in the Google Playstore."
+                    live="https://play.google.com/store/apps/details?id=com.ph.forent_app&pli=1"   
+                />
+                <SmallCard 
+                    id='forent_web'
+                    iconsrc="icons/icon-placeholder.png"
+                    title="Update Forent’s branding as they grew from a small start-up to a recognized one."
+                    description="Conference, More"
+                    imgsrc="card-photos/forent-web.png"
+                    link="/works#forent-web"
+
+                    long_title="Forent Website Redesign"
+                    long_description="In 2022, Forent ventured from being a small start up to a recognized organization. In order to adapt to its growing influence, I was given the solo responsibility of redesigning their website from scratch to accommodate new features, such as testimonials, FAQs and a blog."
+                    live="https://www.forent-app.com/"   
+                    figma="https://www.figma.com/design/mZfL6mYrNCynrRbfDVi1IT/Forent-Web---Allaine?node-id=0-1"
+                />
+            </div>
+            <div class="flex flex-col px-4 gap-8">
+                <!-- HEADER -->
+                <div class="grid gap-[12px]">
+                    <hr width="100%" size="2" noshade>
+                    <p class="text-light-accent">AI/ML/DATA</p>
+                </div>
+
+                <!-- CONTENT -->
+                <SmallCard 
+                    iconsrc="icons/icon-placeholder.png"
+                    title="Campus Disease Spread Model"
+                    description="An agent based model of disease spread and impact on student productivity."
+                    imgsrc="card-photos/dcs-disease.png"
+                    link="/"
+                />
+                <SmallCard 
+                    id='mask_patrol'
+                    iconsrc="icons/icon-placeholder.png"
+                    title="Mask Patrol: Face Mask Detection"
+                    description="A deployed face mask and social distancing detection model using computer vision."
+                    imgsrc="card-photos/mask-patrol.png"
+                    link="/works#mask-patrol"
+
+                    long_description = "For our AI class, we were challenged to use AI to solve an everyday issue. Within 2 weeks, my group was able to train and deploy a Face Mask Detection and Social Distancing Detection Model using convolutional neural networks with a 97% accuracy. I trained the model over 3,000+ images and designed the UI of the website."
+                    github = "https://github.com/allainerain/CS180-MaskPatrol"
+                    figma = "https://www.figma.com/file/uoXEo5hwm93aywbjAgJCyW/Mask-Patrol?type=design&node-id=0%3A1&mode=design&t=xXjBaG6H8ZCXAWra-1"
+                    live = "none"
+                    case_study="none"
+                />
+                <SmallCard 
+                    id="abscbn"
+                    iconsrc="icons/icon-placeholder.png"
+                    title="Twitter Disinformation Analysis"
+                    description="An award winning case analysis regarding the disinformation on the ABS-CBN tax evasion case."
+                    imgsrc="card-photos/abscbn.png"
+                    link="/works#abs-cbn"
+
+                    long_description = "In 2023, our Data Science class made us explore the disinformation spread on Twitter regarding political issues in the Philippines. Using data analysis, NLP and modeling, my group of 3 created an award winning case analysis over 60 groups regarding the disinformation on the ABS-CBN tax evasion case. I designed the website, performed NLP and created the poster presentation which garnered a special distinction for visual design."
+                    github = "https://github.com/allainerain/cs132-data-science-portfolio/tree/main"
+                    figma = "https://www.figma.com/file/e8J2k03nZe5kHTqPXIWPmQ/Data-Science-Portfolio?type=design&node-id=0%3A1&mode=design&t=Dy8GkZyLzTafGD66-1"
+                    live = "https://overdrivengain.github.io/cs132-portfolio/#portfolio"
+                    case_study="none"
+                />
+            </div>
+        </div>
     </section>
     
-    <Footer></Footer>
-</body>
+</section>
 
-
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono&family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
-section {
-    color: #C2C2C2;
-    width: 800px;
-    margin: 150px auto 150px auto;
-    text-align: center;
-}
-
-h1{
-    /* font-family: 'Giom Mod', sans-serif; */
-    /* font-family: 'Casftego', sans-serif; */
-    /* font-family: 'Opsi', sans-serif; */
-    /* font-family: 'Kemilash', sans-serif; */
-    font-family: 'Hogbine', sans-serif;
-
-    font-weight: 400;
-    font-size: 96px;
-    line-height: 1.11;
-}
-
-.journey h1 {
-    font-size: 64px;
-}
-
-p{
-    font-family: 'Satoshi', sans-serif;
-    font-size: 18px;
-    line-height: 1.75;
-    color: #B3B3B3
-}
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 50px;
-    justify-items: center;
-    margin: 100px 0px;
-}
-
-/* TABLET VIEW */
-@media only screen and (max-width: 900px) {
-    section{
-        width: 94%;
-        margin: 150px 3% 150px 3%; /* Adjust the margin for small screens */
-
-    }
-    h1{
-        font-size: 72px;
-    }
-    .journey h1 {
-        font-size: 48px;
-    }
-    p{
-        font-size: 20px;
+<style lang="postcss">
+    .gradient-text {
+        --bg-size: 400%;
+        --color-one: #6E48BF;
+        --color-two: #E378B1;
+        --color-two: #ED885E;
+        /* font-size: clamp(3rem, 25vmin, 8rem); */
+        background: linear-gradient(
+                        90deg,
+                        var(--color-one),
+                        var(--color-two),
+                        var(--color-one)
+                    ) 0 0 / var(--bg-size) 100%;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        animation: move-bg 15s infinite linear;
     }
 
-}
-
-/* PHONE VIEW */
-@media only screen and (max-width:770px){
-    section{
-        width: 90%;
-        margin: 150px 5% 150px 5%; /* Adjust the margin for small screens */
+    @keyframes move-bg {
+        to {
+            background-position: var(--bg-size) 0;
+        }
     }
-    h1{
-        font-size: 54px;
+
+    @keyframes move-bg-oscillate {
+        to {
+            background-position: 200% 0;
+        }
     }
-    .journey h1 {
-        font-size: 38px;
+
+    section.journey{
+        @apply grid gap-8 text-center;
     }
-    p{
-        font-size: 16px;
+
+    .gradient-text-grey {
+        --bg-size: 400%;
+        --color-one: #ADAFB5;
+        --color-two: #71747A;
+        --color-two: #3F4145;
+        /* font-size: clamp(3rem, 25vmin, 8rem); */
+        background: linear-gradient(
+                        90deg,
+                        var(--color-one),
+                        var(--color-two),
+                        var(--color-one)
+                    ) 0 0 / var(--bg-size) 100%;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        animation: move-bg-oscillate 120s infinite linear;
+
     }
-}
 
-.gradient-text {
-    --bg-size: 400%;
-    --color-one: #6E48BF;
-    --color-two: #E378B1;
-    --color-two: #ED885E;
-    /* font-size: clamp(3rem, 25vmin, 8rem); */
-    background: linear-gradient(
-                    90deg,
-                    var(--color-one),
-                    var(--color-two),
-                    var(--color-one)
-                ) 0 0 / var(--bg-size) 100%;
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    animation: move-bg 15s infinite linear;
-
-}
-
-@keyframes move-bg {
-  to {
-    background-position: var(--bg-size) 0;
-  }
-}
-
+    .gradient-text-static {
+        --bg-size: 50%;
+        --color-one: #ADAFB5;
+        --color-two: #71747A;
+        --color-two: #3F4145;
+        background: linear-gradient(
+                        90deg,
+                        var(--color-one),
+                        var(--color-two),
+                        var(--color-one)
+                    ) 0 0 / var(--bg-size) 100%;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
 
 </style>
