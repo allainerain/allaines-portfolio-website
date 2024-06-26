@@ -20,15 +20,15 @@
         <img in:fade={{ duration: 800 }} class="carousel-image {imagesLoaded === 1 ? 'loaded' : ''}" src={item} alt="Project" on:load={() => imagesLoaded = 1}>
     {/each}
 
-    <div class="carousel-controls">
+    <div class="carousel-controls text-light-text">
         <button class="previous" on:click={previousSlide} transition:fade>
-            Previous
+            <p>Previous</p>
         </button>
         <div class="pagenum">
-            {currentSlideItem + 1} of {gallery_items.length}
+            <p>{currentSlideItem + 1} of {gallery_items.length}</p>
         </div>
         <button class="next" on:click={nextSlide} transition:fade>
-            Next
+            <p>Next</p>
         </button>
     </div>
 </div>
@@ -36,10 +36,7 @@
 <style>
     .carousel {
         width: 100%;
-        max-width: 800px;
-        margin: 100px auto;
         color: #C2C2C2;
-        font-family: 'Gentium Plus', serif;
         font-size: 20px;
     }
   
@@ -87,7 +84,6 @@
     @media only screen and (max-width: 900px) {
         .carousel{
             width: 94%;
-            margin: 75px 3% 150px 3%;
         }
     }
 
@@ -95,7 +91,6 @@
     @media only screen and (max-width: 770px){
         .carousel{
             width: 90%;
-            margin: 75px 5% 0px 5%; 
         }
     }
 </style>
