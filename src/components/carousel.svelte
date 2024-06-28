@@ -17,7 +17,7 @@
 
 <div class="carousel">
     {#each [gallery_items[currentSlideItem]] as item (currentSlideItem)}
-        <img in:fade={{ duration: 800 }} class="carousel-image {imagesLoaded === 1 ? 'loaded' : ''}" src={item} alt="Project" on:load={() => imagesLoaded = 1}>
+        <img in:fade={{ duration: 800 }} class="carousel-image rounded-lg {imagesLoaded === 1 ? 'loaded' : ''}" src={item} alt="Project" on:load={() => imagesLoaded = 1}>
     {/each}
 
     <div class="carousel-controls text-light-text dark:text-dark-text">
