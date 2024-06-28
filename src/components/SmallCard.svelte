@@ -1,7 +1,7 @@
 <script>
     import Project from "./Project.svelte";
     import { onMount } from "svelte";
-    import { slide, fly } from "svelte/transition";
+    import { fly } from "svelte/transition";
     import { quintOut } from "svelte/easing";
     import { Icon, XMark } from "svelte-hero-icons";
 
@@ -71,12 +71,15 @@
         '/works/hb/10.png'
     ];
 
-    let berdebox = [
-        '/works/berdebox/1.png',
-        '/works/berdebox/2.png',
-        '/works/berdebox/3.png',
+    let berdebox_app = [
         '/works/berdebox/4.png',
         '/works/berdebox/5.png',
+    ];
+
+    let berdebox_web = [
+        '/works/berdebox/1.png',
+        '/works/berdebox/2.png',
+        '/works/berdebox/3.png'
     ];
 
     let suse = [
@@ -87,8 +90,28 @@
         '/works/suse/5.png',
     ];
 
-    let selected = false;
+    let abscbn_conf = [
+        '/works/abscbn_conf/1.png',
+        '/works/abscbn_conf/2.png'
+    ];
 
+    let suse_conf = [
+        '/works/suse_conf/1.png',
+        '/works/suse_conf/2.png',
+        '/works/suse_conf/3.png'
+    ];
+
+    let eba_conf = [
+        '/works/eba_conf/1.png',
+        '/works/eba_conf/2.png',
+        '/works/eba_conf/3.png'
+    ];
+
+    let abm = [
+        '/works/abm/1.png'
+    ];
+
+    let selected = false;
     let gallery_items = [];
 
     // Function to select the appropriate array based on id
@@ -118,6 +141,24 @@
             case 'suse':
                 gallery_items = suse;
                 break;
+            case 'abscbn_conf':
+                gallery_items = abscbn_conf;
+                break;
+            case 'suse_conf':
+                gallery_items = suse_conf;
+                break;
+            case 'eba_conf':
+                gallery_items = eba_conf;
+                break;
+            case 'berdebox_web':
+                gallery_items = berdebox_web;
+                break;
+            case 'berdebox_app':
+                gallery_items = berdebox_app;
+                break;
+            case 'abm':
+                gallery_items = abm;
+                break;
             default:
                 gallery_items = [];
         }
@@ -126,20 +167,19 @@
     onMount(() => {
         selectGalleryItems(id);
     });
-
 </script>
 
 <button on:click={() => selected = true}>
     <div class="grid gap-4">
-        <div class="rounded-lg border border-[3px] border-light-accent border-opacity-[20%] overflow-hidden">
+        <div class="rounded-lg border border-[1px] border-light-accent border-opacity-[20%] overflow-hidden">
             
             {#if imgsrc != ""}
-                <img class="w-full h-full transition-transform duration-300"
+                <img class="w-full h-full transition-transform duration-300 hover:scale-[102%]"
                     src={imgsrc} alt={title}
                 />
             {/if}
             {#if videosrc != ""}
-                <video playsinline autoplay loop>
+                <video playsinline autoplay loop class="transition-transform duration-300 hover:scale-[102%]">
                     <source src={videosrc} type="video/mp4">
                     <track kind="captions">
                     Your browser does not support the video tag.
@@ -161,7 +201,7 @@
             <!-- Exit button-->
             <div class="fixed top-0 right-0 z-40 m-8 text-light-text dark:text-dark-text">
                 <button on:click={() => selected = false}>
-                    <Icon src={XMark}  size="52"/>
+                    <Icon src={XMark}  size="40"/>
                 </button>
             </div>
 

@@ -6,7 +6,7 @@
 </script>
 
 <a class="grid gap-4" href={link}>
-    <div class="rounded-lg border border-[3px] border-light-accent border-opacity-[20%] overflow-hidden">
+    <div class="rounded-lg border border-[2px] border-light-accent border-opacity-[20%] overflow-hidden">
         <img class="w-full h-full transition-transform duration-300 hover:scale-[102%]"
         src={imgsrc} alt={title}
     />
