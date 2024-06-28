@@ -9,7 +9,7 @@ export default {
           background: "#ffffff",
           text: "#404040",
           accent: "#6C6F75",
-          border: "#F3F4F6",
+          border: "#A8ACB3",
         },
         dark: {
           background: "#131313",
