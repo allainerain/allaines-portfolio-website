@@ -24,7 +24,18 @@
 
             </span>
             <span transition:fly={{y: 300, duration: 800, delay: 100}} class=" ">
-                <h1 in:blur={{amount: 100, duration: 800, delay: 100}} class="gradient-text-grey masked-text">
+                <h1 in:blur={{amount: 100, duration: 800, delay: 100}} 
+                    class="
+                    relative inline-block
+                    before:content-['']
+                    before:absolute
+                    before:inset-0
+                    before:bg-[radial-gradient(circle_at_center,rgba(255,255,255,0)_10%,rgba(255,255,255,0.4)_90%)]
+                    before:pointer-events-none
+                    before:dark:bg-[radial-gradient(circle_at_center,rgba(19,19,19,0)_10%,rgba(19,19,19,0.4)_90%)]
+                    text:text-dark-accent
+                    "
+                >
                     Allaine is a designer and developer from the sunny Philippines, designing and building intuitive interfaces for emerging technologies. She studied Computer Science at University of the Philippines Diliman, and she’s designed for startups and presently at Samsung.
                 </h1>
             </span>
@@ -252,7 +263,6 @@
         -webkit-background-clip: text;
         background-clip: text;
         animation: move-bg-oscillate 120s infinite linear;
-
     }
 
     .gradient-text-static {
@@ -270,18 +280,4 @@
         -webkit-background-clip: text;
         background-clip: text;
     }
-
-    .masked-text {
-        position: relative;
-        display: inline-block;
-    }
-    
-    .masked-text::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: radial-gradient(circle at center, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0.4) 95%);
-        pointer-events: none;
-    } 
 </style>
