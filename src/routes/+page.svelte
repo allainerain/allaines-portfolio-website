@@ -6,107 +6,129 @@
 
 <section class="flex flex-col w-full items-center">
 
-    <section class="grid gap-12 items-center justify-center max-lg:w-[75%] w-[90%]">
-        <section class="Hero flex flex-col gap-8 items-left justify-center md:pt-40 md:pb-20 pt-20">
-            
-            <!-- <h1 class="xl:w-[80%] xl:text-center">Freelance <span class="moving-gradient gradient-text">Designer & Developer</span>. Cycling Around the World.</h1> -->
+    
+    <section class="grid gap-12 items-center justify-center w-[90%]">
+        <!-- Text Introduction -->
+        <section class="Hero flex flex-col gap-8 items-left justify-center md:pt-40 md:pb-20 pt-20 max-w-[1800px] ">            
             <h5 class="gradient-text-static">Hello there!</h5>
             <h1 class="gradient-text-grey">
-                Allaine Tan is a designer and developer from the sunny Philippines, designing next-generation interfaces and products for emerging technologies. She studied Computer Science at University of the Philippines Diliman, and she’s designed for startups and more.
+                Allaine is a designer and developer from the sunny Philippines, designing and building intuitive interfaces for emerging technologies. She studied Computer Science at University of the Philippines Diliman, and she’s designed for startups and presently at Samsung.
             </h1>
         </section>
         
         <Divider text={"RECENT WORK I'M PROUD OF"}/>
 
-        <section class="journey">
-            <div class="cards grid grid-cols-1 gap-8 md:grid-cols-2">
+        <section class="">
+            <div class="cards grid grid-cols-1 gap-8 lg:grid-cols-2">
             <Card 
                 iconsrc="icons/icon-placeholder.png"
-                title="Avail library services seamlessly with university ID with SUSe"
+                title="Avail library services seamlessly with your university ID with SUSe"
                 description="Project turned open-source"
                 imgsrc="card-photos/suse.png"
-                link="/works#suse"
+                link="/"
             />
             <Card 
                 iconsrc="icons/icon-placeholder.png"
-                title="Claim packages remotely and securely from anywhere with BerdeBox"
+                title="Receive packages remotely and securely from anywhere with BerdeBox"
                 description="Personal"
                 imgsrc="card-photos/berdebox.png"
-                link="/works#berdebox"
+                link="/"
             />
             </div>
-            
         </section>
-        <section class="journey">
-            <div class="cards grid grid-cols-1 gap-8 md:grid-cols-2">
-
-            </div>
-        
-        </section>
-
     </section>
-    <section class="flex flex-col items-center bg-[#FBFBFB] w-full py-20 dark:bg-[#070707]">
+
+    <br>
+
+    <section class="flex flex-col items-center bg-[#FBFBFB] w-full py-10 dark:bg-[#070707] mt-10">
 
         <!-- OTHER PROJECTS -->
-        <div class="grid md:grid-cols-3 grid-cols-1 max-lg:w-[75%] w-[90%]">
+        <div class="grid lg:grid-cols-3 grid-cols-1 w-[90%]">
             <div class="flex flex-col px-4 gap-8">
 
                 <!-- HEADER -->
                 <Divider text={"RESEARCH"}/>
 
+                <!-- content -->
+                <SmallCard 
+                    id=''
+                    title="Poster presentation for EDA on disinformation on twitter"
+                    description="Among 30+ groups, emerged as the best poster presentation, with awards on best visual impact and best social relevance."
+                    imgsrc="card-photos/abscbn-conf.png"
+                    videosrc=""
+                />
+                <SmallCard 
+                    id=''
+                    title="Poster presentation for our library service availing system"
+                    description="Only non-final year project presented in our department's final year colloquium. Awarded 2nd Runner-up for Best Presentation, 1st Runner-up for People's Choice, and received a vote for Best Project from one professor."
+                    imgsrc="card-photos/suse-conf.png"
+                    videosrc=""
+                />
+                <SmallCard 
+                    id=''
+                    title="Poster presentation on preventative solutions for industrial diseases in Minamata, Japan"
+                    description="After a 10-day fieldwork in Japan, we conducted research, created a poster, and presented it to stakeholders in Minamata, all within 3 hours."
+                    imgsrc="card-photos/eba-conf.png"
+                    videosrc=""
+                />
+
             </div>
             <div class="flex flex-col px-4 gap-8">
                 <!-- HEADER -->
-                <Divider text={"WEB DEVELOPMENT"}/>
-
+                <Divider text={"DESIGN & DEVELOPMENT"}/>
 
                 <!-- CONTENT -->
                 <SmallCard 
                     id='hb'
-                    iconsrc="icons/icon-placeholder.png"
                     title="Website for 3+ Million community members of Home Buddies"
-                    description="Conference, More"
-                    imgsrc="card-photos/home-buddies.png"
-                    link="/works#hb"
+                    description="I was one of 3 product designers, and Webflow developers for Home Buddies' long overdue website. Created in a span of 2 months."
+                    imgsrc=""
+                    videosrc="card-photos/homebuddies.mp4"
 
                     long_title="Homebuddies Website"
                     long_description="As a Product Design Intern in Cocomilk Studio. I was involved in designing their website from low fidelity to high fidelity wireframes, to implementing the website using Webflow within 2 months."
                     live="https://www.homebuddies.community/"             
                 />
                 <SmallCard 
-                    id='gdsc'
-                    iconsrc="icons/icon-placeholder.png"
-                    title="Website design for Google Developer Student Clubs UP Diliman"
-                    description="Conference, More"
-                    imgsrc="card-photos/gdsc.png"
-                    link="/works#gdsc"
-
-                    long_title="Google Developer Student Clubs Website"
-                    long_description="As a freshman in 2020, UP Diliman's Google Developer Student Clubs hosted an internal website design competition for its 300+ community members. I co-designed this layout with the idea to create a clean yet playful design to encapsulate Google's branding. After a couple of revisions, the output was selected to be the official website design to represent the organization."
-                    live="https://gdscupd.com/"   
-                    figma="https://www.figma.com/file/SoKB49L9i4hfsquxfOBw7s/DSC-Website-UI-(Project)?type=design&node-id=0%3A1&mode=design&t=cStUvlPrHtVG34Za-1"
-                />
-                <SmallCard 
                     id='forent_app'
-                    iconsrc="icons/icon-placeholder.png"
                     title="Growing Forent from 500 to 10,000+ downloads"
-                    description="Conference, More"
+                    description="I redesigned Forent's old reservation screens and proposed a referral system as Forent continued to scale."
                     imgsrc="card-photos/forent-mobile.png"
-                    link="/works#forent-app"
+                    videosrc=""
 
                     long_title="Forent App Design"
                     long_description="In 2022, I was a UI/UX designer intern in Forent, a start up with a mission to create a centralized renting platform in the Philippines. As a part of the pioneer interns, my work included redesigning outdated screens, creating user flows and layouting new features to create a seamless lessor to renter connection. Now, the Forent App has over 5,000 downloads in the Google Playstore."
                     live="https://play.google.com/store/apps/details?id=com.ph.forent_app&pli=1"   
                 />
                 <SmallCard 
-                    id='forent_web'
-                    iconsrc="icons/icon-placeholder.png"
-                    title="Update Forent’s branding as they grew from a small start-up to a recognized one."
-                    description="Conference, More"
-                    imgsrc="card-photos/forent-web.png"
-                    link="/works#forent-web"
+                id=''
+                    title="BerdeBox's landing website for consumer trust"
+                    description="Created in less than a week, I designed and developed a landing page featuring 3D models to show our vision for BerdeBox."
+                    imgsrc=""
+                    videosrc="card-photos/berdebox-web.mp4"
 
-                    long_title="Forent Website Redesign"
+                    long_description="As a Product Design Intern in Cocomilk Studio. I was involved in designing their website from low fidelity to high fidelity wireframes, to implementing the website using Webflow within 2 months."
+                    live="https://www.homebuddies.community/"             
+                />
+                <SmallCard 
+                    id='gdsc'
+                    title="Website design for Google Developer Student Clubs UP Diliman's 300+ community members"
+                    description="One of two principal designers of the organization's website. Launched within a year of the organizations founding."
+                    imgsrc="card-photos/gdsc.png"
+                    videosrc=""
+
+                    long_description="As a freshman in 2020, UP Diliman's Google Developer Student Clubs hosted an internal website design competition for its 300+ community members. I co-designed this layout with the idea to create a clean yet playful design to encapsulate Google's branding. After a couple of revisions, the output was selected to be the official website design to represent the organization."
+                    live="https://gdscupd.com/"   
+                    figma="https://www.figma.com/file/SoKB49L9i4hfsquxfOBw7s/DSC-Website-UI-(Project)?type=design&node-id=0%3A1&mode=design&t=cStUvlPrHtVG34Za-1"
+                />
+
+                <SmallCard 
+                    id='forent_web'
+                    title="Update Forent’s branding as they grew from a small start-up to a recognized one."
+                    description="Proposed a website redesign to better reflect Forent's brand."
+                    imgsrc="card-photos/forent-web.png"
+                    videosrc=""
+
                     long_description="In 2022, Forent ventured from being a small start up to a recognized organization. In order to adapt to its growing influence, I was given the solo responsibility of redesigning their website from scratch to accommodate new features, such as testimonials, FAQs and a blog."
                     live="https://www.forent-app.com/"   
                     figma="https://www.figma.com/design/mZfL6mYrNCynrRbfDVi1IT/Forent-Web---Allaine?node-id=0-1"
@@ -118,19 +140,17 @@
 
                 <!-- CONTENT -->
                 <SmallCard 
-                    iconsrc="icons/icon-placeholder.png"
                     title="Campus Disease Spread Model"
                     description="An agent based model of disease spread and impact on student productivity."
-                    imgsrc="card-photos/dcs-disease.png"
-                    link="/"
+                    imgsrc = ""
+                    videosrc="/card-photos/abm.mp4"
                 />
                 <SmallCard 
                     id='mask_patrol'
-                    iconsrc="icons/icon-placeholder.png"
-                    title="Mask Patrol: Face Mask Detection"
-                    description="A deployed face mask and social distancing detection model using computer vision."
+                    title="Mask Patrol: Real-time face mask detection with 97% accuracy"
+                    description="Within 2 weeks, trained and deployed a face mask and social distancing detection model using computer vision."
                     imgsrc="card-photos/mask-patrol.png"
-                    link="/works#mask-patrol"
+                    videosrc=""
 
                     long_description = "For our AI class, we were challenged to use AI to solve an everyday issue. Within 2 weeks, my group was able to train and deploy a Face Mask Detection and Social Distancing Detection Model using convolutional neural networks with a 97% accuracy. I trained the model over 3,000+ images and designed the UI of the website."
                     github = "https://github.com/allainerain/CS180-MaskPatrol"
@@ -140,11 +160,10 @@
                 />
                 <SmallCard 
                     id="abscbn"
-                    iconsrc="icons/icon-placeholder.png"
                     title="Twitter Disinformation Analysis"
-                    description="An award winning case analysis regarding the disinformation on the ABS-CBN tax evasion case."
-                    imgsrc="card-photos/abscbn.png"
-                    link="/works#abs-cbn"
+                    description="An award winning case analysis regarding the disinformation on the ABS-CBN tax evasion case and the different appeals used by tweets containing disinformation."
+                    imgsrc=""
+                    videosrc="/card-photos/abscbn.mp4"
 
                     long_description = "In 2023, our Data Science class made us explore the disinformation spread on Twitter regarding political issues in the Philippines. Using data analysis, NLP and modeling, my group of 3 created an award winning case analysis over 60 groups regarding the disinformation on the ABS-CBN tax evasion case. I designed the website, performed NLP and created the poster presentation which garnered a special distinction for visual design."
                     github = "https://github.com/allainerain/cs132-data-science-portfolio/tree/main"
@@ -195,8 +214,8 @@
 
     .gradient-text-grey {
         --bg-size: 400%;
-        --color-one: #ADAFB5;
-        --color-two: #71747A;
+        --color-one: #7E8187;
+        --color-two: #61646A;
         --color-two: #3F4145;
         /* font-size: clamp(3rem, 25vmin, 8rem); */
         background: linear-gradient(
@@ -214,8 +233,8 @@
 
     .gradient-text-static {
         --bg-size: 50%;
-        --color-one: #ADAFB5;
-        --color-two: #71747A;
+        --color-one: #7E8187;
+        --color-two: #61646A;
         --color-two: #3F4145;
         background: linear-gradient(
                         90deg,
