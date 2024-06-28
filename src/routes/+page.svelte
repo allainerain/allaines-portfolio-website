@@ -1,41 +1,62 @@
 <script>
+    import { fly } from "svelte/transition";
+    import { blur} from "svelte/transition";
+    import { onMount } from 'svelte';
+    import { quadInOut } from "svelte/easing";
+
+    let ready = false;
+    onMount(() => ready = true);
     import Card from "../components/Card.svelte";
     import SmallCard from "../components/SmallCard.svelte";
     import Divider from "../components/Divider.svelte";
 </script>
 
+{#if ready}
 <section class="flex flex-col w-full items-center">
 
-    
     <section class="grid gap-12 items-center justify-center w-[90%]">
         <!-- Text Introduction -->
-        <section class="Hero flex flex-col gap-8 items-left justify-center md:pt-40 md:pb-20 pt-20 max-w-[1800px] ">            
-            <h5 class="gradient-text-static">Hello there!</h5>
-            <h1 class="gradient-text-grey">
-                Allaine is a designer and developer from the sunny Philippines, designing and building intuitive interfaces for emerging technologies. She studied Computer Science at University of the Philippines Diliman, and she’s designed for startups and presently at Samsung.
-            </h1>
-        </section>
-        
-        <Divider text={"RECENT WORK I'M PROUD OF"}/>
+        <section   
+                    
+            class="Hero flex flex-col gap-8 items-left justify-center md:pt-40 md:pb-20 pt-20 max-w-[1800px]"
+        >   
+            <span transition:fly={{y: 300, duration: 800}}>
+                <h5 in:blur={{amount: 100, duration: 800}}  class="gradient-text-static">Hello there!</h5>
 
-        <section class="">
-            <div class="cards grid grid-cols-1 gap-8 lg:grid-cols-2">
-            <Card 
-                iconsrc="icons/icon-placeholder.png"
-                title="Avail library services seamlessly with your university ID with SUSe"
-                description="Project turned open-source"
-                imgsrc="card-photos/suse.png"
-                link="/"
-            />
-            <Card 
-                iconsrc="icons/icon-placeholder.png"
-                title="Receive packages remotely and securely from anywhere with BerdeBox"
-                description="Personal"
-                imgsrc="card-photos/berdebox.png"
-                link="/"
-            />
-            </div>
+            </span>
+            <span transition:fly={{y: 300, duration: 800, delay: 100}}>
+                <h1 in:blur={{amount: 100, duration: 800, delay: 100}} class="gradient-text-grey">
+                    Allaine is a designer and developer from the sunny Philippines, designing and building intuitive interfaces for emerging technologies. She studied Computer Science at University of the Philippines Diliman, and she’s designed for startups and presently at Samsung.
+                </h1>
+            </span>
         </section>
+
+        <span transition:fly={{y: 300, duration: 800, delay: 200}}>
+            <span in:blur={{amount: 100, duration: 800, delay: 200}}>
+                <Divider  text={"RECENT WORK I'M PROUD OF"}/>
+            </span>
+        </span>
+
+        <span transition:fly={{y: 300, duration: 800, delay: 300}}>
+            <section in:blur={{amount: 20, duration: 800, delay: 300}} class="">
+                <div class="cards grid grid-cols-1 gap-8 lg:grid-cols-2">
+                <Card 
+                    iconsrc="icons/icon-placeholder.png"
+                    title="Avail library services seamlessly with your university ID with SUSe"
+                    description="Project turned open-source"
+                    imgsrc="card-photos/suse.png"
+                    link="/"
+                />
+                <Card 
+                    iconsrc="icons/icon-placeholder.png"
+                    title="Receive packages remotely and securely from anywhere with BerdeBox"
+                    description="Personal"
+                    imgsrc="card-photos/berdebox.png"
+                    link="/"
+                />
+                </div>
+            </section>
+        </span>
     </section>
 
     <br>
@@ -176,6 +197,7 @@
     </section>
     
 </section>
+{/if}
 
 <style lang="postcss">
     .gradient-text {
