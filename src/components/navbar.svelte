@@ -18,7 +18,7 @@
         <a href="/" class="px-3 py-1"><p>Home</p></a>
         <a href="/about" class="px-3 py-1"><p>About</p></a>
         <ThemeSwitch />
-        <a href="/works" class="px-3 py-1"><p>Works</p></a>
+        <a href="https://drive.google.com/file/d/1Puny_APyd60U_T_RxMf4vDKnYQIeKOE_/view?usp=sharing" target="_blank" class="px-3 py-1"><p>Resume</p></a>
         <a href="/blog" class="px-3 py-1"><p>Blog</p></a>
     </div>
 </div>
