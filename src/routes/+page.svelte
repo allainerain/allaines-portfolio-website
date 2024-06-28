@@ -2,19 +2,18 @@
     import { fly } from "svelte/transition";
     import { blur} from "svelte/transition";
     import { onMount } from 'svelte';
-    import { quadInOut } from "svelte/easing";
-
-    let ready = false;
-    onMount(() => ready = true);
     import Card from "../components/Card.svelte";
     import SmallCard from "../components/SmallCard.svelte";
     import Divider from "../components/Divider.svelte";
+
+    let ready = false;
+    onMount(() => ready = true);
 </script>
 
 {#if ready}
 <section class="flex flex-col w-full items-center">
 
-    <section class="grid gap-12 items-center justify-center w-[90%]">
+    <section class="grid gap-12 items-center justify-center w-[90%]  overflow-hidden">
         <!-- Text Introduction -->
         <section   
                     
@@ -24,8 +23,8 @@
                 <h5 in:blur={{amount: 100, duration: 800}}  class="gradient-text-static">Hello there!</h5>
 
             </span>
-            <span transition:fly={{y: 300, duration: 800, delay: 100}}>
-                <h1 in:blur={{amount: 100, duration: 800, delay: 100}} class="gradient-text-grey">
+            <span transition:fly={{y: 300, duration: 800, delay: 100}} class=" ">
+                <h1 in:blur={{amount: 100, duration: 800, delay: 100}} class="gradient-text-grey masked-text">
                     Allaine is a designer and developer from the sunny Philippines, designing and building intuitive interfaces for emerging technologies. She studied Computer Science at University of the Philippines Diliman, and she’s designed for startups and presently at Samsung.
                 </h1>
             </span>
@@ -72,25 +71,31 @@
 
                 <!-- content -->
                 <SmallCard 
-                    id=''
+                    id='abscbn_conf'
                     title="Poster presentation for EDA on disinformation on twitter"
-                    description="Among 30+ groups, emerged as the best poster presentation, with awards on best visual impact and best social relevance."
+                    description="Presenter, Designer"
                     imgsrc="card-photos/abscbn-conf.png"
                     videosrc=""
+
+                    long_description="Among 30+ groups, emerged as the best poster presentation, with awards on best visual impact and best social relevance."
                 />
                 <SmallCard 
-                    id=''
+                    id='suse_conf'
                     title="Poster presentation for our library service availing system"
-                    description="Only non-final year project presented in our department's final year colloquium. Awarded 2nd Runner-up for Best Presentation, 1st Runner-up for People's Choice, and received a vote for Best Project from one professor."
+                    description="Presenter, Designer"
                     imgsrc="card-photos/suse-conf.png"
                     videosrc=""
+
+                    long_description="Only non-final year project presented in our department's final year colloquium. Awarded 2nd Runner-up for Best Presentation, 1st Runner-up for People's Choice, and received a vote for Best Project from one professor."
                 />
                 <SmallCard 
-                    id=''
+                    id='eba_conf'
                     title="Poster presentation on preventative solutions for industrial diseases in Minamata, Japan"
-                    description="After a 10-day fieldwork in Japan, we conducted research, created a poster, and presented it to stakeholders in Minamata, all within 3 hours."
+                    description="Presenter, Designer, Researcher"
                     imgsrc="card-photos/eba-conf.png"
                     videosrc=""
+
+                    long_description="After a 10-day fieldwork in Japan, we conducted research, created a poster, and presented it to stakeholders in Minamata, all within 3 hours. We aimed to answer the question: How might we prevent cases like the Minamata Disease?"
                 />
 
             </div>
@@ -101,40 +106,38 @@
                 <!-- CONTENT -->
                 <SmallCard 
                     id='hb'
-                    title="Website for 3+ Million community members of Home Buddies"
-                    description="I was one of 3 product designers, and Webflow developers for Home Buddies' long overdue website. Created in a span of 2 months."
+                    title="Website for 3+ million community members of Home Buddies"
+                    description="Designer, Webflow Developer"
                     imgsrc=""
                     videosrc="card-photos/homebuddies.mp4"
 
-                    long_title="Homebuddies Website"
-                    long_description="As a Product Design Intern in Cocomilk Studio. I was involved in designing their website from low fidelity to high fidelity wireframes, to implementing the website using Webflow within 2 months."
+                    long_description="As a Product Design Intern in Cocomilk Studio, I was involved in designing their website from low fidelity to high fidelity wireframes, to implementing the website using Webflow within 2 months."
                     live="https://www.homebuddies.community/"             
                 />
                 <SmallCard 
                     id='forent_app'
-                    title="Growing Forent from 500 to 10,000+ downloads"
-                    description="I redesigned Forent's old reservation screens and proposed a referral system as Forent continued to scale."
+                    title="Growing Forent from 500 to 10,000+ downloads with a redesign"
+                    description="Designer"
                     imgsrc="card-photos/forent-mobile.png"
                     videosrc=""
 
-                    long_title="Forent App Design"
-                    long_description="In 2022, I was a UI/UX designer intern in Forent, a start up with a mission to create a centralized renting platform in the Philippines. As a part of the pioneer interns, my work included redesigning outdated screens, creating user flows and layouting new features to create a seamless lessor to renter connection. Now, the Forent App has over 5,000 downloads in the Google Playstore."
+                    long_description="In 2022, I was a UI/UX designer intern in Forent, a start up with a mission to create a centralized renting platform in the Philippines. As a part of the pioneer interns, my work included redesigning outdated screens, creating user flows and layouting new features to create a seamless lessor to renter connection. Now, the Forent App has over 10,000 downloads in the Google Playstore."
                     live="https://play.google.com/store/apps/details?id=com.ph.forent_app&pli=1"   
                 />
                 <SmallCard 
-                id=''
+                    id='berdebox_web'
                     title="BerdeBox's landing website for consumer trust"
-                    description="Created in less than a week, I designed and developed a landing page featuring 3D models to show our vision for BerdeBox."
+                    description="Designer, Developer"
                     imgsrc=""
                     videosrc="card-photos/berdebox-web.mp4"
 
-                    long_description="As a Product Design Intern in Cocomilk Studio. I was involved in designing their website from low fidelity to high fidelity wireframes, to implementing the website using Webflow within 2 months."
-                    live="https://www.homebuddies.community/"             
+                    long_description="Created in less than a week, I designed and developed a landing page featuring 3D models to show our vision for BerdeBox."
+                    live="https://berde-box.vercel.app/"             
                 />
                 <SmallCard 
                     id='gdsc'
                     title="Website design for Google Developer Student Clubs UP Diliman's 300+ community members"
-                    description="One of two principal designers of the organization's website. Launched within a year of the organizations founding."
+                    description="Designer"
                     imgsrc="card-photos/gdsc.png"
                     videosrc=""
 
@@ -146,7 +149,7 @@
                 <SmallCard 
                     id='forent_web'
                     title="Update Forent’s branding as they grew from a small start-up to a recognized one."
-                    description="Proposed a website redesign to better reflect Forent's brand."
+                    description="Designer"
                     imgsrc="card-photos/forent-web.png"
                     videosrc=""
 
@@ -161,15 +164,18 @@
 
                 <!-- CONTENT -->
                 <SmallCard 
-                    title="Campus Disease Spread Model"
-                    description="An agent based model of disease spread and impact on student productivity."
+                    id="abm"
+                    title="Analyzing disease spread on campus, and policies to maximize student learning"
+                    description="Agent Based Modelling"
                     imgsrc = ""
                     videosrc="/card-photos/abm.mp4"
+
+                    long_description="Used Mesa to create an agent based model of disease spread and impact on student productivity in small campuses using the SEIR model. Findings show that health protocols reducing transmission probability should be prioritized. Once the probability of transmission has reached a low enough threshold, it's better to commit to a strict isolation policy than a weak isolation policy to maximize learning productivity."
                 />
                 <SmallCard 
                     id='mask_patrol'
-                    title="Mask Patrol: Real-time face mask detection with 97% accuracy"
-                    description="Within 2 weeks, trained and deployed a face mask and social distancing detection model using computer vision."
+                    title="Real-time face mask detection with 97% accuracy with Mask Patrol"
+                    description="Computer Vision, Design"
                     imgsrc="card-photos/mask-patrol.png"
                     videosrc=""
 
@@ -182,7 +188,7 @@
                 <SmallCard 
                     id="abscbn"
                     title="Twitter Disinformation Analysis"
-                    description="An award winning case analysis regarding the disinformation on the ABS-CBN tax evasion case and the different appeals used by tweets containing disinformation."
+                    description="EDA, Design"
                     imgsrc=""
                     videosrc="/card-photos/abscbn.mp4"
 
@@ -230,10 +236,6 @@
         }
     }
 
-    section.journey{
-        @apply grid gap-8 text-center;
-    }
-
     .gradient-text-grey {
         --bg-size: 400%;
         --color-one: #7E8187;
@@ -269,4 +271,17 @@
         background-clip: text;
     }
 
+    .masked-text {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .masked-text::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle at center, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0.4) 95%);
+        pointer-events: none;
+    } 
 </style>
