@@ -9,8 +9,8 @@
     export let title;
     export let description;
     export let imgsrc;
+    export let videosrc;
 
-    export let long_title;
     export let long_description;
     export let github = "none";
     export let figma = "none";
@@ -132,9 +132,19 @@
 <button on:click={() => selected = true}>
     <div class="grid gap-4">
         <div class="rounded-lg border border-[3px] border-light-accent border-opacity-[20%] overflow-hidden">
-            <img class="w-full h-full transition-transform duration-300"
-            src={imgsrc} alt={title}
-        />
+            
+            {#if imgsrc != ""}
+                <img class="w-full h-full transition-transform duration-300"
+                    src={imgsrc} alt={title}
+                />
+            {/if}
+            {#if videosrc != ""}
+                <video playsinline autoplay loop>
+                    <source src={videosrc} type="video/mp4">
+                    <track kind="captions">
+                    Your browser does not support the video tag.
+                </video>
+            {/if}
         </div>
 
         <div class="grid gap-2 text-left">
