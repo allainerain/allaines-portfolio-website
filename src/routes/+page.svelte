@@ -2,21 +2,24 @@
     import { fly } from "svelte/transition";
     import { blur} from "svelte/transition";
     import { onMount } from 'svelte';
-    import Card from "../components/Card.svelte";
-    import SmallCard from "../components/SmallCard.svelte";
-    import Divider from "../components/Divider.svelte";
+
+    import Card from "$lib/components/Card.svelte";
+    import SmallCard from "$lib/components/SmallCard.svelte";
+    import Divider from "$lib/components/Divider.svelte";
 
     let ready = false;
-    onMount(() => ready = true);
+    onMount(() => {
+        ready = true
+    });
+
 </script>
 
 {#if ready}
-<section class="flex flex-col w-full items-center">
 
-    <section class="grid gap-12 items-center justify-center w-[90%]  overflow-hidden">
+<section class="flex flex-col w-full items-center">
+    <section class="grid gap-12 items-center justify-center w-[90%] overflow-hidden">
         <!-- Text Introduction -->
-        <section   
-                    
+        <section         
             class="Hero flex flex-col gap-8 items-left justify-center md:pt-40 md:pb-20 pt-20 max-w-[1800px]"
         >   
             <span transition:fly={{y: 300, duration: 800}}>
@@ -34,16 +37,17 @@
                     before:pointer-events-none
                     before:dark:bg-[radial-gradient(circle_at_center,rgba(19,19,19,0)_10%,rgba(19,19,19,0.4)_90%)]
                     text:text-dark-accent
+                    leading-30
                     "
                 >
-                    Allaine is a designer and developer from the sunny Philippines, designing and building intuitive interfaces for emerging technologies. She studied Computer Science at University of the Philippines Diliman, and she’s designed for startups and presently at Samsung.
+                    Allaine is a designer and developer from the sunny Philippines, designing and building intuitive interfaces for emerging technologies. She studied Computer Science at University of the Philippines Diliman, and she’s designed for startups. Presently at Samsung.
                 </h1>
             </span>
         </section>
 
         <span transition:fly={{y: 300, duration: 800, delay: 200}}>
             <span in:blur={{amount: 100, duration: 800, delay: 200}}>
-                <Divider  text={"RECENT WORK I'M PROUD OF"}/>
+                <Divider>RECENT WORK I'M PROUD OF</Divider>
             </span>
         </span>
 
@@ -51,14 +55,12 @@
             <section in:blur={{amount: 20, duration: 800, delay: 300}} class="">
                 <div class="cards grid grid-cols-1 gap-8 lg:grid-cols-2">
                 <Card 
-                    iconsrc="icons/icon-placeholder.png"
                     title="Avail library services seamlessly with your university ID with SUSe"
                     description="Project turned open-source"
                     imgsrc="card-photos/suse.png"
                     link="/"
                 />
                 <Card 
-                    iconsrc="icons/icon-placeholder.png"
                     title="Receive packages remotely and securely from anywhere with BerdeBox"
                     description="Personal"
                     imgsrc="card-photos/berdebox.png"
@@ -78,7 +80,7 @@
             <div class="flex flex-col px-4 gap-8">
 
                 <!-- HEADER -->
-                <Divider text={"RESEARCH"}/>
+                <Divider>CONFERENCES</Divider>
 
                 <!-- content -->
                 <SmallCard 
@@ -112,7 +114,7 @@
             </div>
             <div class="flex flex-col px-4 gap-8">
                 <!-- HEADER -->
-                <Divider text={"DESIGN & DEVELOPMENT"}/>
+                <Divider>DESIGN & DEVELOPMENT</Divider>
 
                 <!-- CONTENT -->
                 <SmallCard 
@@ -171,7 +173,7 @@
             </div>
             <div class="flex flex-col px-4 gap-8">
                 <!-- HEADER -->
-                <Divider text={"AI/ML/DATA"}/>
+                <Divider>AI/ML/DATA</Divider>
 
                 <!-- CONTENT -->
                 <SmallCard 

@@ -3,9 +3,19 @@
 </svelte:head>
 
 <script>
+    import { blogPosts } from '$lib/stores/blogStores.js';
+
 	import '../app.pcss';
-    import Footer from '../components/Footer.svelte';
-    import Navbar from "../components/Navbar.svelte";
+    import Footer from '$lib/components/Footer.svelte';
+    import Navbar from "$lib/components/Navbar.svelte";
+
+    export let data;  
+
+    async function fetchAndSetBlogPosts() {
+        blogPosts.set(data.posts.results); // Set initial blog posts
+    }
+
+    fetchAndSetBlogPosts();
 </script>
 
 <Navbar></Navbar>
