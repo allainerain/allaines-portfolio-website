@@ -1,21 +1,22 @@
 <script>
   import { onMount } from 'svelte';
-  export let data;
-  
-  let blogData = data.props.results.results 
+  import { fly, blur } from 'svelte/transition';
 
-  // console.log("data", blogData)
+  import { blogPosts } from '$lib/stores/blogStores.js';
 
-  let blogPosts = [];
+  let blogPostsData;
+  let length;
 
-  onMount(formatBlogPosts)
+  onMount(() => {
+    formatBlogPosts();
+  });
 
   function formatBlogPosts() {
-    blogPosts = blogData.map((blogPost) => {
+    blogPostsData = $blogPosts.map((blogPost) => {
       const publishDate = new Date(blogPost.properties.Publish_Date.date.start);
       const formattedPublishDate = new Intl.DateTimeFormat('en-US', {
-        month: 'long',
-        day: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
         year: 'numeric'
       }).format(publishDate);
 
@@ -28,146 +29,62 @@
       };
     });
 
-    // console.log(blogPosts);
+    length = blogPostsData.length;
   }
 
-  function getUniqueCategories(){
-    const categories = new Set(blogPosts.map((post) => post.category));
+  function getUniqueCategories() {
+    const categories = new Set(blogPostsData.map((post) => post.category));
     return Array.from(categories);
   }
 
   function filterBlogPosts(category) {
-    return blogPosts.filter((post) => post.category === category)
+    return blogPostsData.filter((post) => post.category === category);
   }
-
 </script>
 
-<body>
-<section>
-  {#if blogPosts.length > 0}
-  {#each getUniqueCategories() as category}
-    <h1>{category}</h1>
-    <ul>
-      {#each filterBlogPosts(category) as blogPost}
+{#if length > 0}
+<section class="flex flex-col w-full items-center md:mt-40 mt-20">
+  <section class="grid gap-4 items-center justify-center w-[90%] max-w-[1300px]">
+
+    <!-- Display posts for every category -->
+    {#each getUniqueCategories() as category, categoryIndex} 
+      <span in:fly|global={{ y: 300, duration: 800, delay: categoryIndex * 400 }} >
+        <span in:blur|global={{ amount: 100, duration: 800, delay: categoryIndex * 400 }} class="grid gap-2 w-full">
+          <h2>{category}</h2>
+          <!-- Category Descriptions -->
+          {#if category == 'Case Study'}
+            <p>Take a closer look at the process behind some of my favorite projects I build for school or for fun!</p>
+          {/if}
+          {#if category == 'Journey'}
+            <p>Some side journeys I have been on! Watch me document the other things I love to do.</p>
+          {/if}
+          <hr class="w-full my-6 border-t dark:border-light-border/[.50]">
+        </span>
+        
+      </span>
+
+      <!-- Posts under the category -->
+      <ul class="grid gap-4 w-full">
+        {#each filterBlogPosts(category) as blogPost, index}
           <li>
-            <a href={`/blog/${blogPost.slug}`}>
-              <div class="card">
+            <a 
+              
+              href={`/blog/${blogPost.slug}`}
+              in:fly|global={{ y: 300, duration: 800, delay: categoryIndex * 400 + (index + 1) * 100 }}
+            >
+              <div 
+                  in:blur|global={{ amount: 100, duration: 800, delay: categoryIndex * 400 + (index + 1) * 100 }}
+                  class="flex flex-col md:flex-row justify-between hover:text-light-accent hover:dark:text-dark-accent"
+              >
                 <p>{blogPost.published}</p>
-                <h2>{blogPost.title}</h2>
-                <p>{blogPost.description}</p>
+                <h5 class="md:order-first">{blogPost.title}</h5>
               </div>
             </a>
           </li>
-      {/each}
-    </ul>
-  {/each}
-{:else}
-  <p>Loading.</p>
-{/if}
-
+        {/each}
+      </ul>
+      <br>
+    {/each}
+  </section>
 </section>
-
-</body>
-
-
-<style>
-
-body{
-  color: #D9D9D9
-}
-
-section {
-    color: #C2C2C2;
-    width: 800px;
-    margin: 100px auto 100px auto;
-}
-
-li{
-  list-style: none;
-}
-
-ul{
-  margin: 0;
-  padding: 0;
-}
-
-h1{
-    font-family: 'Hogbine', sans-serif;
-    font-weight: 400;
-    font-size: 64px;
-    line-height: 1.11;
-}
-
-.card{
-  /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
-  transition: 0.2s;
-  background-color: #161A11;
-  padding: 20px 40px;
-  margin: 20px 0px;
-  border-radius: 10px
-}
-
-.card:hover {
-  /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); */
-  transform: scale(1.02);
-  cursor: pointer;
-}
-
-a{
-  text-decoration: none;
-}
-
-a h2{
-  color: #D9D9D9;
-  font-family: 'Satoshi', sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-}
-
-a p{
-  color: #838481;
-  font-family: 'Roboto Mono', monospace;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-/* TABLET VIEW */
-@media only screen and (max-width: 900px) {
-    section{
-      width: 94%;
-      margin: 150px 3% 150px 3%; /* Adjust the margin for small screens */
-
-    }
-    h1{
-      font-size: 48px;
-    }
-    h2{
-      font-size: 24px;
-    }
-    a p{
-      font-size: 15px;
-      line-height: 1.4;
-    }
-
-}
-
-/* PHONE VIEW */
-@media only screen and (max-width:770px){
-    section{
-      width: 90%;
-      margin: 150px 5% 150px 5%; /* Adjust the margin for small screens */
-    }
-    h1{
-      font-size: 36px;
-    }
-    h2{
-      font-size: 20px;
-    }
-    a p{
-      font-size: 14px;
-      line-height: 1.3;
-    }
-
-  }
-
-</style>
+{/if}
