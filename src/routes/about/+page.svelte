@@ -1,13 +1,13 @@
 <script>
-    import Divider from "../../components/Divider.svelte";
-    import { fade, blur } from "svelte/transition";
-    import { fly } from "svelte/transition";
+    import { fly, blur } from "svelte/transition";
     import { onMount } from "svelte";
+
+    import Divider from "$lib/components/Divider.svelte";
 
     let hobby = 'travel'
     let hobbySrc = '/hobbies/travel.jpg'
-
     let ready = false;
+
     onMount(() => ready = true);
 
 </script>
@@ -48,7 +48,7 @@
         <!-- EDUFATION SECTION -->
         <span transition:fly={{y: 300, duration: 800, delay: 200}}>
             <span in:blur={{amount: 100, duration: 800, delay: 200}}>
-                <Divider text={"EDUCATION"} />
+                <Divider>EDUCATION</Divider>
             </span>
         </span>
 
@@ -72,7 +72,7 @@
         <!-- DESIGN PHILOSOPHIES SECTION -->
         <span transition:fly={{y: 300, duration: 800, delay: 500}}>
             <span in:blur={{amount: 100, duration: 800, delay: 500}}>
-                <Divider text={"DESIGN PHILOSOPHIES"} />
+                <Divider>DESIGN PHILOSOPHIES</Divider>
             </span>
         </span>
 
@@ -90,7 +90,7 @@
         <!-- HOBBIES SECTION -->
         <span transition:fly={{y: 300, duration: 800, delay: 700}}>
             <span in:blur={{amount: 100, duration: 800, delay: 700}}>
-                <Divider text={"THINGS I LOVE TO DO AWAY FROM THE KEYBOARD"} />
+                <Divider>THINGS I LOVE TO DO AWAY FROM THE KEYBOARD</Divider>
             </span>
         </span>
 
@@ -111,7 +111,7 @@
             </div>
 
             {#key hobbySrc}
-                <div in:fade class="relative overflow-hidden max-h-[600px] rounded-[20px] lg:order-last">
+                <div class="relative overflow-hidden max-h-[600px] rounded-[20px] lg:order-last">
                     <img 
                         class="object-cover w-full transition-opacity duration-500 ease-in-out" alt="Me" 
                         src={hobbySrc}
