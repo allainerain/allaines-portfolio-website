@@ -1,6 +1,5 @@
 <script>
-    import Block from "$lib/components/blog/Block.svelte";
-    import Divider from "$lib/components/Divider.svelte";
+    import Block from "./Block.svelte";
 
     export let block
     export let title = block.rich_text[0].plain_text;
