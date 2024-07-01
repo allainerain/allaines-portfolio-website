@@ -7,9 +7,8 @@
 	import Embed from "./Embed.svelte";
     import Callout from "./Callout.svelte"
     import Table from "./Table.svelte"
+
     export let block
-    // $: console.log(block.type, block);
-    
 </script>
 
 

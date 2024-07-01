@@ -1,0 +1,19 @@
+<script>
+    import { Image } from "@unpic/svelte";
+    
+    export let block;
+</script>
+
+{#if block.image}
+    {#if block.image.type=="file"}
+        <Image src={block.image.file.url} layout="fullWidth" aspectRatio={16/9} class="rounded-lg max-w-full" />
+        {#if block.image.caption?.length > 0}
+            <p class="w-full text-xs text-gray-500 text-center">{block.image.caption?.[0].plain_text}</p>
+        {/if}
+    {:else if block.image.type=="external"}
+        <Image src={block.image.external.url} layout="fullWidth" aspectRatio={16/9} class="rounded-lg max-w-full" />
+        {#if block.image.caption?.length > 0}
+            <p class="w-full text-xs text-gray-500 text-center">{block.image.caption?.[0].plain_text}</p>
+        {/if}
+    {/if}
+{/if}
