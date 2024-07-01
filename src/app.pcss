@@ -1,106 +1,147 @@
-/* Write your global styles here, in PostCSS syntax */
+/* Import Tailwind base, components, and utilities */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Font-face definition */
 @font-face {
   font-family: "SF Pro Text";
   src: url("/fonts/SF-Pro/SF-Pro.ttf");
   font-weight: normal;
 }
 
+/* Global heading and paragraph styles */
 h1 {
   font-family: "SF Pro Display", sans-serif;
-  font-size: 57px;
-  line-height: auto;
+  font-weight: 500;
+  line-height: 120%;
 }
 
 h2 {
-  font-size: 45px;
   font-weight: 500;
   line-height: 120%;
 }
 
 h3 {
-  font-size: 32px;
   font-weight: 100;
   line-height: auto;
 }
 
 h4 {
-  font-size: 24px;
+  font-family: "SF Pro Text", sans-serif;
   font-weight: 100;
   line-height: 140%;
 }
 
 h5 {
   font-family: "SF Pro Text", sans-serif;
-  font-size: 24px;
   font-weight: 100;
   line-height: auto;
 }
 
 p {
   font-family: "SF Pro Text", sans-serif;
-  font-size: 18px;
   font-weight: 100;
   line-height: auto;
 }
 
 h6 {
   font-family: "SF Pro Text", sans-serif;
-  font-size: 14px;
   font-weight: 200;
-  line-height: 22.4px;
+  line-height: auto;
 }
+
+/* Responsive styles */
 
 /* Small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
-  /* Your styles here */
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+@media (max-width: 800px) {
   h1 {
-    font-size: 45px;
-    line-height: auto;
+    font-size: 40px;
   }
 
   h2 {
-    font-size: 45px;
-    font-weight: 500;
-    line-height: 120%;
+    font-size: 32px;
   }
 
   h3 {
     font-size: 24px;
-    font-weight: 100;
-    line-height: auto;
   }
 
   h4 {
     font-size: 22px;
-    font-weight: 100;
-    line-height: 140%;
   }
 
   h5 {
     font-size: 20px;
-    font-weight: 100;
-    line-height: auto;
   }
 
   p {
-    letter-spacing: 0.5px;
-    font-size: 18px;
-    font-weight: 100;
-    line-height: auto;
+    font-size: 16px;
   }
 
   h6 {
     font-size: 14px;
-    font-weight: 200;
-    line-height: 22.4px;
+  }
+}
+
+/* Medium devices*/
+@media (min-width: 800px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 22px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  h6 {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1300px) {
+  h1 {
+    font-size: 64px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 22px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  h6 {
+    font-size: 14px;
   }
 }
 
