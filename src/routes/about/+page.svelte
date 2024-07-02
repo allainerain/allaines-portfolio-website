@@ -33,8 +33,8 @@
                     before:dark:bg-[radial-gradient(circle_at_center,rgba(19,19,19,0)_10%,rgba(19,19,19,0.4)_95%)]
                     dark:text-dark-accent"
                 >
-                    <h1  class="text-[100px]">Allaine Tan</h1>
-                    <h1 class="text-[100px]">鄭俐嫻</h1>    
+                    <h1 class="md:text-[100px] sm:text-[78px] text-[64px]">Allaine Tan</h1>
+                    <h1 class="md:text-[100px] sm:text-[78px] text-[64px]">鄭俐嫻</h1>    
                 </div>
                 <span in:blur={{amount: 100, duration: 800, delay:100}}  class="flex flex-col gap-4">
                     <p>I’m a designer and developer based in Manila, Philippines.</p>
