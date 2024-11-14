@@ -11,7 +11,7 @@
     md:bg-gradient-to-b
 ">
     <div class="
-        inline-flex gap-4 bg-light-background items-center justify-center border m-4 p-4 rounded-lg border-1 border-dark-accent/[0.2]
+        inline-flex gap-1 bg-light-background items-center justify-center border m-4 p-4 rounded-lg border-1 border-dark-accent/[0.2]
         max-md:ml-[5%] max-md:mb-20
         dark:bg-dark-background dark:text-dark-text
     ">
