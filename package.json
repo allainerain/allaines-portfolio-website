@@ -32,7 +32,7 @@
     "@sveltejs/vite-plugin-svelte": "^3.0.0",
     "autoprefixer": "^10.4.20",
     "dotenv": "^16.3.1",
-		"postcss": "^8.4.47",
+    "postcss": "^8.4.47",
     "prettier": "^3.3.2",
     "prettier-plugin-svelte": "^3.2.4",
     "publint": "^0.1.9",
@@ -49,6 +49,7 @@
   "type": "module",
   "dependencies": {
     "@notionhq/client": "^2.2.6",
+    "@sveltejs/adapter-vercel": "^5.4.7",
     "@unpic/svelte": "^0.0.25",
     "neverthrow": "^6.0.0",
     "svelte-meta-tags": "^2.8.0",
