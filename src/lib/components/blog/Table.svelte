@@ -12,9 +12,9 @@
         <table class="text-light-accent rounded-lg border-collapse w-full m-2 dark:text-dark-text">
             <tbody class="block">
                 {#each Array(length) as _, rowIndex (rowIndex)}
-                    {#if rows[rowIndex].cells[colIndex] !== null}
-                        <tr >
-                            <p class={rowIndex === 0 ? "font-bold mb-2" : ""}>{rows[rowIndex].cells[colIndex]}</p>
+                    {#if rows[rowIndex].cells[colIndex] !== null}    
+                        <tr>
+                            <td class={rowIndex === 0 ? "font-bold mb-2" : ""}>{rows[rowIndex].cells[colIndex]}</td>
                         </tr>
                     {/if}
                 {/each}
