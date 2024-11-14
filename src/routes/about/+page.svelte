@@ -33,8 +33,8 @@
                     before:dark:bg-[radial-gradient(circle_at_center,rgba(19,19,19,0)_10%,rgba(19,19,19,0.4)_95%)]
                     dark:text-dark-accent"
                 >
-                    <h1  class="text-[100px]">Allaine Tan</h1>
-                    <h1 class="text-[100px]">鄭俐嫻</h1>    
+                    <h1 class="md:text-[100px] sm:text-[78px] text-[64px]">Allaine Tan</h1>
+                    <h1 class="md:text-[100px] sm:text-[78px] text-[64px]">鄭俐嫻</h1>    
                 </div>
                 <span in:blur={{amount: 100, duration: 800, delay:100}}  class="flex flex-col gap-4">
                     <p>I’m a designer and developer based in Manila, Philippines.</p>
@@ -64,7 +64,9 @@
                         <h2 class="text-light-accent dark:text-dark-accent">College of Engineering</h2>
                     </span>
                     <h5>Bachelor of Science in Computer Science</h5>
-                    <p>I owe my work ethic and principles to the University of the Philippines, by surrounding me with computer scientists who I have nothing but uttmost respect for and who I aspire to be one day. Teaching me how computers are built from the ground up, what exactly it means for something to compute, and how to tell these computers what to do in an elegant way. I went to UP knowing nothing about computer science and I left seeing how beautiful it all is.</p>
+                    <p>
+                        I owe my work ethic and principles to the University of the Philippines, which surrounded me with computer scientists for whom I have nothing but utmost respect and whom I aspire to be like one day. I went to UP thinking computer science was all about software development, but I left with an appreciation for design -- of systems, of computation, and how everything is built from the ground up to what we use today. Most of all, this was where I saw the immense talent of computer scientists in the Philippines, and I hope to show that to the world.
+                    </p>
                 </div>
             </span>
         </section>
@@ -78,12 +80,16 @@
 
         <section transition:fly={{y: 300, duration: 800, delay: 600}} class="grid grid-cols-1 lg:grid-cols-2 w-full gap-16 lg:max-h-[700px]">
             <div in:blur={{amount: 100, duration: 800, delay: 600}} class="flex flex-col gap-2">
-                <h5>Less Research, More Building</h5>
-                <p>I believe that great products are built entirely for users. I don’t want to sell promises of an idea, or the future. Build, then get feedback from real users, then iterate.</p>
+                <h5>Less planning, more building</h5>
+                <p>
+                    I believe that great products are built entirely for users. I don't want to sell promises of an idea or the future. Just as in life, planning can only take you so far. I want to build, get feedback from real users, and then iterate (Read: Getting Real by Basecamp).
+                </p>
             </div>
             <div in:blur={{amount: 100, duration: 800, delay: 600}} class="flex flex-col gap-2">
-                <h5>Less Research, More Building</h5>
-                <p>I believe that great products are built entirely for users. I don’t want to sell promises of an idea, or the future. Build, then get feedback from real users, then iterate.</p>
+                <h5>Jack-of-all trades, better than a master of one</h5>
+                <p>
+                    I never know how to introduce myself -- a product designer, UI designer, UX researcher, frontend developer, AI practitioner? But I embrace it. I believe that great products come from the intersection of many disciplines. I am a builder of things; my versatile mediums for building only make me more creative.
+                </p>
             </div>
         </section>
 
