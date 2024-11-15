@@ -15,8 +15,8 @@
   let maxRows = Math.max(1, roles.length, team.length, tools.length);
 </script>
 
-<section class="flex flex-col gap-8 w-full h-svh items-center justify-center">
-  <div class="flex flex-col gap-4 mt-20 pt-10">
+<section class="flex flex-col gap-8 w-full">
+  <div class="flex flex-col gap-4 my-20 items-center justify-center">
       <span class="flex flex-col gap-2 ">
           <h2>{title}</h2>
           
@@ -38,8 +38,8 @@
           <p>{description}</p>
       </span>
 
-      <!-- Table Details -->
-      <div class="flex p-4 rounded-lg border border-1 dark:bg-[#161616] dark:border-[#2D2D2D]">
+      <!-- Large Table Details -->
+      <div class="hidden sm:block flex p-4 w-full rounded-lg border border-1 dark:bg-[#161616] dark:border-[#2D2D2D]">
           <table class="text-light-accent rounded-lg border-collapse w-full m-2 dark:text-dark-text text-left">
             <thead>
               <tr>
@@ -64,6 +64,31 @@
           </table>
         </div>
 
+          <div class="sm:hidden flex flex-col gap-4 p-4 w-full rounded-lg border border-1 dark:bg-[#161616] dark:border-[#2D2D2D] text-light-accent rounded-lg border-collapse w-full m-2 dark:text-dark-text text-left">
+            
+              <div>
+                <p class="font-bold mb-2">Role</p>
+                {#each roles as role}
+                  <p>{role}</p>
+                {/each}
+              </div>
+              <div>
+                <p class="font-bold mb-2">Team</p>
+                {#each team as team_member}
+                  <p>{team_member}</p>
+                {/each}
+              </div>
+              <div>
+                <p class="font-bold mb-2">Tools</p>
+                {#each tools as tool}
+                  <p>{tool}</p>
+                {/each}
+              </div>
+              <div>
+                <p class="font-bold mb-2">Timeline</p>
+                  <p>{timeline}</p>
+              </div>
+          </div> 
       <Carousel gallery_items={gallery_items}/>
   </div>
 </section>
