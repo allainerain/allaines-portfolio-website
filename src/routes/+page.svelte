@@ -8,6 +8,7 @@
     import Divider from "$lib/components/Divider.svelte";
 
     let ready = false;
+        
     onMount(() => {
         ready = true
     });
