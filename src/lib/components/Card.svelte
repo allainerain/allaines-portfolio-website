@@ -97,8 +97,8 @@
     >
     <div class="flex flex-col max-w-[900px] w-[90%]">
         <!-- Exit Button -->
-        <div class="fixed top-0 right-0 z-40 m-8 text-light-text dark:text-dark-text">
-            <button on:click={enableScroll}>
+        <div class="fixed top-0 right-0 z-40 m-8 text-light-text dark:text-dark-text bg-[#FBFBFB] rounded-[1000px]">
+            <button class="flex items-center p-2 backdrop-blur-sm rounded-[1000px]" on:click={enableScroll}>
                 <Icon src={XMark} size="40"/>
             </button>
         </div>
