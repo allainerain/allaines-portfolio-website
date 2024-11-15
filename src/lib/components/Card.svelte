@@ -12,10 +12,10 @@
     export let id;
 
     export let long_description;
-    export let github = "none";
-    export let figma = "none";
-    export let live = "none";
-    export let case_study = "none";
+    export let github = null;
+    export let figma = null;
+    export let live = null;
+    export let case_study = null;
 
     export let tools;
     export let team;
