@@ -88,7 +88,7 @@
             <div in:blur={{amount: 100, duration: 800, delay: 600}} class="flex flex-col gap-2">
                 <h5>Jack-of-all trades, better than a master of one</h5>
                 <p>
-                    I never know how to introduce myself -- a product designer, UI designer, UX researcher, frontend developer, AI practitioner? But I embrace it. I believe that great products come from the intersection of many disciplines. I am a builder of things; my versatile mediums for building only make me more creative.
+                    I never know how to introduce myself — a product designer, UI designer, UX researcher, frontend developer, AI practitioner? But I embrace it. I believe that great products come from the intersection of many disciplines. I am a builder of things; my versatile mediums for building only make me more creative.
                 </p>
             </div>
         </section>
