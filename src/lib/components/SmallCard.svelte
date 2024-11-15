@@ -182,9 +182,29 @@
     onMount(() => {
         selectGalleryItems(id);
     });
+
+    let scroll = true;
+
+    $: {
+        if (!scroll) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    }
+  
+    function disableScroll() {
+        scroll = false;
+        selected = true;
+    }
+
+    function enableScroll() {
+        scroll = true;
+        selected = false;
+    }
 </script>
 
-<button on:click={() => selected = true}>
+<button on:click={disableScroll}>
     <div class="grid gap-4">
         <div class="rounded-lg border border-[1px] border-light-accent border-opacity-[20%] overflow-hidden">
             
@@ -213,12 +233,12 @@
     <!-- Project preview -->
     <div
         transition:fly={{ duration: 300, easing: quintOut, y: 1000 }}
-        class="fixed top-0 left-0 h-screen w-full bg-[#FBFBFB] dark:bg-[#070707] z-50 flex justify-center overflow-y-auto"
+        class="fixed top-0 left-0 w-full bg-[#FBFBFB] dark:bg-[#070707] z-50 flex justify-center h-svh overflow-y-auto"
     >
-    <div class="flex flex-col max-w-[900px] w-[90%] max-h-screen ">
+    <div class="flex flex-col max-w-[900px] w-[90%]">
         <!-- Exit Button -->
         <div class="fixed top-0 right-0 z-40 m-8 text-light-text dark:text-dark-text">
-            <button on:click={() => selected = false}>
+            <button on:click={enableScroll}>
                 <Icon src={XMark} size="40"/>
             </button>
         </div>
@@ -242,4 +262,3 @@
     </div>
 </div>
 {/if}
-
