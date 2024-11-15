@@ -16,23 +16,23 @@
 </script>
 
 <section class="flex flex-col gap-8 w-full h-svh items-center justify-center">
-  <div class="flex flex-col gap-4 mt-20 pb-10">
+  <div class="flex flex-col gap-4 mt-20 pt-10">
       <span class="flex flex-col gap-2 ">
           <h2>{title}</h2>
           
           <!-- Project Links -->
-          <span class="links">
+          <span class="flex gap-2">
               {#if github}
-                  <a href={github} target="_blank">Github</a>
+                  <a href={github} target="_blank" class="links">Github</a>
               {/if}
               {#if figma}
-                  <a href={figma} target="_blank">Figma</a>
+                  <a href={figma} target="_blank" class="links">Figma</a>
               {/if}
               {#if live}
-                  <a href={live} target="_blank">Live</a>
+                  <a href={live} target="_blank" class="links">Live</a>
               {/if}
               {#if case_study}
-                  <a href={case_study} target="_blank">Case Study</a>
+                  <a href={case_study} target="_blank" class="links">Case Study</a>
               {/if}
           </span>
           <p>{description}</p>
