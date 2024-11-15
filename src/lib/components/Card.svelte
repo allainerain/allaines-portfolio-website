@@ -54,9 +54,29 @@
         selectGalleryItems(id);
     });
 
+    let scroll = true;
+
+    $: {
+        if (!scroll) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    }
+
+    function disableScroll() {
+        scroll = false;
+        selected = true;
+    }
+
+    function enableScroll() {
+        scroll = true;
+        selected = false;
+    }
+
 </script>
 
-<button class="grid gap-4" on:click={() => selected = true}>
+<button class="grid gap-4" on:click={disableScroll}>
     <div class="rounded-lg border border-[2px] border-light-accent border-opacity-[20%] overflow-hidden">
         <img class="w-full h-full transition-transform duration-300 hover:scale-[102%]"
         src={imgsrc} alt={title}
@@ -69,17 +89,16 @@
     </div>
 </button>
 
-
 {#if selected}
     <!-- Project preview -->
     <div
         transition:fly={{ duration: 300, easing: quintOut, y: 1000 }}
-        class="fixed top-0 left-0 h-screen w-full bg-[#FBFBFB] dark:bg-[#070707] z-50 flex justify-center overflow-y-auto"
+        class="fixed top-0 left-0 w-full bg-[#FBFBFB] dark:bg-[#070707] z-50 flex justify-center h-svh overflow-y-auto"
     >
-    <div class="flex flex-col max-w-[900px] w-[90%] max-h-screen ">
+    <div class="flex flex-col max-w-[900px] w-[90%]">
         <!-- Exit Button -->
         <div class="fixed top-0 right-0 z-40 m-8 text-light-text dark:text-dark-text">
-            <button on:click={() => selected = false}>
+            <button on:click={enableScroll}>
                 <Icon src={XMark} size="40"/>
             </button>
         </div>
