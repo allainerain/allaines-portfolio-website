@@ -233,7 +233,7 @@
     <!-- Project preview -->
     <div
         transition:fly={{ duration: 300, easing: quintOut, y: 1000 }}
-        class="fixed top-0 left-0 w-full bg-[#FBFBFB] dark:bg-[#070707] z-50 flex justify-center h-svh overflow-y-auto"
+        class="fixed top-0 left-0 w-full bg-[#FBFBFB] dark:bg-[#070707] z-50 flex justify-center h-dvh overflow-y-auto"
     >
     <div class="flex flex-col max-w-[900px] w-[90%]">
         <!-- Exit Button -->
