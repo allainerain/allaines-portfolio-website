@@ -35,18 +35,14 @@
             <span in:blur={{amount: 20, duration: 800, delay: 300}} >
                 <div class="w-full grid grid-cols-1 gap-8 lg:grid-cols-3">
                 <Case 
-                    id="suse"
                     title="SUSe: Library borrowing made seamless"
-                    pill = "Project turned open-source"
                     description="Designer, Frontend Developer"
                     imgsrc="card-photos/suse-small.png"
                     link="/suse"
                     cursor_text="View Case Study"
                 />
                 <Case 
-                    id="dormy"
                     title="Simplifying renting in the Philippines with Dormy"
-                    pill = "Personal"
                     description="Designer"
                     imgsrc="card-photos/dormy.png"
                     link="/"
@@ -54,9 +50,7 @@
 
                 />
                 <Case 
-                    id="berdebox"
                     title="Receive packages securely from anywhere with BerdeBox"
-                    pill = "Personal"
                     description="Designer, Full-stack Developer"
                     imgsrc="card-photos/berde-box-small.png"
                     link="/berde-box"
@@ -64,8 +58,6 @@
                 />
                 </div>
             </span>
-            
-
         </span>
         </div>
     </section>
