@@ -3,7 +3,7 @@
 </script>
 
 <section 
-    class="flex flex-row items-center justify-between py-10 mx-auto w-[90%] md:mb-0"
+    class="flex flex-row items-center justify-between md:w-[80%] md:py-10 pt-10 pb-[150px] mx-auto px-8 md:mb-0"
 >
     <p>Made with Love 💛</p>
 

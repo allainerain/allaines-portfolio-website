@@ -39,18 +39,18 @@
 </svelte:head>
 
 {#if ready}
-<div class="w-full px-10 py-12 flex flex-col gap-6 items-center">
+<div class="w-full md:px-10 px-4 py-12 flex flex-col gap-6 items-center">
     
 	<!-- HEADER -->
-	<div class="pt-24 pb-8 w-full max-w-5xl"
+	<div class="md:pt-24 pb-8 w-full max-w-5xl"
     transition:fly={{y: 400, duration: 800}}
   >
     <span in:blur={{amount: 100, duration: 800}}>
-            <img class="rounded-xl w-full h-auto" src="/suse/suse-header.png" alt="BerdeBox header image" />
+        <img class="rounded-xl w-full h-auto" src="/suse/suse-header.png" alt="BerdeBox header image" />
     </span>
 	</div>
 
-  <div class="lg:w-[50%] py-12 flex flex-col gap-6">
+	<div class="max-w-[900px] md:py-12 flex flex-col gap-6">
     <span transition:fly={{y: 400, duration: 800, delay: 100}}>
       <span class="flex flex-col gap-6" in:blur={{amount: 100, duration: 800, delay: 100}}>
         <h1>SUSe: Library borrowing made seamless</h1>
@@ -61,7 +61,7 @@
     <span transition:fly={{y: 400, duration: 800, delay: 200}}>
       <span class="flex flex-col gap-6" in:blur={{amount: 100, duration: 800, delay: 200}}>
         <!-- INFO GRID -->
-        <div class="grid grid-cols-3 gap-6 text-left text-gray-800">
+        <div class="grid md:grid-cols-3 gap-6 text-left text-gray-800">
           <div>
             <p class="mb-2 text-gray-400">ROLE</p>
             <p>Product Designer, Frontend Developer</p>
