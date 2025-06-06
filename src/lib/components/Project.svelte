@@ -10,16 +10,16 @@
   export let roles = [];
   export let team = [];
   export let tools = [];
+  export let results = [];
   export let timeline;
 
-  let maxRows = Math.max(1, roles.length, team.length, tools.length);
 </script>
 
 <section class="flex flex-col gap-8 w-full">
   <div class="flex flex-col gap-4 my-20 items-center justify-center">
-      <span class="flex flex-col gap-2 ">
-          <h2>{title}</h2>
-          
+      <span class="flex flex-col gap-6 ">
+          <h1>{title}</h1>
+          <hr class="border-t border-gray-200 w-full" />
           <!-- Project Links -->
           <span class="flex gap-2">
               {#if github}
@@ -35,60 +35,46 @@
                   <a href={case_study} target="_blank" class="links">Case Study</a>
               {/if}
           </span>
-          <p>{description}</p>
+          <!-- Divider -->
+          <hr class="border-t border-gray-200 w-full" />
+
+          <!-- INFO GRID -->
+          <div class="grid grid-cols-3 gap-6 text-left text-gray-800">
+            <div>
+              <p class="mb-2 text-gray-400">ROLE</p>
+              {#each roles as role}
+                <p>{role}</p>
+              {/each}
+            </div>
+            <div>
+              <p class="mb-2 text-gray-400">DURATION</p>
+              <p>{timeline}</p>
+            </div>
+            <div>
+              <p class="mb-2 text-gray-400">TEAM</p>
+              {#each team as team_member}
+                <p>{team_member}</p>
+              {/each}
+            </div>
+          </div>
+
+          {#if results.length > 0}
+            <hr class="border-t border-gray-200 w-full" />
+
+            <p class="mb-2 text-gray-400">IMPACT & OUTCOMES</p>
+            <ul class="list-disc pl-6">
+              {#each results as result}
+                <li><p>{result}</p></li>
+              {/each}
+            </ul>
+          {/if}
+          <hr class="border-t border-gray-200 w-full" />
+
+          <slot name="description" />
+
+          <slot name="content" />
       </span>
 
-      <!-- Large Table Details -->
-      <div class="hidden sm:block flex p-4 w-full rounded-lg border border-1 dark:bg-[#161616] dark:border-[#2D2D2D]">
-          <table class="text-light-accent rounded-lg border-collapse w-full m-2 dark:text-dark-text text-left">
-            <thead>
-              <tr>
-                <th class="font-bold mb-2">Role</th>
-                <th class="font-bold mb-2">Team</th>
-                <th class="font-bold mb-2">Tools</th>
-                <th class="font-bold mb-2">Timeline</th>
-              </tr>
-            </thead>
-            <tbody>
-              {#each Array(maxRows) as _, index}
-                <tr>
-                  <td>{roles[index] || ""}</td>
-                  <td>{team[index] || ""}</td>
-                  <td>{tools[index] || ""}</td>
-                  {#if index === 0}
-                    <td rowspan={maxRows} class="align-top">{timeline}</td>
-                  {/if}
-                </tr>
-              {/each}
-            </tbody>
-          </table>
-        </div>
-
-          <div class="sm:hidden flex flex-col gap-4 p-4 w-full rounded-lg border border-1 dark:bg-[#161616] dark:border-[#2D2D2D] text-light-accent rounded-lg border-collapse w-full m-2 dark:text-dark-text text-left">
-            
-              <div>
-                <p class="font-bold mb-2">Role</p>
-                {#each roles as role}
-                  <p>{role}</p>
-                {/each}
-              </div>
-              <div>
-                <p class="font-bold mb-2">Team</p>
-                {#each team as team_member}
-                  <p>{team_member}</p>
-                {/each}
-              </div>
-              <div>
-                <p class="font-bold mb-2">Tools</p>
-                {#each tools as tool}
-                  <p>{tool}</p>
-                {/each}
-              </div>
-              <div>
-                <p class="font-bold mb-2">Timeline</p>
-                  <p>{timeline}</p>
-              </div>
-          </div> 
-      <Carousel gallery_items={gallery_items}/>
+      <!-- <Carousel gallery_items={gallery_items}/> -->
   </div>
 </section>
