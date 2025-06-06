@@ -14,7 +14,7 @@
     }
 </script>
 
-   <section class="flex flex-col gap-8 items-left justify-center md:pt-40 md:pb-20 pt-20 w-full px-10 sm:px-6 md:px-10 overflow-hidden">
+   <section class="flex flex-col gap-8 items-left justify-center md:pt-40 md:pb-20 pt-20 w-full md:px-10 px-4 overflow-hidden">
         <!-- Tabs -->
        
         <div class="relative w-full max-w-full">
