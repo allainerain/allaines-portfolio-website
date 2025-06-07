@@ -1,11 +1,15 @@
 <script>
+  import Carousel from "./Carousel.svelte";
+  export let gallery_items;
   export let title = "Placeholder";
+  export let description;
   export let github = null;
   export let figma = null;
   export let live = null;
   export let case_study = null;
   export let roles = [];
   export let team = [];
+  export let tools = [];
   export let results = [];
   export let timeline;
 
