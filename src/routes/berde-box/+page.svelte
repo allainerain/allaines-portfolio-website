@@ -171,9 +171,17 @@
 
 		<h3 class="pt-8 font-semibold">The Pitch to the Dragons</h3>
 		<p>We pitched at the DCS IoT Cup sponsored by Enstack. Watch the full pitch below.</p>
-		<video controls class="rounded-md border hover:scale-[102%] duration-300 w-full">
-			<source src="/berde-box/pitch.mp4" type="video/mp4" />
-		</video>
+		<div class="w-full aspect-video border border-1 rounded-md overflow-hidden hover:scale-[102%] transition-transform duration-200">
+		<iframe
+			class="w-full h-full"
+			src="https://www.youtube.com/embed/RwQBs_rxBYI?si=eXWVZsnJYalwwksA"
+			title="YouTube video player"
+			frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+			referrerpolicy="strict-origin-when-cross-origin"
+			allowfullscreen
+		></iframe>
+		</div>
 
 		<h3 class="pt-8 font-semibold">The Exhibit</h3>
 		<p>Over 100 students experienced BerdeBox at our exhibit. We demoed real-world usage and let them try it hands-on.</p>

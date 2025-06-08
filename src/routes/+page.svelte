@@ -298,11 +298,17 @@
                         <h2 class="pt-10 text-center">The Presentation</h2>
                         <hr class="border-t border-gray-200 w-full" />
 
-                        <video controls class=" border border-1 rounded-md hover:scale-[102%]">
-                            <source src="/abm/presentation.mp4" type="video/mp4">
-                            <track kind="captions">
-                            Your browser does not support the video tag.
-                        </video>    
+                        <div class="w-full aspect-video border border-1 rounded-md overflow-hidden hover:scale-[102%] transition-transform duration-200">
+                        <iframe
+                            class="w-full h-full"
+                            src="https://www.youtube.com/embed/xQ9SzHUwJ5k?si=J6CP9YMHjegyJbi4"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen
+                        ></iframe>
+                        </div>
 
                     </svelte:fragment>
                 </Project>
