@@ -22,8 +22,7 @@
     <section class="grid  items-center justify-center w-full">
         <!-- Text Introduction -->
         <Intro></Intro>
-        <div class="flex flex-col p-10 gap-12">
-
+        <div class="flex flex-col md:p-10 p-4 gap-12">
         
         <span transition:fly={{y: 300, duration: 800, delay: 200}}>
             <span in:blur={{amount: 100, duration: 800, delay: 200}}>
@@ -72,7 +71,7 @@
 
     <br>
 
-    <section class="grid items-center bg-[#FBFBFB] w-full p-10 dark:bg-[#070707] mt-10">
+    <section class="grid items-center bg-[#FBFBFB] w-full md:p-10 p-4 dark:bg-[#070707] mt-10">
         
         <span class="w-full pb-10" transition:fly={{y: 300, duration: 800, delay: 200}}>
             <span in:blur={{amount: 100, duration: 800, delay: 200}}>
